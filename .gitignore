@@ -63,8 +63,9 @@ venv.bak/
 
 # Data files
 data/raw/*
+!data/raw/sample_knowledge_base.csv
 data/processed/*
-!data/.gitkeep
+!data/processed/.gitkeep
 
 # Model files
 models/*.pt
@@ -72,6 +73,7 @@ models/*.pt
 *.bin
 *.safetensors
 *.faiss
+model_cache/
 
 # IDE / Editor specific
 .idea/
