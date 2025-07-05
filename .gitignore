@@ -67,13 +67,16 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 
-# Model files
+# Model and data files
 models/*.pt
 *.pth
 *.bin
 *.safetensors
 *.faiss
 model_cache/
+data/
+reports/
+old_scripts_archive/
 
 # IDE / Editor specific
 .idea/
