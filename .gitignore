@@ -78,6 +78,9 @@ data/
 reports/
 old_scripts_archive/
 
+# Documentation files
+docs/*.docx
+
 # IDE / Editor specific
 .idea/
 .vscode/
