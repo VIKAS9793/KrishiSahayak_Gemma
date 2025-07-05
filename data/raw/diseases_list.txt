@@ -1,0 +1,112 @@
+# Plant Diseases List
+# This file contains all plant-disease combinations from the dataset
+# Format: {Plant} - {Disease}
+# Last updated: 2025-07-04
+# Total unique entries: 46
+
+# ========================
+# Apple Diseases
+# ========================
+Apple - Apple Scab
+Apple - Black Rot
+Apple - Cedar Apple Rust
+Apple - Healthy
+Apple - Rust
+
+# ========================
+# Bell Pepper Diseases
+# ========================
+Bell Pepper - Healthy
+Bell Pepper - Spot
+
+# ========================
+# Blueberry Diseases
+# ========================
+Blueberry - Healthy
+
+# ========================
+# Cherry Diseases
+# ========================
+Cherry - Healthy
+Cherry - Including Sour Healthy
+Cherry - Including Sour Powdery
+
+# ========================
+# Corn Diseases
+# ========================
+Corn - Blight
+Corn - Cercospora Spot
+Corn - Common Rust
+Corn - Gray Spot
+Corn - Healthy
+Corn - Northern Blight
+Corn - Rust
+
+# ========================
+# Grape Diseases
+# ========================
+Grape - Black Rot
+Grape - Blight Isariopsis Spot
+Grape - Esca Black Measles
+Grape - Healthy
+
+# ========================
+# Orange Diseases
+# ========================
+Orange - Healthy
+Orange - Huanglongbing Citrus Greening
+
+# ========================
+# Peach Diseases
+# ========================
+Peach - Bacterial Spot
+Peach - Healthy
+
+# ========================
+# Pepper Diseases
+# ========================
+Pepper - Bell Bacterial Spot
+Pepper - Bell Healthy
+
+# ========================
+# Potato Diseases
+# ========================
+Potato - Early Blight
+Potato - Healthy
+Potato - Late Blight
+
+# ========================
+# Raspberry Diseases
+# ========================
+Raspberry - Healthy
+
+# ========================
+# Soybean Diseases
+# ========================
+Soybean - Healthy
+
+# ========================
+# Squash Diseases
+# ========================
+Squash - Powdery Mildew
+
+# ========================
+# Strawberry Diseases
+# ========================
+Strawberry - Healthy
+Strawberry - Scorch
+
+# ========================
+# Tomato Diseases
+# ========================
+Tomato - Bacterial Spot
+Tomato - Early Blight
+Tomato - Healthy
+Tomato - Late Blight
+Tomato - Leaf Mold
+Tomato - Mold
+Tomato - Mosaic Virus
+Tomato - Septoria Spot
+Tomato - Target Spot
+Tomato - Two-Spotted Spider Mites
+

@@ -1,0 +1,214 @@
+Disease Name
+Symptoms
+Remedy
+Source
+
+Apple Scab
+- Olive-green to brown circular spots on leaves, often with a velvety texture.
+ - Leaves may become twisted, puckered, and drop prematurely.
+ - Fruit develops scabby, sunken, brown spots which can crack.
+- Cultural: Remove and destroy fallen leaves and fruit to reduce overwintering fungus. Prune trees to improve air circulation and hasten drying.
+ - Chemical: Apply fungicides based on a schedule targeting growth stages (e.g., pink bud, petal fall). Products include Mancozeb, Captan, and Myclobutanil. A post-harvest Urea spray is also recommended in India.
+ - Biological: Use of Bacillus subtilis and Trichoderma harzianum can help suppress the pathogen.
+National Horticulture Board (NHB.gov.in), citing ICAR
+
+Apple Black Rot
+- Leaves: "Frog-eye leaf spot" with purplish borders and tan centers.
+ - Fruit: Rot begins at the blossom end, forming a black spot with concentric rings ("bull's-eye" pattern). Fruit may mummify and remain on the tree.
+ - Branches: Sunken, reddish-brown cankers.
+- Cultural: Prune and destroy all dead branches and cankers. Remove all mummified fruit from the tree and orchard floor.
+ - Chemical: Traditional Indian remedy includes post-harvest treatment with linseed or mustard oil. Fungicides like Difenoconazole and Propiconazole have shown efficacy.
+TNAU Agritech Portal ; University of Minnesota Extension
+
+Cedar Apple Rust
+- On Apple: Bright orange-yellow spots on leaves, often with red borders and tiny black dots on the surface. Finger-like tubes may appear on the underside. Fruit can have larger yellow lesions, causing it to be misshapen.
+ - On Cedar/Juniper: Hard, brown galls form on twigs, which produce striking orange, gelatinous "telial horns" in wet spring weather.
+- Cultural: The most effective method is removing the alternate host (cedar/juniper trees) within a radius of several kilometers, though often impractical. A more feasible approach is to prune and destroy galls from nearby cedars in late winter.
+ - Host Resistance: Plant rust-resistant apple varieties like 'Redfree', 'Liberty', or 'Stayman'.
+ - Chemical: Apply fungicides (e.g., Mancozeb, Myclobutanil) to apple trees when the orange horns are visible on the cedar host.
+Oklahoma State University Extension ; University of Minnesota Extension
+
+Bell Pepper Bacterial Spot
+- Leaves: Small, water-soaked spots that become angular and dark-green to black, often with a yellow halo. Centers can fall out, creating a "shot-hole" look.
+ - Fruit: Raised, rough, brown, or scab-like spots.
+- Cultural: Use certified pathogen-free seed and transplants. Practice a 2-3 year crop rotation with non-solanaceous crops. Avoid overhead irrigation.
+ - Host Resistance: Plant resistant varieties where available.
+ - Chemical: Apply copper-based bactericides, often mixed with Mancozeb. Seed treatment with hot water (50°C for 25 mins) or sodium hypochlorite can be effective.
+Plantix ; University of Florida IFAS Extension
+
+Cherry Powdery Mildew
+- White, powdery, or cotton-like growth on leaves, shoots, and fruit.
+ - Infected leaves may curl, blister, and become distorted.
+ - Fruit can develop circular, depressed areas covered in the white fungus, making it unmarketable.
+- Cultural: Prune to improve air circulation. Remove and destroy sucker shoots. Manage irrigation to keep foliage dry.
+ - Chemical: Apply fungicides (e.g., sulfur, myclobutanil, propiconazole) from shuck fall through harvest. Rotate fungicides with different modes of action (FRAC groups) to manage resistance.
+ - Organic: Potassium bicarbonate, neem oil, or milk-based sprays can be used.
+PNW Handbooks ; WSU Tree Fruit
+
+Corn Gray Leaf Spot
+- Long, narrow, rectangular, tan-to-gray lesions on leaves that run parallel to the veins.
+ - Symptoms typically start on lower leaves and progress up the plant.
+ - Severe infection can cause leaves to blight and stalks to weaken.
+- Cultural: Practice crop rotation with non-host crops (e.g., beans, peas). Tillage to bury infected residue can reduce inoculum, but this conflicts with no-till conservation practices.
+ - Host Resistance: Use of resistant maize hybrids is the most effective and economical strategy.
+ - Chemical: Apply foliar fungicides (e.g., strobilurins like pyraclostrobin, triazoles like propiconazole) when disease first appears.
+Plantix ; Crop Protection Network
+
+Corn Common Rust
+- Circular to elongated, powdery, cinnamon-brown pustules on both upper and lower leaf surfaces.
+ - Pustules turn brownish-black as the plant matures.
+- Cultural: Remove alternate hosts (Oxalis species) from around fields. Collect and destroy infected crop residue after harvest.
+ - Host Resistance: Planting resistant maize hybrids is the most effective method.
+ - Chemical: TNAU recommends foliar sprays of fungicides like Mancozeb, Tebuconazole, or Kresoxim-methyl at 35 and 50 days after sowing.
+TNAU Agritech Portal ; ICAR-IIMR
+
+Corn Northern Leaf Blight
+- Large (1-7 inches), elliptical or "cigar-shaped" tan to grayish-green lesions on leaves.
+ - Infection typically begins on lower leaves and moves up the plant.
+ - In humid weather, lesions may appear dark and sooty.
+- Cultural: Manage crop residue through crop rotation and/or tillage to reduce the primary inoculum source.
+ - Host Resistance: Use of resistant hybrids is the most economical and recommended strategy.
+ - Chemical: Apply fungicides like Mancozeb or Propiconazole, especially for high-value corn.
+ResearchGate ; ICAR-IIMR
+
+Grape Black Rot
+- Leaves: Reddish-brown circular spots with dark borders and tan centers. Tiny black dots (pycnidia) often form in a ring pattern inside the spots.
+ - Fruit: Berries turn black, shrivel, and become hard, dry "mummies" covered with black pycnidia.
+- Cultural: Sanitation is critical. Remove and destroy all mummified fruit and diseased canes during dormant pruning. Improve air circulation through canopy management.
+ - Chemical: Apply protective fungicide sprays (e.g., Mancozeb, Copper Oxychloride) starting early in the season.
+Missouri Botanical Garden ; University of Kentucky Extension
+
+Grape Isariopsis Leaf Spot
+- Scattered, angular, purple-brown spots on the upper leaf surface.
+ - Corresponding spots on the lower surface are less conspicuous and brown.
+ - Dark green to black tufts of fungal structures may be visible in the center of the spots with a hand lens.
+- Cultural: General fungal leaf spot management applies: vineyard sanitation (raking and destroying fallen leaves) and improving air circulation via canopy management.
+ - Chemical: Fungicide programs for other diseases (e.g., Black Rot) using Mancozeb or copper-based products are likely to provide control.
+Invasive.org ; CABI
+
+Grape Esca (Black Measles)
+- Leaves: Characteristic interveinal "tiger-stripes" (dark red in red grapes, yellow in white grapes).
+ - Fruit: Small, round, dark spots ("measles"), each bordered by a brown-purple ring.
+ - Wood: Internal dark spots or white rot in cross-sections of the trunk.
+ - Apoplexy: Sudden wilting and death of the entire vine in summer.
+- Cultural/Preventative: There is no cure. Management is entirely preventative. Prune during late dormancy in dry weather. Protect large pruning wounds with a sealant or fungicide paint to prevent new infections. Disinfect pruning tools between vines.
+UC IPM ; Alltech ; APS Journals
+
+Citrus Greening (HLB)
+- Leaves: Asymmetrical blotchy mottling (patches of yellow and green not symmetrical across the midrib).
+ - Fruit: Small, lopsided fruit that remains green at the bottom (stylar end) when mature. Juice is often bitter.
+ - Tree: Stunted growth and twig dieback.
+- Cultural: There is no cure for an infected tree. Management focuses on prevention.
+ - Plant certified, disease-free nursery stock.
+ - Immediately remove and destroy any infected trees to eliminate the pathogen source.
+ - Vector Control: Control the Asian Citrus Psyllid vector through monitoring and insecticide application.
+Wikipedia ; UCR CISR ; ICAR-CCRI
+
+Peach Bacterial Spot
+- Leaves: Small, water-soaked lesions that turn reddish-brown/black and become angular. Centers often fall out, creating a "shot-hole" appearance, leading to defoliation.
+ - Fruit: Pitting, cratering, and cracking on the fruit surface, especially from early-season infections.
+- Cultural: Prune to improve air circulation. Avoid planting in windy, sandy sites.
+ - Host Resistance: Use resistant or less susceptible peach varieties.
+ - Chemical: Apply copper-based sprays during dormancy. For in-season control, use antibiotics like oxytetracycline, which are safer for the plant.
+Alabama Cooperative Extension System ; MSU Extension
+
+Potato Early Blight
+- Leaves: "Target-board" or "bull's-eye" lesions; circular, dark brown spots with concentric rings, typically on older, lower leaves.
+ - Tubers: Brown, corky, dry rot with dark, circular, slightly raised surface lesions.
+- Cultural: Practice a 2-3 year crop rotation with non-solanaceous crops. Use certified disease-free seed. Remove and destroy plant debris after harvest.
+ - Host Resistance: Late-maturing varieties are generally more resistant.
+ - Chemical: Apply fungicides (e.g., Mancozeb, Azoxystrobin, Chlorothalonil) at the first sign of disease.
+UC IPM ; Vikaspedia ; University of Connecticut
+
+Potato Late Blight
+- Leaves: Large, irregular, purple-brown to black, oily-appearing blotches. A fuzzy white mold appears on the underside of leaves in high humidity.
+ - Tubers: Reddish-brown, granular dry rot that extends from the skin into the tuber flesh.
+- Cultural: Use certified, disease-free seed potatoes. Destroy all volunteer plants and cull piles. In high-rainfall areas of India, soil mulching with black polythene is effective.
+ - Host Resistance: Use resistant varieties like 'Kufri Girdhari' and 'Kufri Shailja' developed by ICAR-CPRI.
+ - Chemical: Preventative sprays are essential. Copper-based fungicides and premixes like Metalaxyl + Mancozeb are recommended.
+ARCC Journals ; ResearchGate ; ICAR
+
+Squash Powdery Mildew
+- White, powdery (ash-like) coating in patches on leaves and young shoots.
+ - Affected leaves may turn pale and curl up, leading to defoliation in severe cases.
+- Cultural: Prune and destroy affected plant parts. Ensure good air circulation with adequate plant spacing. Avoid overhead irrigation.
+ - Chemical: Spray with Sulphur, Carbendazim, or Karathane.
+ - Organic: Neem oil, potassium bicarbonate, or milk-based sprays are effective options.
+National Horticulture Board (NHB.gov.in) ; eOrganic
+
+Strawberry Scorch
+- Numerous small, irregular, purplish blotches on the upper leaf surface.
+ - Spots enlarge, centers turn brown then greyish-white, with a distinct reddish-purple border.
+ - Leaves can look scorched, dry up, curl, and become brittle.
+- Cultural: Use certified disease-free plants. Remove and destroy infected leaves and debris. Promote air circulation and avoid overhead irrigation.
+ - Host Resistance: Plant resistant varieties if available.
+ - Chemical: Apply protective fungicides. Copper-based sprays can be used during dormancy.
+Not available (Flagged for review)
+
+Tomato Bacterial Spot
+- Leaves: Small, water-soaked, circular spots, often with a yellow halo. Lesions become angular and dark brown/black, leading to defoliation.
+ - Fruit: Small, slightly raised, water-soaked spots on green fruit that become brown and scabby.
+- Cultural: Use certified disease-free seed and transplants. Practice a 3-4 year crop rotation away from solanaceous crops. Stake plants and use mulch.
+ - Chemical: Protective sprays with copper-containing bactericides, often mixed with Mancozeb. Drenching seedlings with Streptomycin before transplanting is also practiced.
+Vikaspedia ; Nunhems ; UC IPM
+
+Tomato Early Blight
+- Leaves: Small, black or brown lesions, mostly on older foliage, that enlarge into a "bull's-eye" pattern with concentric rings.
+ - Fruit: Dark, leathery, sunken lesions with concentric rings, typically at the stem end.
+- Cultural: Use a 2-3 year crop rotation with non-solanaceous crops. Use disease-free seeds. Stake or cage plants to improve air circulation.
+ - Host Resistance: Plant tolerant varieties like 'Indus 1030 tomato' or 'Bangalore red tomato'.
+ - Chemical: Apply fungicides like Mancozeb, Chlorothalonil, or Copper Oxychloride.
+BigHaat Kisan Vedika ; Katyayani Krishi Direct ; GardenTech
+
+Tomato Late Blight
+- Leaves: Large, purple-brown, oily-appearing blotches. A white, fuzzy mold appears on the underside of leaves in humid conditions.
+ - Fruit: Large, firm, brown to black, greasy-looking blotches, often on the fruit's shoulders.
+- Cultural: Use certified disease-free transplants. Destroy volunteer potato/tomato plants. Avoid sprinkler irrigation.
+ - Host Resistance: Use resistant varieties. In India, 'Arka Abhed F1' has shown resistance.
+ - Chemical: Preventative sprays are critical. In India, sprays of copper oxychloride with soil mulching are highly effective. Other options include Metalaxyl + Mancozeb.
+ResearchGate ; UC IPM ; Katyayani Krishi Direct
+
+Tomato Leaf Mold
+- Pale greenish-yellow spots with indefinite margins on the upper leaf surface.
+ - An olive-green to brownish, velvety mold develops on the corresponding lower surface.
+ - Leaves turn yellow, wither, and die but often remain attached.
+- Cultural: Ensure good air circulation by staking and pruning. Avoid overhead irrigation. Lower humidity in greenhouses. Remove and destroy infected plant material.
+ - Host Resistance: Planting resistant varieties is the most effective strategy.
+ - Chemical: Apply fungicides like mancozeb, chlorothalonil, or copper-based products as protectants.
+Vikaspedia ; UMN Extension
+
+Tomato Septoria Spot
+- Numerous small, water-soaked spots, typically on lower leaves first.
+ - Spots mature to have dark brown margins with tan or grey centers.
+ - Tiny black specks (pycnidia) are visible in the center of the spots.
+ - Leads to extensive defoliation from the bottom of the plant upwards.
+- Cultural: Practice a 3-year crop rotation. Use disease-free seed. Remove and destroy infected plant debris. Improve air circulation and use mulch. Avoid overhead watering.
+ - Chemical: Apply fungicides containing chlorothalonil, mancozeb, or copper at the first sign of disease.
+Vikaspedia ; GardenTech
+
+Tomato - Two-Spotted Spider Mites
+- Tiny yellow or white speckles (stippling) on leaves from mites sucking cell contents.
+ - Leaves can turn yellow or bronze and dry up.
+ - Fine webbing is often visible on the undersides of leaves in heavy infestations.
+- Cultural: Mites thrive in hot, dry conditions; keep plants well-watered. Periodically spray plants with a strong jet of water to dislodge mites.
+ - Biological: Conserve natural predators like predatory mites, lacewings, and ladybugs.
+ - Chemical: Avoid broad-spectrum insecticides. Use selective miticides (acaricides), horticultural oils, or insecticidal soaps if necessary.
+ICAR-NRC for Grapes ; Vikaspedia
+
+Tomato Mosaic Virus
+- Light green, yellow, and dark green mosaic or mottled pattern on leaves.
+ - Leaves may be malformed, crinkled, or smaller than normal ("fern leaf" symptom).
+ - Plants are often stunted.
+- Cultural: There is no cure. Management is entirely preventative. Practice strict sanitation (wash hands, disinfect tools). Remove and destroy infected plants immediately. Control weed hosts. Avoid using tobacco products near tomatoes.
+ - Host Resistance: Plant resistant varieties.
+Vikaspedia
+
+Tomato Yellow Leaf Curl Virus
+- Severe stunting of the plant.
+ - Upward curling and cupping of leaves.
+ - Distinct yellowing (chlorosis) of leaf margins.
+ - Poor fruit set due to flower drop.
+- Cultural (Vector Control): There is no cure. Management focuses on controlling the whitefly vector. Use insect-proof nets in nurseries, reflective mulches in the field, and plant tall barrier crops (e.g., maize). Remove and destroy infected plants and weed hosts.
+ - Host Resistance: This is the most effective strategy. Plant varieties with genetic resistance (e.g., containing Ty genes).
+ - Chemical (Vector Control): Apply insecticides to control the whitefly population, rotating classes to manage resistance.
+Vikaspedia ; CABI ; Frontiers in Plant Science

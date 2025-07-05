@@ -74,7 +74,15 @@ models/*.pt
 *.safetensors
 *.faiss
 model_cache/
-data/
+
+# Data directory - track everything except raw/plantdoc and raw/plantvillage
+data/**
+!data/raw/
+!data/raw/*/
+!data/raw/plantdoc/
+!data/raw/plantvillage/
+
+# Other ignored directories
 reports/
 old_scripts_archive/
 
