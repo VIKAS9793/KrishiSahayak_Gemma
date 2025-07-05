@@ -1,0 +1,347 @@
+{
+  "timestamp": "2025-07-04T21:15:20.953824",
+  "system_info": {
+    "cpu_count": 12,
+    "memory_total": 15.652114868164062,
+    "python_version": "3.11",
+    "model_name": "all-MiniLM-L6-v2"
+  },
+  "index_validation": {
+    "index_size": 46,
+    "texts_count": 46,
+    "dimension": 384,
+    "is_trained": true,
+    "issues": [],
+    "is_valid": true
+  },
+  "benchmark_results": {
+    "individual_results": [
+      {
+        "query": "What are the best practices for crop rotation?",
+        "results": [
+          {
+            "text": "Disease: Potato___Healthy. Symptoms: Vigorous, dark green foliage without spots or discoloration. Well-formed tubers. Strong, upright stems.. Remedy: Use certified disease-free seed potatoes. Rotate crops (3-4 years between potato plantings). Hill soil around plants to prevent tuber greening.. Source: Enhanced with additional data.",
+            "score": 1.2720904350280762,
+            "index": 29
+          },
+          {
+            "text": "Disease: Soybean___Healthy. Symptoms: Deep green, trifoliate leaves without spots or discoloration. Well-podded plants with good height. No stunting or yellowing.. Remedy: Practice crop rotation, use disease-resistant varieties, maintain proper soil fertility, and control weeds. Use high-quality, treated seed.. Source: Enhanced with additional data.",
+            "score": 1.2747265100479126,
+            "index": 32
+          },
+          {
+            "text": "Disease: Tomato___Healthy. Symptoms: Deep green, turgid leaves without spots or discoloration. Well-formed fruits. Strong, upright growth habit.. Remedy: Rotate crops annually, provide consistent moisture, use stakes or cages for support, and monitor for pests and diseases.. Source: Enhanced with additional data.",
+            "score": 1.297326683998108,
+            "index": 38
+          },
+          {
+            "text": "Disease: Apple___Healthy. Symptoms: Vibrant green leaves without spots or discoloration. Firm, blemish-free fruit. Strong, well-spaced branches with good air circulation.. Remedy: Maintain good cultural practices: proper spacing, regular pruning, balanced fertilization, and adequate irrigation. Monitor regularly for early signs of pests or diseases.. Source: Enhanced with additional data.",
+            "score": 1.3324222564697266,
+            "index": 3
+          },
+          {
+            "text": "Disease: Potato___Early_Blight. Symptoms: Leaves: \"Target-board\" or \"bull's-eye\" lesions; circular, dark brown spots with concentric rings, typically on older, lower leaves. Tubers: Brown, corky, dry rot with dark, circular, slightly raised surface lesions.. Remedy: Cultural: Practice a 2-3 year crop rotation with non-solanaceous crops. Use certified disease-free seed. Remove and destroy plant debris after harvest. Host Resistance: Late-maturing varieties are generally more resistant. Chemical: Apply fungicides (e.g., Mancozeb, Azoxystrobin, Chlorothalonil) at the first sign of disease.. Source: UC IPM ; Vikaspedia ; University of Connecticut.",
+            "score": 1.3947930335998535,
+            "index": 28
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.04136395454406738, memory_usage=49.70703125, cpu_usage=488.3, query_length=46, results_count=5, relevance_score=1.3142717838287354)"
+      },
+      {
+        "query": "How to manage pest control in organic farming?",
+        "results": [
+          {
+            "text": "Disease: Tomato___Leaf_Mold. Symptoms: Pale greenish-yellow spots with indefinite margins on the upper leaf surface. An olive-green to brownish, velvety mold develops on the corresponding lower surface. Leaves turn yellow, wither, and die but often remain attached.. Remedy: Cultural: Ensure good air circulation by staking and pruning. Avoid overhead irrigation. Lower humidity in greenhouses. Remove and destroy infected plant material. Host Resistance: Planting resistant varieties is the most effective strategy. Chemical: Apply fungicides like mancozeb, chlorothalonil, or copper-based products as protectants.. Source: Vikaspedia ; UMN Extension.",
+            "score": 1.2154669761657715,
+            "index": 40
+          },
+          {
+            "text": "Disease: Tomato___Two-Spotted_Spider_Mites. Symptoms: Fine stippling or yellow speckling on leaves. Fine webbing on undersides of leaves. Severe infestations cause leaf bronzing and drop.. Remedy: Use insecticidal soaps or horticultural oils. Encourage natural predators like lady beetles. Maintain adequate moisture as mites thrive in dry conditions.. Source: Enhanced with additional data.",
+            "score": 1.2535806894302368,
+            "index": 45
+          },
+          {
+            "text": "Disease: Tomato___Late_Blight. Symptoms: Leaves: Large, purple-brown, oily-appearing blotches. A white, fuzzy mold appears on the underside of leaves in humid conditions. Fruit: Large, firm, brown to black, greasy-looking blotches, often on the fruit's shoulders.. Remedy: Cultural: Use certified disease-free transplants. Destroy volunteer potato/tomato plants. Avoid sprinkler irrigation. Host Resistance: Use resistant varieties. In India, 'Arka Abhed F1' has shown resistance. Chemical: Preventative sprays are critical. In India, sprays of copper oxychloride with soil mulching are highly effective. Other options include Metalaxyl + Mancozeb.. Source: ResearchGate ; UC IPM ; Katyayani Krishi Direct.",
+            "score": 1.2572555541992188,
+            "index": 39
+          },
+          {
+            "text": "Disease: Squash___Powdery_Mildew. Symptoms: White, powdery (ash-like) coating in patches on leaves and young shoots. Affected leaves may turn pale and curl up, leading to defoliation in severe cases.. Remedy: Cultural: Prune and destroy affected plant parts. Ensure good air circulation with adequate plant spacing. Avoid overhead irrigation. Chemical: Spray with Sulphur, Carbendazim, or Karathane. Organic: Neem oil, potassium bicarbonate, or milk-based sprays are effective options.. Source: National Horticulture Board (NHB.gov.in) ; eOrganic.",
+            "score": 1.2989084720611572,
+            "index": 33
+          },
+          {
+            "text": "Disease: Tomato___Healthy. Symptoms: Deep green, turgid leaves without spots or discoloration. Well-formed fruits. Strong, upright growth habit.. Remedy: Rotate crops annually, provide consistent moisture, use stakes or cages for support, and monitor for pests and diseases.. Source: Enhanced with additional data.",
+            "score": 1.3166344165802002,
+            "index": 38
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.0168454647064209, memory_usage=0.04296875, cpu_usage=504.0, query_length=46, results_count=5, relevance_score=1.2683692216873168)"
+      },
+      {
+        "query": "What fertilizers are recommended for wheat cultivation?",
+        "results": [
+          {
+            "text": "Disease: Corn___Common_Rust. Symptoms: Circular to elongated, powdery, cinnamon-brown pustules on both upper and lower leaf surfaces. Pustules turn brownish-black as the plant matures.. Remedy: Cultural: Remove alternate hosts (Oxalis species) from around fields. Collect and destroy infected crop residue after harvest. Host Resistance: Planting resistant maize hybrids is the most effective method. Chemical: TNAU recommends foliar sprays of fungicides like Mancozeb, Tebuconazole, or Kresoxim-methyl at 35 and 50 days after sowing.. Source: TNAU Agritech Portal ; ICAR-IIMR.",
+            "score": 1.3737832307815552,
+            "index": 13
+          },
+          {
+            "text": "Disease: Soybean___Healthy. Symptoms: Deep green, trifoliate leaves without spots or discoloration. Well-podded plants with good height. No stunting or yellowing.. Remedy: Practice crop rotation, use disease-resistant varieties, maintain proper soil fertility, and control weeds. Use high-quality, treated seed.. Source: Enhanced with additional data.",
+            "score": 1.4430396556854248,
+            "index": 32
+          },
+          {
+            "text": "Disease: Tomato___Late_Blight. Symptoms: Leaves: Large, purple-brown, oily-appearing blotches. A white, fuzzy mold appears on the underside of leaves in humid conditions. Fruit: Large, firm, brown to black, greasy-looking blotches, often on the fruit's shoulders.. Remedy: Cultural: Use certified disease-free transplants. Destroy volunteer potato/tomato plants. Avoid sprinkler irrigation. Host Resistance: Use resistant varieties. In India, 'Arka Abhed F1' has shown resistance. Chemical: Preventative sprays are critical. In India, sprays of copper oxychloride with soil mulching are highly effective. Other options include Metalaxyl + Mancozeb.. Source: ResearchGate ; UC IPM ; Katyayani Krishi Direct.",
+            "score": 1.4566234350204468,
+            "index": 39
+          },
+          {
+            "text": "Disease: Corn___Healthy. Symptoms: Upright, deep green leaves without spots or discoloration. Well-developed tassels and ears. Strong stalks with good ear development.. Remedy: Plant in well-drained soil with full sun. Use balanced fertilization based on soil tests. Maintain proper plant spacing and irrigation.. Source: Enhanced with additional data.",
+            "score": 1.4640107154846191,
+            "index": 15
+          },
+          {
+            "text": "Disease: Potato___Early_Blight. Symptoms: Leaves: \"Target-board\" or \"bull's-eye\" lesions; circular, dark brown spots with concentric rings, typically on older, lower leaves. Tubers: Brown, corky, dry rot with dark, circular, slightly raised surface lesions.. Remedy: Cultural: Practice a 2-3 year crop rotation with non-solanaceous crops. Use certified disease-free seed. Remove and destroy plant debris after harvest. Host Resistance: Late-maturing varieties are generally more resistant. Chemical: Apply fungicides (e.g., Mancozeb, Azoxystrobin, Chlorothalonil) at the first sign of disease.. Source: UC IPM ; Vikaspedia ; University of Connecticut.",
+            "score": 1.4865901470184326,
+            "index": 28
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.017230749130249023, memory_usage=0.34765625, cpu_usage=625.0, query_length=55, results_count=5, relevance_score=1.4448094367980957)"
+      },
+      {
+        "query": "How to improve soil health naturally?",
+        "results": [
+          {
+            "text": "Disease: Soybean___Healthy. Symptoms: Deep green, trifoliate leaves without spots or discoloration. Well-podded plants with good height. No stunting or yellowing.. Remedy: Practice crop rotation, use disease-resistant varieties, maintain proper soil fertility, and control weeds. Use high-quality, treated seed.. Source: Enhanced with additional data.",
+            "score": 1.2837871313095093,
+            "index": 32
+          },
+          {
+            "text": "Disease: Tomato___Late_Blight. Symptoms: Leaves: Large, purple-brown, oily-appearing blotches. A white, fuzzy mold appears on the underside of leaves in humid conditions. Fruit: Large, firm, brown to black, greasy-looking blotches, often on the fruit's shoulders.. Remedy: Cultural: Use certified disease-free transplants. Destroy volunteer potato/tomato plants. Avoid sprinkler irrigation. Host Resistance: Use resistant varieties. In India, 'Arka Abhed F1' has shown resistance. Chemical: Preventative sprays are critical. In India, sprays of copper oxychloride with soil mulching are highly effective. Other options include Metalaxyl + Mancozeb.. Source: ResearchGate ; UC IPM ; Katyayani Krishi Direct.",
+            "score": 1.3142812252044678,
+            "index": 39
+          },
+          {
+            "text": "Disease: Blueberry___Healthy. Symptoms: Dark green, waxy leaves without spots or discoloration. Firm, plump berries. Vigorous, well-branched growth.. Remedy: Maintain acidic soil (pH 4.5-5.5), provide adequate moisture, mulch with pine bark or sawdust, and prune annually to encourage air circulation.. Source: Enhanced with additional data.",
+            "score": 1.3444783687591553,
+            "index": 7
+          },
+          {
+            "text": "Disease: Potato___Late_Blight. Symptoms: Leaves: Large, irregular, purple-brown to black, oily-appearing blotches. A fuzzy white mold appears on the underside of leaves in high humidity. Tubers: Reddish-brown, granular dry rot that extends from the skin into the tuber flesh.. Remedy: Cultural: Use certified, disease-free seed potatoes. Destroy all volunteer plants and cull piles. In high-rainfall areas of India, soil mulching with black polythene is effective. Host Resistance: Use resistant varieties like 'Kufri Girdhari' and 'Kufri Shailja' developed by ICAR-CPRI. Chemical: Preventative sprays are essential. Copper-based fungicides and premixes like Metalaxyl + Mancozeb are recommended.. Source: ARCC Journals ; ResearchGate ; ICAR.",
+            "score": 1.3518309593200684,
+            "index": 30
+          },
+          {
+            "text": "Disease: Squash___Powdery_Mildew. Symptoms: White, powdery (ash-like) coating in patches on leaves and young shoots. Affected leaves may turn pale and curl up, leading to defoliation in severe cases.. Remedy: Cultural: Prune and destroy affected plant parts. Ensure good air circulation with adequate plant spacing. Avoid overhead irrigation. Chemical: Spray with Sulphur, Carbendazim, or Karathane. Organic: Neem oil, potassium bicarbonate, or milk-based sprays are effective options.. Source: National Horticulture Board (NHB.gov.in) ; eOrganic.",
+            "score": 1.3608320951461792,
+            "index": 33
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.015534162521362305, memory_usage=0.375, cpu_usage=1074.2, query_length=37, results_count=5, relevance_score=1.3310419559478759)"
+      },
+      {
+        "query": "What are the signs of nutrient deficiency in plants?",
+        "results": [
+          {
+            "text": "Disease: Soybean___Healthy. Symptoms: Deep green, trifoliate leaves without spots or discoloration. Well-podded plants with good height. No stunting or yellowing.. Remedy: Practice crop rotation, use disease-resistant varieties, maintain proper soil fertility, and control weeds. Use high-quality, treated seed.. Source: Enhanced with additional data.",
+            "score": 1.113350749015808,
+            "index": 32
+          },
+          {
+            "text": "Disease: Corn___Rust. Symptoms: Small, circular to elongate, powdery, reddish-brown pustules on both leaf surfaces. Severe infections cause premature leaf death.. Remedy: Plant resistant hybrids, rotate crops, and apply fungicides if disease appears early in the season. Remove volunteer corn plants.. Source: Enhanced with additional data.",
+            "score": 1.1478605270385742,
+            "index": 17
+          },
+          {
+            "text": "Disease: Corn___Healthy. Symptoms: Upright, deep green leaves without spots or discoloration. Well-developed tassels and ears. Strong stalks with good ear development.. Remedy: Plant in well-drained soil with full sun. Use balanced fertilization based on soil tests. Maintain proper plant spacing and irrigation.. Source: Enhanced with additional data.",
+            "score": 1.1494390964508057,
+            "index": 15
+          },
+          {
+            "text": "Disease: Tomato___Healthy. Symptoms: Deep green, turgid leaves without spots or discoloration. Well-formed fruits. Strong, upright growth habit.. Remedy: Rotate crops annually, provide consistent moisture, use stakes or cages for support, and monitor for pests and diseases.. Source: Enhanced with additional data.",
+            "score": 1.1601760387420654,
+            "index": 38
+          },
+          {
+            "text": "Disease: Raspberry___Healthy. Symptoms: Vibrant green leaves without spots or discoloration. Firm, well-formed berries. Strong, upright canes.. Remedy: Prune out old canes after fruiting. Maintain good air circulation. Provide consistent moisture and balanced nutrition. Mulch to control weeds.. Source: Enhanced with additional data.",
+            "score": 1.1743855476379395,
+            "index": 31
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.018448829650878906, memory_usage=0.4296875, cpu_usage=976.6, query_length=52, results_count=5, relevance_score=1.1490423917770385)"
+      },
+      {
+        "query": "Best irrigation techniques for water conservation",
+        "results": [
+          {
+            "text": "Disease: Tomato___Late_Blight. Symptoms: Leaves: Large, purple-brown, oily-appearing blotches. A white, fuzzy mold appears on the underside of leaves in humid conditions. Fruit: Large, firm, brown to black, greasy-looking blotches, often on the fruit's shoulders.. Remedy: Cultural: Use certified disease-free transplants. Destroy volunteer potato/tomato plants. Avoid sprinkler irrigation. Host Resistance: Use resistant varieties. In India, 'Arka Abhed F1' has shown resistance. Chemical: Preventative sprays are critical. In India, sprays of copper oxychloride with soil mulching are highly effective. Other options include Metalaxyl + Mancozeb.. Source: ResearchGate ; UC IPM ; Katyayani Krishi Direct.",
+            "score": 1.653632402420044,
+            "index": 39
+          },
+          {
+            "text": "Disease: Potato___Late_Blight. Symptoms: Leaves: Large, irregular, purple-brown to black, oily-appearing blotches. A fuzzy white mold appears on the underside of leaves in high humidity. Tubers: Reddish-brown, granular dry rot that extends from the skin into the tuber flesh.. Remedy: Cultural: Use certified, disease-free seed potatoes. Destroy all volunteer plants and cull piles. In high-rainfall areas of India, soil mulching with black polythene is effective. Host Resistance: Use resistant varieties like 'Kufri Girdhari' and 'Kufri Shailja' developed by ICAR-CPRI. Chemical: Preventative sprays are essential. Copper-based fungicides and premixes like Metalaxyl + Mancozeb are recommended.. Source: ARCC Journals ; ResearchGate ; ICAR.",
+            "score": 1.6642465591430664,
+            "index": 30
+          },
+          {
+            "text": "Disease: Grape___Healthy. Symptoms: Deep green, turgid leaves without spots or discoloration. Well-formed fruit clusters. Strong, well-attached canes.. Remedy: Prune annually to maintain good air circulation, provide proper support, and monitor for pests and diseases. Maintain consistent soil moisture.. Source: Enhanced with additional data.",
+            "score": 1.6769490242004395,
+            "index": 21
+          },
+          {
+            "text": "Disease: Soybean___Healthy. Symptoms: Deep green, trifoliate leaves without spots or discoloration. Well-podded plants with good height. No stunting or yellowing.. Remedy: Practice crop rotation, use disease-resistant varieties, maintain proper soil fertility, and control weeds. Use high-quality, treated seed.. Source: Enhanced with additional data.",
+            "score": 1.678968906402588,
+            "index": 32
+          },
+          {
+            "text": "Disease: Tomato___Bacterial_Spot. Symptoms: Leaves: Small, water-soaked, circular spots, often with a yellow halo. Lesions become angular and dark brown/black, leading to defoliation. Fruit: Small, slightly raised, water-soaked spots on green fruit that become brown and scabby.. Remedy: Cultural: Use certified disease-free seed and transplants. Practice a 3-4 year crop rotation away from solanaceous crops. Stake plants and use mulch. Chemical: Protective sprays with copper-containing bactericides, often mixed with Mancozeb. Drenching seedlings with Streptomycin before transplanting is also practiced.. Source: Vikaspedia ; Nunhems ; UC IPM.",
+            "score": 1.6962873935699463,
+            "index": 36
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.01266932487487793, memory_usage=0.11328125, cpu_usage=1041.7, query_length=49, results_count=5, relevance_score=1.6740168571472167)"
+      },
+      {
+        "query": "How to prevent crop diseases during monsoon?",
+        "results": [
+          {
+            "text": "Disease: Potato___Late_Blight. Symptoms: Leaves: Large, irregular, purple-brown to black, oily-appearing blotches. A fuzzy white mold appears on the underside of leaves in high humidity. Tubers: Reddish-brown, granular dry rot that extends from the skin into the tuber flesh.. Remedy: Cultural: Use certified, disease-free seed potatoes. Destroy all volunteer plants and cull piles. In high-rainfall areas of India, soil mulching with black polythene is effective. Host Resistance: Use resistant varieties like 'Kufri Girdhari' and 'Kufri Shailja' developed by ICAR-CPRI. Chemical: Preventative sprays are essential. Copper-based fungicides and premixes like Metalaxyl + Mancozeb are recommended.. Source: ARCC Journals ; ResearchGate ; ICAR.",
+            "score": 1.0357897281646729,
+            "index": 30
+          },
+          {
+            "text": "Disease: Tomato___Late_Blight. Symptoms: Leaves: Large, purple-brown, oily-appearing blotches. A white, fuzzy mold appears on the underside of leaves in humid conditions. Fruit: Large, firm, brown to black, greasy-looking blotches, often on the fruit's shoulders.. Remedy: Cultural: Use certified disease-free transplants. Destroy volunteer potato/tomato plants. Avoid sprinkler irrigation. Host Resistance: Use resistant varieties. In India, 'Arka Abhed F1' has shown resistance. Chemical: Preventative sprays are critical. In India, sprays of copper oxychloride with soil mulching are highly effective. Other options include Metalaxyl + Mancozeb.. Source: ResearchGate ; UC IPM ; Katyayani Krishi Direct.",
+            "score": 1.0480811595916748,
+            "index": 39
+          },
+          {
+            "text": "Disease: Soybean___Healthy. Symptoms: Deep green, trifoliate leaves without spots or discoloration. Well-podded plants with good height. No stunting or yellowing.. Remedy: Practice crop rotation, use disease-resistant varieties, maintain proper soil fertility, and control weeds. Use high-quality, treated seed.. Source: Enhanced with additional data.",
+            "score": 1.120718002319336,
+            "index": 32
+          },
+          {
+            "text": "Disease: Tomato___Early_Blight. Symptoms: Leaves: Small, black or brown lesions, mostly on older foliage, that enlarge into a \"bull's-eye\" pattern with concentric rings. Fruit: Dark, leathery, sunken lesions with concentric rings, typically at the stem end.. Remedy: Cultural: Use a 2-3 year crop rotation with non-solanaceous crops. Use disease-free seeds. Stake or cage plants to improve air circulation. Host Resistance: Plant tolerant varieties like 'Indus 1030 tomato' or 'Bangalore red tomato'. Chemical: Apply fungicides like Mancozeb, Chlorothalonil, or Copper Oxychloride.. Source: BigHaat Kisan Vedika ; Katyayani Krishi Direct ; GardenTech.",
+            "score": 1.1444568634033203,
+            "index": 37
+          },
+          {
+            "text": "Disease: Tomato___Leaf_Mold. Symptoms: Pale greenish-yellow spots with indefinite margins on the upper leaf surface. An olive-green to brownish, velvety mold develops on the corresponding lower surface. Leaves turn yellow, wither, and die but often remain attached.. Remedy: Cultural: Ensure good air circulation by staking and pruning. Avoid overhead irrigation. Lower humidity in greenhouses. Remove and destroy infected plant material. Host Resistance: Planting resistant varieties is the most effective strategy. Chemical: Apply fungicides like mancozeb, chlorothalonil, or copper-based products as protectants.. Source: Vikaspedia ; UMN Extension.",
+            "score": 1.1467293500900269,
+            "index": 40
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.013718128204345703, memory_usage=0.11328125, cpu_usage=976.6, query_length=44, results_count=5, relevance_score=1.099155020713806)"
+      },
+      {
+        "query": "Organic farming methods for sustainable agriculture",
+        "results": [
+          {
+            "text": "Disease: Tomato___Leaf_Mold. Symptoms: Pale greenish-yellow spots with indefinite margins on the upper leaf surface. An olive-green to brownish, velvety mold develops on the corresponding lower surface. Leaves turn yellow, wither, and die but often remain attached.. Remedy: Cultural: Ensure good air circulation by staking and pruning. Avoid overhead irrigation. Lower humidity in greenhouses. Remove and destroy infected plant material. Host Resistance: Planting resistant varieties is the most effective strategy. Chemical: Apply fungicides like mancozeb, chlorothalonil, or copper-based products as protectants.. Source: Vikaspedia ; UMN Extension.",
+            "score": 1.3881402015686035,
+            "index": 40
+          },
+          {
+            "text": "Disease: Tomato___Late_Blight. Symptoms: Leaves: Large, purple-brown, oily-appearing blotches. A white, fuzzy mold appears on the underside of leaves in humid conditions. Fruit: Large, firm, brown to black, greasy-looking blotches, often on the fruit's shoulders.. Remedy: Cultural: Use certified disease-free transplants. Destroy volunteer potato/tomato plants. Avoid sprinkler irrigation. Host Resistance: Use resistant varieties. In India, 'Arka Abhed F1' has shown resistance. Chemical: Preventative sprays are critical. In India, sprays of copper oxychloride with soil mulching are highly effective. Other options include Metalaxyl + Mancozeb.. Source: ResearchGate ; UC IPM ; Katyayani Krishi Direct.",
+            "score": 1.4176112413406372,
+            "index": 39
+          },
+          {
+            "text": "Disease: Tomato___Healthy. Symptoms: Deep green, turgid leaves without spots or discoloration. Well-formed fruits. Strong, upright growth habit.. Remedy: Rotate crops annually, provide consistent moisture, use stakes or cages for support, and monitor for pests and diseases.. Source: Enhanced with additional data.",
+            "score": 1.4241198301315308,
+            "index": 38
+          },
+          {
+            "text": "Disease: Soybean___Healthy. Symptoms: Deep green, trifoliate leaves without spots or discoloration. Well-podded plants with good height. No stunting or yellowing.. Remedy: Practice crop rotation, use disease-resistant varieties, maintain proper soil fertility, and control weeds. Use high-quality, treated seed.. Source: Enhanced with additional data.",
+            "score": 1.437891960144043,
+            "index": 32
+          },
+          {
+            "text": "Disease: Potato___Healthy. Symptoms: Vigorous, dark green foliage without spots or discoloration. Well-formed tubers. Strong, upright stems.. Remedy: Use certified disease-free seed potatoes. Rotate crops (3-4 years between potato plantings). Hill soil around plants to prevent tuber greening.. Source: Enhanced with additional data.",
+            "score": 1.4451569318771362,
+            "index": 29
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.0120086669921875, memory_usage=0.1328125, cpu_usage=683.6, query_length=51, results_count=5, relevance_score=1.4225840330123902)"
+      },
+      {
+        "query": "What are the benefits of companion planting?",
+        "results": [
+          {
+            "text": "Disease: Apple___Healthy. Symptoms: Vibrant green leaves without spots or discoloration. Firm, blemish-free fruit. Strong, well-spaced branches with good air circulation.. Remedy: Maintain good cultural practices: proper spacing, regular pruning, balanced fertilization, and adequate irrigation. Monitor regularly for early signs of pests or diseases.. Source: Enhanced with additional data.",
+            "score": 1.3831501007080078,
+            "index": 3
+          },
+          {
+            "text": "Disease: Soybean___Healthy. Symptoms: Deep green, trifoliate leaves without spots or discoloration. Well-podded plants with good height. No stunting or yellowing.. Remedy: Practice crop rotation, use disease-resistant varieties, maintain proper soil fertility, and control weeds. Use high-quality, treated seed.. Source: Enhanced with additional data.",
+            "score": 1.3954834938049316,
+            "index": 32
+          },
+          {
+            "text": "Disease: Tomato___Healthy. Symptoms: Deep green, turgid leaves without spots or discoloration. Well-formed fruits. Strong, upright growth habit.. Remedy: Rotate crops annually, provide consistent moisture, use stakes or cages for support, and monitor for pests and diseases.. Source: Enhanced with additional data.",
+            "score": 1.4483184814453125,
+            "index": 38
+          },
+          {
+            "text": "Disease: Raspberry___Healthy. Symptoms: Vibrant green leaves without spots or discoloration. Firm, well-formed berries. Strong, upright canes.. Remedy: Prune out old canes after fruiting. Maintain good air circulation. Provide consistent moisture and balanced nutrition. Mulch to control weeds.. Source: Enhanced with additional data.",
+            "score": 1.456228494644165,
+            "index": 31
+          },
+          {
+            "text": "Disease: Grape___Healthy. Symptoms: Deep green, turgid leaves without spots or discoloration. Well-formed fruit clusters. Strong, well-attached canes.. Remedy: Prune annually to maintain good air circulation, provide proper support, and monitor for pests and diseases. Maintain consistent soil moisture.. Source: Enhanced with additional data.",
+            "score": 1.4612270593643188,
+            "index": 21
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.010632753372192383, memory_usage=0.0390625, cpu_usage=0.0, query_length=44, results_count=5, relevance_score=1.4288815259933472)"
+      },
+      {
+        "query": "How to increase crop yield without chemicals?",
+        "results": [
+          {
+            "text": "Disease: Soybean___Healthy. Symptoms: Deep green, trifoliate leaves without spots or discoloration. Well-podded plants with good height. No stunting or yellowing.. Remedy: Practice crop rotation, use disease-resistant varieties, maintain proper soil fertility, and control weeds. Use high-quality, treated seed.. Source: Enhanced with additional data.",
+            "score": 1.3050684928894043,
+            "index": 32
+          },
+          {
+            "text": "Disease: Tomato___Late_Blight. Symptoms: Leaves: Large, purple-brown, oily-appearing blotches. A white, fuzzy mold appears on the underside of leaves in humid conditions. Fruit: Large, firm, brown to black, greasy-looking blotches, often on the fruit's shoulders.. Remedy: Cultural: Use certified disease-free transplants. Destroy volunteer potato/tomato plants. Avoid sprinkler irrigation. Host Resistance: Use resistant varieties. In India, 'Arka Abhed F1' has shown resistance. Chemical: Preventative sprays are critical. In India, sprays of copper oxychloride with soil mulching are highly effective. Other options include Metalaxyl + Mancozeb.. Source: ResearchGate ; UC IPM ; Katyayani Krishi Direct.",
+            "score": 1.313950538635254,
+            "index": 39
+          },
+          {
+            "text": "Disease: Tomato___Bacterial_Spot. Symptoms: Leaves: Small, water-soaked, circular spots, often with a yellow halo. Lesions become angular and dark brown/black, leading to defoliation. Fruit: Small, slightly raised, water-soaked spots on green fruit that become brown and scabby.. Remedy: Cultural: Use certified disease-free seed and transplants. Practice a 3-4 year crop rotation away from solanaceous crops. Stake plants and use mulch. Chemical: Protective sprays with copper-containing bactericides, often mixed with Mancozeb. Drenching seedlings with Streptomycin before transplanting is also practiced.. Source: Vikaspedia ; Nunhems ; UC IPM.",
+            "score": 1.391413927078247,
+            "index": 36
+          },
+          {
+            "text": "Disease: Pepper___Bell_Bacterial_Spot. Symptoms: Small, water-soaked spots on leaves that become necrotic with yellow halos. Spots may coalesce, causing leaf drop. Raised, scabby lesions on fruit.. Remedy: Use disease-free seed and transplants. Apply copper-based bactericides. Avoid overhead irrigation. Remove and destroy infected plants. Practice crop rotation.. Source: Enhanced with additional data.",
+            "score": 1.4215142726898193,
+            "index": 26
+          },
+          {
+            "text": "Disease: Corn___Common_Rust. Symptoms: Circular to elongated, powdery, cinnamon-brown pustules on both upper and lower leaf surfaces. Pustules turn brownish-black as the plant matures.. Remedy: Cultural: Remove alternate hosts (Oxalis species) from around fields. Collect and destroy infected crop residue after harvest. Host Resistance: Planting resistant maize hybrids is the most effective method. Chemical: TNAU recommends foliar sprays of fungicides like Mancozeb, Tebuconazole, or Kresoxim-methyl at 35 and 50 days after sowing.. Source: TNAU Agritech Portal ; ICAR-IIMR.",
+            "score": 1.4306650161743164,
+            "index": 13
+          }
+        ],
+        "metrics": "PerformanceMetrics(search_time=0.04381680488586426, memory_usage=-0.1015625, cpu_usage=135.9, query_length=45, results_count=5, relevance_score=1.3725224494934083)"
+      }
+    ],
+    "summary_stats": {
+      "avg_search_time": 0.020226883888244628,
+      "max_search_time": 0.04381680488586426,
+      "min_search_time": 0.010632753372192383,
+      "p95_search_time": 0.04271302223205566,
+      "avg_memory_usage": 5.119921875,
+      "avg_cpu_usage": 650.5899999999999,
+      "avg_relevance_score": 1.3504694676399231,
+      "min_relevance_score": 1.099155020713806,
+      "max_relevance_score": 1.6740168571472167
+    },
+    "total_queries": 10,
+    "successful_queries": 10
+  },
+  "recommendations": [
+    "Small index size. Consider adding more diverse training data for better coverage"
+  ]
+}

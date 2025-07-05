@@ -83,7 +83,6 @@ data/**
 !data/raw/plantvillage/
 
 # Other ignored directories
-reports/
 old_scripts_archive/
 
 # Documentation files
