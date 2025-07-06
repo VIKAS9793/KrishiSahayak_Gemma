@@ -83,13 +83,13 @@ Okay, here's a breakdown of why it's likely [Early Blight], what to look for, an
 ![Model Configuration](images/1.png)
 *Figure 1: Model architecture and configuration showing the 4.46B parameter Gemma-3n model with 30 layers and 8 attention heads.*
 
-### Interactive Demo
-![Interactive Demo](images/2.png)
-*Figure 2: Interactive demo showing the model's response to agricultural queries with the terminal interface.*
-
 ### Performance Metrics
-![Performance Metrics](images/3.png)
-*Figure 3: Performance metrics and token generation statistics from the model inference.*
+![Performance Metrics](images/2.png)
+*Figure 2: Performance metrics and token generation statistics from the model inference.*
+
+### Interactive Demo
+![Interactive Demo](images/3.png)
+*Figure 3: Interactive demo showing the model's response to agricultural queries with the terminal interface.*
 
 ## Model Card Contact
 For questions about this model card, please contact:
