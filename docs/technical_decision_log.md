@@ -1,5 +1,6 @@
 # Technical Decision Log: KrishiSahayak Web Demo
 
+**Version:** 1.1  
 **Date:** July 6, 2025  
 **Status:** Finalized  
 **Component:** web_demo
@@ -46,6 +47,26 @@ To enhance the reliability and explainability of the demo, a Retrieval-Augmented
 
 **Benefit:** This adds a layer of robustness. When the base model is not confident, it can retrieve relevant, expert-verified information from our knowledge base to provide a more accurate and trustworthy final answer.
 
-## 5. Conclusion
+## 5. Deployment & Distribution Strategy
+
+The two project tracks have distinct deployment models.
+
+### Web Demo:
+- Deployed on a standard cloud server or run locally for demonstration purposes.
+- Requires an active internet connection to download the model on first run.
+
+### Android App:
+- A fully offline application.
+- Not distributed through the Google Play Store.
+- Distribution method:
+  - Final .apk file will be distributed through a network of trusted partners (NGOs, local agricultural centers).
+  - Updates (containing new models or databases) will be delivered to partners.
+  - Partners will distribute updates to farmers via P2P methods like SD cards or local file sharing.
+- **Benefits:**
+  - Ensures application accessibility in areas with no internet connectivity.
+  - Maintains the ability to push updates through trusted local networks.
+  - Reduces data costs and infrastructure requirements for end-users.
+
+## 6. Conclusion
 
 The chosen architecture and technologies are optimal for the web demo. By keeping the web and mobile tracks separate, we can effectively showcase the project's full potential while ensuring the final Android product is perfectly optimized for its real-world constraints.

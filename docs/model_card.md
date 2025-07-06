@@ -1,9 +1,9 @@
-# Model Card for KrishiSahayak-Gemma-v1.0
+# Model Card for KrishiSahayak-Gemma-v1.1
 
 ## Model Details
 ### Model Description
 - **Model Name:** gemma-3n-q4_k_m.gguf
-- **Version:** 1.0
+- **Version:** 1.1
 - **Base Model:** google/gemma-3n-E2B-it
 - **Model Type:** Instruction-tuned, text-to-text generative AI
 - **Architecture:** gemma3n (4.46 Billion Parameters)

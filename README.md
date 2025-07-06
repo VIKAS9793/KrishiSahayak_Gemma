@@ -463,3 +463,4 @@ For any questions, feedback, or support, please don't hesitate to reach out:
   <p>Made with ❤️ for farmers and the open source community</p>
   <img src="https://komarev.com/ghpvc/?username=VIKAS9793&label=Project%20Visitors&color=blueviolet&style=flat" alt="Project Visitors">
 </div>
+
