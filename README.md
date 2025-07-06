@@ -272,7 +272,6 @@ KrishiSahayak-Gemma/
 └── 📁 web_demo/            # Web-based demonstration
     ├── 📄 app.py                  # Main application
     ├── 📄 requirements.txt        # Python dependencies
-    ├── 📄 MODEL_CARD.md          # Model documentation
     │
     └── 📁 src/                   # Source code
         ├── 📁 pipeline/          # ML pipeline components
