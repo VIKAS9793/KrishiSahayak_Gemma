@@ -17,7 +17,7 @@ The central component of the system is a highly optimized version of Google's Ge
 - **Final Format:** GGUF with Q4_K_M 4-bit quantization.
 - **Final Size:** 2.59 GiB
 
-This asset was produced via a robust pipeline on a high-performance GCP instance, and its performance has been validated (see [Model Card](web_demo/MODEL_CARD.md) for full metrics).
+This asset was produced via a robust pipeline on a high-performance GCP instance, and its performance has been validated (see [Model Card](model_card.md) for full metrics).
 
 ## 3. Data Architecture
 
