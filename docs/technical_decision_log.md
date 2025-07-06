@@ -1,56 +1,51 @@
-# Technical Decision Log: KrishiSahayak+Gemma
+# Technical Decision Log: KrishiSahayak Web Demo
 
-**Date:** July 5, 2025  
-**Status:** Approved  
-**Version:** 1.0
+**Date:** July 6, 2025  
+**Status:** Finalized  
+**Component:** web_demo
 
 ## 1. Objective
-The primary technical objective was to convert the `google/gemma-3n-e2b-it` model into a quantized TensorFlow Lite (.tflite) file suitable for offline, on-device inference in a hyper-constrained environment (2GB RAM).
 
-## 2. The Core Challenge: "Dependency Hell" in Cloud Environments
-The project faced a persistent and critical blocker: the inability to create a stable Python environment for model conversion within standard cloud notebook platforms (Google Colab, Kaggle).
+The primary objective for this component was to rapidly develop a high-fidelity, interactive web-based prototype. This prototype serves two main purposes:
+- To validate the core multimodal AI pipeline (Image + Audio → Diagnosis)
+- To provide a functional and impressive demo for stakeholders, showcasing the project's potential before embarking on the more complex native Android development.
 
-### 2.1. Root Cause Analysis
-The root cause was identified as a fundamental conflict between the pre-installed, older software packages in the cloud environments and the new, cutting-edge libraries required to support the novel architecture of the Gemma 3n model family.
+## 2. Architectural Decisions
 
-- **Pre-existing Environment:** Cloud notebooks come with dozens of libraries (tensorflow, numpy, transformers, etc.) already installed.
-- **Conflicting Requirements:** The optimum and ai-edge-torch libraries, required for conversion, have strict dependency requirements that clashed with these pre-installed packages.
-- **Resolution Failure:** pip's dependency resolver correctly identified these conflicts and failed with ResolutionImpossible errors, preventing the creation of a stable environment.
+A standard, server-based Python architecture was chosen to prioritize development speed and leverage the mature Python AI ecosystem.
 
-### 2.2. Attempted Solutions & Outcomes
-A series of industry-standard solutions were systematically attempted to resolve the environmental conflicts.
+| Component | Technology | Justification |
+|-----------|------------|---------------|
+| Web Framework | Gradio | Selected for its ability to create rich, interactive ML application interfaces with minimal code, making it ideal for rapid prototyping. |
+| Backend Logic | Python 3 | The de-facto standard for ML engineering, providing access to all necessary libraries for inference, audio processing, and search. |
+| Serving | FastAPI / Uvicorn | These are the underlying, high-performance web servers used by Gradio to handle user requests efficiently. |
 
-| Attempt | Strategy | Outcome | Analysis |
-|---------|----------|---------|----------|
-| A | Standard pip install | Failure | ResolutionImpossible errors due to conflicts with base image packages. |
-| B | Pinned Versions | Failure | ResolutionImpossible errors. Manually guessing a compatible set of versions for such new libraries proved impossible. |
-| C | Install from Source (GitHub) | Failure | ImportError. Even the latest dev versions of the libraries had internal incompatibilities. |
-| D | Isolated conda Environment | Failure | ResolutionImpossible. Conda's more powerful resolver also failed, confirming the deep incompatibility. |
-| E | Docker Environment | Blocked | The ideal solution was blocked by the user's local machine failing to install Docker Desktop, a prerequisite. |
+## 3. Model & Inference Strategy
 
-## 3. The Second Challenge: Unstable Tooling
-The repeated failures led to a critical insight, which was confirmed by further research: the standard open-source conversion tools (optimum) were not yet officially stable for the brand-new Gemma 3n architecture. The model was released ahead of full support in the community toolchain.
+A key decision was made to use different model assets for the web demo and the final Android application, optimizing each for its specific environment.
 
-## 4. Final Solution & Architectural Pivot
-The only professional engineering path forward was to stop trying to fix an unstable conversion process and instead use an official, pre-built artifact.
+### Web Demo Strategy (Implemented):
+- **Model Source:** The base `google/gemma-3n-E2B-it` model is downloaded directly from the Hugging Face Hub at runtime.
+- **Inference Library:** The Hugging Face `transformers` library is used to run inference.
+- **Quantization:** BitsAndBytes is used to perform on-the-fly 4-bit quantization.
 
-### 4.1. The Pivot: Direct Download of Pre-Converted Model
-We discovered that Google provides an official, pre-converted TFLite version of the model specifically for on-device use: `google/gemma-3n-E4B-it-litert-preview`.
+**Justification:** This strategy is ideal for a prototype. It leverages powerful server-side hardware to showcase the model's maximum quality and capabilities with minimal setup complexity.
 
-Our strategy pivoted from **Model Conversion** to **Direct Asset Download**.
+### Android App Strategy (Separate Track):
+- **Model Source:** The pre-quantized `gemma-3n-q4_k_m.gguf` asset.
+- **Inference Library:** The native `llama.cpp` C++ engine.
 
-### 4.2. Justification
-This decision is rooted in production engineering best practices:
+**Justification:** This strategy is essential for the final product. It prioritizes offline performance, small size, and low RAM usage, which are the core requirements for the target mobile devices.
 
-- **Eliminates Risk:** It completely removes all risks associated with unstable tooling and dependency conflicts.
-- **Guarantees Correctness:** Using the official asset guarantees that we have a model that is correctly converted and optimized by the team that built it.
-- **Accelerates Project Timeline:** It unblocks the project, allowing us to immediately proceed with building the Android application without further delays.
+## 4. Data & Reliability Strategy
+
+To enhance the reliability and explainability of the demo, a Retrieval-Augmented Generation (RAG) pipeline was implemented as a fallback mechanism.
+
+- **Vector Search:** A FAISS index is built from the curated `knowledge_base.csv` using sentence-transformers embeddings.
+- **Uncertainty Trigger:** A custom module (`uncertainty.py`) analyzes the model's initial response. If the response is too short or contains keywords indicating uncertainty (e.g., "could be," "not sure"), the RAG pipeline is triggered.
+
+**Benefit:** This adds a layer of robustness. When the base model is not confident, it can retrieve relevant, expert-verified information from our knowledge base to provide a more accurate and trustworthy final answer.
 
 ## 5. Conclusion
-The journey to acquire a mobile-compatible model asset for Gemma 3n highlights a key lesson in modern ML engineering: for bleeding-edge models, the official, vendor-provided artifacts are often more reliable than community tools that are still catching up. Our final strategy of downloading the pre-converted model is the most robust, professional, and pragmatic path to achieving our project goals.
 
-## 6. Next Steps
-1. Implement model download and verification script
-2. Integrate the pre-converted model into the Android application
-3. Optimize model loading and inference for target hardware
-4. Implement model update mechanism for future versions
+The chosen architecture and technologies are optimal for the web demo. By keeping the web and mobile tracks separate, we can effectively showcase the project's full potential while ensuring the final Android product is perfectly optimized for its real-world constraints.
