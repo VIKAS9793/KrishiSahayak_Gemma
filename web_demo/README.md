@@ -46,7 +46,7 @@ web_demo/
 ```
 
 ## Model Information
-For details about the model used in this demo, see the [Model Card](../../docs/model_card.md).
+For details about the model used in this demo, see the [Model Card](../docs/model_card.md).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
