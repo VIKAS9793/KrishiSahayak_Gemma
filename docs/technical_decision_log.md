@@ -52,6 +52,39 @@ To enhance the reliability and explainability of the demo, a Retrieval-Augmented
 
 **Benefit:** This adds a layer of robustness. When the base model is not confident, it can retrieve relevant, expert-verified information from our knowledge base to provide a more accurate and trustworthy final answer. The versioned archive ensures reproducibility and makes it easy to maintain different dataset versions.
 
+### 2025-07-07: Regional Knowledge Base Structure Implementation
+
+#### 1. New Directory Structure
+- **Decision**: Implement a standardized structure for regional knowledge bases
+- **Reason**: To organize regional data assets in a consistent, maintainable way
+- **Structure**:
+  ```
+  regional_kbs/
+  ├── 1_raw_text/        # Raw text data collection
+  ├── 2_curated_csv/     # Processed and cleaned CSVs
+  ├── 3_sqlite_packs/    # Mobile-optimized SQLite databases
+  └── 4_faiss_packs/     # FAISS indices for semantic search
+  ```
+  
+#### 2. Regional Coverage
+- **Decision**: Cover all 36 states and union territories of India
+- **Implementation**:
+  - 28 states (e.g., Maharashtra, Punjab, Kerala)
+  - 8 union territories (e.g., Delhi, Jammu & Kashmir, Ladakh)
+  - Each region has its own specialized data pack
+- **Naming Conventions**:
+  - Lowercase, underscore-separated (e.g., jammu_and_kashmir, uttar_pradesh)
+  - Follows ISO 3166-2:IN where applicable
+
+#### 2. Naming Conventions
+- **Files**: `knowledge_base_{region}_v{MAJOR}.{MINOR}.{ext}`
+- **Regions**: Lowercase, underscore-separated (e.g., maharashtra, punjab)
+- **Versions**: Separate versioning per region
+
+#### 3. Git Ignore Rules
+- Updated to track FAISS and SQLite files in regional_kbs/
+- Maintained ignore rules for raw image directories
+
 ### 2025-07-07: Knowledge Base Versioning and Archiving Strategy
 
 #### 1. Versioned Data Storage

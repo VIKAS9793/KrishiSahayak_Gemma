@@ -4,8 +4,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.3.1-EE4C2C.svg)](https://pytorch.org/)
-[![Gradio](https://img.shields.io/badge/Gradio-4.37.2-FF4B4B.svg)](https://gradio.app/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.3.1-red.svg)](https://pytorch.org/)
+[![Gradio](https://img.shields.io/badge/Gradio-4.37.2-orange.svg)](https://gradio.app/)
 [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](https://developer.android.com/)
 
 **Empowering farmers with AI-driven agricultural assistance**
@@ -36,13 +36,13 @@ KrishiSahayak+Gemma is built with a modular, scalable architecture that supports
 
 ### 🧱 Core Components
 
-| Component | Technologies | Description |
-|-----------|--------------|-------------|
-| **AI Engine** | PyTorch, Transformers, Gemma | Handles NLP, image processing, and model inference |
-| **Knowledge Base** | FAISS, SQLite, CSV | Stores and retrieves agricultural knowledge |
-| **Web Interface** | Gradio, FastAPI | Provides user interaction and visualization |
+| Component | Technology Stack | Purpose |
+|-----------|------------------|---------|
+| **AI Engine** | PyTorch, Transformers, Gemma | NLP, image processing, model inference |
+| **Knowledge Base** | FAISS, SQLite, CSV | Agricultural data storage and retrieval |
+| **Web Interface** | Gradio, FastAPI | User interaction and visualization |
 | **Mobile App** | Android, SQLite | Offline-capable native application |
-| **Data Processing** | Pandas, NumPy | Handles data transformation and preparation |
+| **Data Processing** | Pandas, NumPy | Data transformation and preparation |
 
 ### 🔄 Data Flow
 
@@ -52,21 +52,22 @@ graph TD
     B -->|Image| C[Image Processing]
     B -->|Audio| D[Speech-to-Text]
     B -->|Text| E[Query Processing]
-    C --> F[Feature Extraction]
+    
+    C --> F[AI Analysis]
     D --> E
-    F --> G[Disease Classification]
-    E --> H[Knowledge Retrieval]
-    G --> I[Response Generation]
-    H --> I
-    I --> J[Response to User]
-    J --> K{Platform}
-    K -->|Web| L[Gradio UI]
-    K -->|Mobile| N[Native Android UI]
+    E --> F
+    
+    F --> G[Knowledge Base Search]
+    G --> H[Response Generation]
+    H --> I[User Interface]
+    
+    I --> J[Web App]
+    I --> K[Mobile App]
 ```
 
 ### 🗃️ Data Storage
 
-#### Versioned Data Archives
+#### Global Knowledge Base
 All dataset versions are stored in the `data/_archive/` directory with versioned filenames.
 
 **Current Version (v0 - Generic 46-class Dataset)**
@@ -75,12 +76,30 @@ All dataset versions are stored in the `data/_archive/` directory with versioned
 - `knowledge_base_v0_generic_46-class_text.pkl` - Pre-processed text data
 - `knowledge_base_v0_generic_46-class.sqlite` - SQLite database for mobile
 
+#### Regional Knowledge Bases
+Our system includes specialized knowledge bases for all 36 states and union territories of India, ensuring locally relevant agricultural information.
+
+**Coverage:**
+- 28 states (e.g., Maharashtra, Punjab, Kerala)
+- 8 union territories (e.g., Delhi, Jammu & Kashmir, Ladakh)
+
+**Structure:**
+```
+regional_kbs/
+├── 1_raw_text/        # Raw text data collection
+├── 2_curated_csv/     # Processed and cleaned CSVs
+├── 3_sqlite_packs/    # Mobile-optimized SQLite databases
+└── 4_faiss_packs/     # FAISS indices for semantic search
+```
+
+Learn more about our [Regional Data Pack Architecture](docs/regional_data_pack_adr.md)
+
 ## 🌐 Web Demo
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Status-Online%20%26%20Active-brightgreen" alt="Status: Online & Active">
-  <img src="https://img.shields.io/badge/Model-Gemma%203B-9cf" alt="Model: Gemma 3B">
-  <img src="https://img.shields.io/badge/API-FastAPI-009688" alt="API: FastAPI">
+  <img src="https://img.shields.io/badge/Status-Online-brightgreen" alt="Status: Online">
+  <img src="https://img.shields.io/badge/Model-Gemma%203B-blue" alt="Model: Gemma 3B">
+  <img src="https://img.shields.io/badge/API-FastAPI-green" alt="API: FastAPI">
 </div>
 
 **Status:** 🟢 Fully Functional
@@ -111,9 +130,9 @@ python app.py
 ## 📱 Mobile Application
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Development-yellow" alt="Status: In Development">
-  <img src="https://img.shields.io/badge/Platform-Android-3DDC84" alt="Platform: Android">
-  <img src="https://img.shields.io/badge/Storage-SQLite-003B57" alt="Storage: SQLite">
+  <img src="https://img.shields.io/badge/Status-Development-yellow" alt="Status: Development">
+  <img src="https://img.shields.io/badge/Platform-Android-green" alt="Platform: Android">
+  <img src="https://img.shields.io/badge/Storage-SQLite-blue" alt="Storage: SQLite">
 </div>
 
 **Status:** 🟡 In Development (MVP Phase)
@@ -145,50 +164,48 @@ A fully offline-capable mobile application designed specifically for farmers in 
 
 ```
 KrishiSahayak-Gemma/
-├── 📁 android_app/         # Android application source
-│   └── 📁 src/main/assets/
-│       └── 📄 knowledge_base_v0_generic_46-class.sqlite  # Local SQLite database for offline use
+├── android_app/              # Android application source
+│   └── src/main/assets/
+│       └── knowledge_base_v0_generic_46-class.sqlite
 │
-├── 📁 asset_preparation/   # Data processing scripts
-│   ├── 📄 build_index.py           # Builds FAISS index
-│   ├── 📄 create_database.py       # Creates knowledge base
-│   └── 📄 generate_knowledge_base_gemma.py  # Processes data for Gemma
+├── asset_preparation/        # Data processing scripts
+│   ├── build_index.py
+│   ├── create_database.py
+│   └── generate_knowledge_base_gemma.py
 │
-├── 📁 data/                # Data storage
-│   └── 📁 _archive/               # Archived dataset versions
-│       └── 📄 knowledge_base_v0_generic_46-class.*  # Version 0 dataset files
-│   ├── 📄 knowledge_base_text.pkl # Pre-processed text data
-│   ├── 📁 _archive/        # Versioned datasets
-│   ├── 📁 processed/       # Processed datasets
-│   └── 📁 raw/             # Raw data files
+├── data/                     # Data storage
+│   ├── _archive/            # Archived dataset versions
+│   ├── knowledge_base_text.pkl
+│   ├── processed/           # Processed datasets
+│   ├── raw/                 # Raw data files
+│   └── regional_kbs/        # Regional knowledge bases
+│       ├── 1_raw_text/
+│       ├── 2_curated_csv/
+│       ├── 3_sqlite_packs/
+│       └── 4_faiss_packs/
 │
-├── 📁 docs/                # Project documentation
-│   ├── 📄 TECHNICAL_REPORT.md      # Comprehensive technical specs
-│   ├── 📄 technical_decision_log.md # Technical decisions and rationale
-│   └── 📄 DEV_LOGS.md              # Development logs
+├── docs/                     # Project documentation
+│   ├── TECHNICAL_REPORT.md
+│   ├── technical_decision_log.md
+│   ├── regional_data_pack_adr.md
+│   ├── VERSIONING.md
+│   └── DEV_LOGS.md
 │
-├── 📁 reports/             # Analysis and performance reports
-│   ├── 📁 eda_results/     # Exploratory data analysis
-│   └── 📁 validation_results/  # Model validation metrics
+├── reports/                  # Analysis and performance reports
+│   ├── eda_results/
+│   └── validation_results/
 │
-└── 📁 web_demo/            # Web-based demonstration
-    ├── 📄 app.py                  # Main application
-    ├── 📄 requirements.txt        # Python dependencies
-    ├── 📄 MODEL_CARD.md          # Model documentation
-    │
-    └── 📁 src/                   # Source code
-        ├── 📁 pipeline/          # ML pipeline components
-        │   ├── 📄 inference.py   # Model inference
-        │   └── 📄 uncertainty.py # Uncertainty quantification
-        │
-        ├── 📁 rag/               # Retrieval-Augmented Generation
-        │   └── 📄 search.py      # Knowledge base search
-        │
-        └── 📁 utils/             # Utility functions
-            └── 📄 audio_processing.py  # Audio handling
+└── web_demo/                 # Web-based demonstration
+    ├── app.py
+    ├── requirements.txt
+    ├── MODEL_CARD.md
+    └── src/
+        ├── pipeline/
+        ├── rag/
+        └── utils/
 ```
 
-### 📄 File Descriptions
+### 📄 Key Files
 
 | File | Purpose |
 |------|---------|
@@ -196,7 +213,6 @@ KrishiSahayak-Gemma/
 | `knowledge_base_v0_generic_46-class.faiss` | FAISS index for efficient similarity search |
 | `knowledge_base_v0_generic_46-class.csv` | Structured agricultural knowledge base |
 | `knowledge_base_v0_generic_46-class_text.pkl` | Pre-processed text data for RAG |
-| `knowledge_base_text.pkl` | Serialized pre-processed text data |
 | `app.py` | Main Gradio web application |
 | `requirements.txt` | Python dependencies for the web demo |
 
@@ -240,7 +256,7 @@ KrishiSahayak-Gemma/
 
 <div align="center">
   <img src="https://img.shields.io/badge/Quick%20Start-4%20Steps-blue" alt="Quick Start: 4 Steps">
-  <img src="https://img.shields.io/badge/Port-7860-9cf" alt="Port: 7860">
+  <img src="https://img.shields.io/badge/Port-7860-orange" alt="Port: 7860">
 </div>
 
 1. **Start the application**
@@ -281,7 +297,6 @@ KrishiSahayak-Gemma/
    import pandas as pd
    
    # Load sample data
-   # Example: Loading the knowledge base
    df = pd.read_csv('data/_archive/knowledge_base_v0_generic_46-class.csv')
    print(f"Knowledge base contains {len(df)} entries")
    ```
@@ -295,7 +310,7 @@ KrishiSahayak-Gemma/
 | [Technical Report](docs/TECHNICAL_REPORT.md) | Comprehensive technical specifications and data architecture |
 | [Model Card](web_demo/MODEL_CARD.md) | Model details, performance, and limitations |
 | [Technical Decision Log](docs/technical_decision_log.md) | Key technical decisions and rationale |
-| [Contribution Guidelines](CONTRIBUTING.md) | How to contribute to the project |
+| [Development Logs](docs/DEV_LOGS.md) | Daily development updates and progress |
 
 > 💡 All documentation is stored in the `docs/` directory. Please ensure documentation is kept up-to-date with code changes.
 
@@ -308,21 +323,6 @@ KrishiSahayak-Gemma/
 
 We welcome contributions from the community! Whether you're a developer, designer, or agricultural expert, there are many ways to contribute. Please read our [Contribution Guidelines](CONTRIBUTING.md) before getting started.
 
-### 📝 Technical Logs
-
-We maintain detailed technical logs for tracking development activities:
-- [Development Logs](docs/DEV_LOGS.md) - Daily development updates and progress
-- [Issue Tracker](https://github.com/VIKAS9793/KrishiSahayak_Gemma/issues) - Track and report bugs/features
-- [Changelog](CHANGELOG.md) - Version history and release notes
-
-### 📚 Documentation Standards
-
-All contributions should follow our documentation standards:
-1. Update relevant documentation when making code changes
-2. Reference related issues in commit messages (e.g., `#123`)
-3. Keep the [Technical Report](docs/TECHNICAL_REPORT.md) updated with architectural changes
-4. Document new features in the [Features Documentation](docs/FEATURES.md)
-
 ### 🛠 How to Contribute
 
 1. **Fork** the repository
@@ -334,10 +334,6 @@ All contributions should follow our documentation standards:
 ### 🔍 Looking for First Issues?
 
 Check out our [Good First Issues](https://github.com/VIKAS9793/KrishiSahayak_Gemma/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to get started!
-
-### 📜 Code of Conduct
-
-Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
 
 ## 📄 License
 
@@ -358,22 +354,27 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Conditions**: Include original license and copyright notice
 - **Limitations**: No liability, no warranty
 
-## 📧 Contact
+## 📧 Contact & Support
 
 <div align="center">
   <a href="mailto:vikassahani17@gmail.com">
     <img src="https://img.shields.io/badge/Email-vikassahani17%40gmail.com-red?style=flat&logo=gmail" alt="Email">
   </a>
   <a href="https://github.com/VIKAS9793">
-    <img src="https://img.shields.io/badge/GitHub-Vikas9793-181717?style=flat&logo=github" alt="GitHub Profile">
+    <img src="https://img.shields.io/badge/GitHub-VIKAS9793-black?style=flat&logo=github" alt="GitHub Profile">
   </a>
 </div>
 
-For any questions, feedback, or support, please don't hesitate to reach out:
+**Project Maintainer**: Vikas Sahani  
+**Email**: [vikassahani17@gmail.com](mailto:vikassahani17@gmail.com)  
+**GitHub**: [@VIKAS9793](https://github.com/VIKAS9793)  
 
-- **Email**: [vikassahani17@gmail.com](mailto:vikassahani17@gmail.com)
-- **GitHub Issues**: [Open an Issue](https://github.com/VIKAS9793/KrishiSahayak_Gemma/issues)
-- **Discussions**: [Join the Discussion](https://github.com/VIKAS9793/KrishiSahayak_Gemma/discussions)
+**Support Channels**:
+- 🐛 [Report Issues](https://github.com/VIKAS9793/KrishiSahayak_Gemma/issues)
+- 💬 [Join Discussions](https://github.com/VIKAS9793/KrishiSahayak_Gemma/discussions)
+- 📚 [Documentation](docs/)
+
+For any questions, feedback, or support, please don't hesitate to reach out through any of the channels above.
 
 ---
 

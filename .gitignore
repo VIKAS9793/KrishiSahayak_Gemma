@@ -70,9 +70,18 @@ models/*.pt
 *.pth
 *.bin
 *.safetensors
-# Allow .faiss files in _archive directory
+
+# FAISS files - only track those in specific directories
 *.faiss
 !data/_archive/*.faiss
+!data/regional_kbs/4_faiss_packs/*.faiss
+
+# SQLite files - only track those in specific directories
+*.sqlite
+!data/_archive/*.sqlite
+!data/regional_kbs/3_sqlite_packs/*.sqlite
+
+# Cache and temporary files
 model_cache/
 
 # Other ignored directories

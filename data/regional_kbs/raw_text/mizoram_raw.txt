@@ -1,0 +1,29 @@
+﻿# MIZORAM - AGRICULTURAL KNOWLEDGE BASE
+# Version: 1.0
+# Last Updated: 2025-07-07
+
+# ===== CROP INFORMATION =====
+# List major crops grown in this region with their local names and varieties
+# Format: Crop Name (Local Name) - Key varieties
+
+# ===== SOIL TYPES =====
+# Describe common soil types in this region
+
+# ===== CLIMATIC CONDITIONS =====
+# Describe the climate, rainfall patterns, and growing seasons
+
+# ===== COMMON PESTS AND DISEASES =====
+# List common agricultural pests and diseases in this region
+# Format: [Crop] - [Pest/Disease Name]: Description
+
+# ===== TRADITIONAL FARMING PRACTICES =====
+# Document any region-specific farming techniques or practices
+
+# ===== GOVERNMENT SCHEMES AND SUBSIDIES =====
+# List relevant agricultural schemes and subsidies
+
+# ===== LOCAL MARKET INFORMATION =====
+# Information about local markets, MSPs, and pricing trends
+
+# ===== CONTACTS =====
+# Important agricultural contacts (KVKs, agriculture departments, etc.)
