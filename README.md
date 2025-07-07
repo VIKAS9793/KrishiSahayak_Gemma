@@ -66,18 +66,10 @@ graph TD
 
 ### 🗃️ Data Storage
 
-#### Current Architecture
-- **Web Version**:
-  - `knowledge_base.faiss` - Vector embeddings for semantic search
-  - `knowledge_base_text.pkl` - Pre-processed text data
-  - `knowledge_base.csv` - Structured agricultural knowledge
-
-- **Mobile Version**:
-  - `knowledge_base.sqlite` - Local database for offline access
-  - Pre-computed embeddings for fast on-device search
-
 #### Versioned Data Archives
-All dataset versions are stored in the `data/_archive/` directory with versioned filenames:
+All dataset versions are stored in the `data/_archive/` directory with versioned filenames.
+
+**Current Version (v0 - Generic 46-class Dataset)**
 - `knowledge_base_v0_generic_46-class.csv` - Structured agricultural knowledge (46 classes)
 - `knowledge_base_v0_generic_46-class.faiss` - Vector embeddings for semantic search
 - `knowledge_base_v0_generic_46-class_text.pkl` - Pre-processed text data
@@ -155,7 +147,7 @@ A fully offline-capable mobile application designed specifically for farmers in 
 KrishiSahayak-Gemma/
 ├── 📁 android_app/         # Android application source
 │   └── 📁 src/main/assets/
-│       └── 📄 knowledge_base.sqlite  # Local SQLite database for offline use
+│       └── 📄 knowledge_base_v0_generic_46-class.sqlite  # Local SQLite database for offline use
 │
 ├── 📁 asset_preparation/   # Data processing scripts
 │   ├── 📄 build_index.py           # Builds FAISS index
@@ -163,8 +155,8 @@ KrishiSahayak-Gemma/
 │   └── 📄 generate_knowledge_base_gemma.py  # Processes data for Gemma
 │
 ├── 📁 data/                # Data storage
-│   ├── 📄 knowledge_base.csv       # Agricultural knowledge base (CSV)
-│   ├── 📄 knowledge_base.faiss    # Vector index for semantic search
+│   └── 📁 _archive/               # Archived dataset versions
+│       └── 📄 knowledge_base_v0_generic_46-class.*  # Version 0 dataset files
 │   ├── 📄 knowledge_base_text.pkl # Pre-processed text data
 │   ├── 📁 _archive/        # Versioned datasets
 │   ├── 📁 processed/       # Processed datasets
@@ -200,9 +192,10 @@ KrishiSahayak-Gemma/
 
 | File | Purpose |
 |------|---------|
-| `knowledge_base.sqlite` | SQLite database for Android app (offline use) |
-| `knowledge_base.faiss` | FAISS index for efficient similarity search |
-| `knowledge_base.csv` | Structured agricultural knowledge base |
+| `knowledge_base_v0_generic_46-class.sqlite` | SQLite database for Android app (offline use) |
+| `knowledge_base_v0_generic_46-class.faiss` | FAISS index for efficient similarity search |
+| `knowledge_base_v0_generic_46-class.csv` | Structured agricultural knowledge base |
+| `knowledge_base_v0_generic_46-class_text.pkl` | Pre-processed text data for RAG |
 | `knowledge_base_text.pkl` | Serialized pre-processed text data |
 | `app.py` | Main Gradio web application |
 | `requirements.txt` | Python dependencies for the web demo |
@@ -288,7 +281,8 @@ KrishiSahayak-Gemma/
    import pandas as pd
    
    # Load sample data
-   df = pd.read_csv('data/knowledge_base.csv')
+   # Example: Loading the knowledge base
+   df = pd.read_csv('data/_archive/knowledge_base_v0_generic_46-class.csv')
    print(f"Knowledge base contains {len(df)} entries")
    ```
 

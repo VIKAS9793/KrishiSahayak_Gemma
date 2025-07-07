@@ -52,6 +52,37 @@ To enhance the reliability and explainability of the demo, a Retrieval-Augmented
 
 **Benefit:** This adds a layer of robustness. When the base model is not confident, it can retrieve relevant, expert-verified information from our knowledge base to provide a more accurate and trustworthy final answer. The versioned archive ensures reproducibility and makes it easy to maintain different dataset versions.
 
+### 2025-07-07: Knowledge Base Versioning and Archiving Strategy
+
+#### 1. Versioned Data Storage
+- **Decision**: Implement a structured versioning system for all data assets
+- **Reason**: To enable tracking changes, support rollbacks, and maintain reproducibility
+- **Details**:
+  - All data files now follow the pattern: `knowledge_base_v{MAJOR}_{MINOR}_[TYPE]_[DETAILS].{EXT}`
+  - Current version: `v0_generic_46-class`
+  - Files stored in `data/_archive/` directory
+
+#### 2. Updated File Structure
+- **Changes**:
+  - Moved all knowledge base files to versioned names in `data/_archive/`
+  - Updated all code references to use versioned paths
+  - Created comprehensive documentation in `docs/VERSIONING.md`
+
+#### 3. Impact and Migration
+- **Affected Components**:
+  - Web demo configuration
+  - Asset preparation scripts
+  - Documentation
+- **Migration Path**:
+  - All systems now reference the versioned files
+  - Old file paths have been removed
+  - Documentation updated to reflect current structure
+
+#### 4. Future Considerations
+- Automated version bumping for data updates
+- Integration with CI/CD pipeline
+- Validation tests for data consistency
+
 ## 5. Deployment & Distribution Strategy
 
 The two project tracks have distinct deployment models.

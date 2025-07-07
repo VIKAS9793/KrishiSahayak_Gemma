@@ -31,11 +31,17 @@ logger = logging.getLogger(__name__)
 try:
     # Assuming this script is in asset_preparation/
     PROJECT_ROOT = Path(__file__).resolve().parent.parent
-    INPUT_CSV_PATH = PROJECT_ROOT / "data" / "knowledge_base.csv"
+    # Path to the versioned CSV in the archive
+    INPUT_CSV_PATH = PROJECT_ROOT / "data" / "_archive" / "knowledge_base_v0_generic_46-class.csv"
     
     # Define the output directory for all prepared assets.
     OUTPUT_DIR = PROJECT_ROOT / "android_app" / "src" / "main" / "assets"
-    OUTPUT_DB_PATH = OUTPUT_DIR / "knowledge_base.sqlite"
+    # Create archive directory if it doesn't exist
+    archive_dir = OUTPUT_DIR / "_archive"
+    archive_dir.mkdir(exist_ok=True, parents=True)
+    
+    # Use versioned filename
+    OUTPUT_DB_PATH = archive_dir / "knowledge_base_v0_generic_46-class.sqlite"
 
     # Create the output directory if it doesn't exist.
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -50,8 +56,8 @@ def create_db_from_csv(csv_path: Path, db_path: Path):
     Reads data from a CSV file and writes it to a clean SQLite database.
 
     Args:
-        csv_path (Path): The path to the input knowledge_base.csv file.
-        db_path (Path): The path where the output knowledge_base.sqlite will be saved.
+        csv_path (Path): The path to the input knowledge_base_v0_generic_46-class.csv file.
+        db_path (Path): The path where the output knowledge_base_v0_generic_46-class.sqlite will be saved.
     """
     if not csv_path.exists():
         logger.error(f"Input file not found at: {csv_path}")

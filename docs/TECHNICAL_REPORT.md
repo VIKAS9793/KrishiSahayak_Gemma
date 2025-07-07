@@ -58,7 +58,13 @@ The project utilizes a sophisticated data pipeline to ensure accurate and reliab
 - Established human-in-the-loop curation process (documented in `Indian Agriculture Disease Data Curation.docx`)
 - Developed comprehensive validation scripts for data quality assurance
 
-### 4.2. Primary Data Source: knowledge_base.csv
+### 4.2. Primary Data Source: Versioned Knowledge Base
+
+All data assets are versioned and stored in `data/_archive/` with the following structure:
+- `knowledge_base_v0_generic_46-class.csv` - Primary structured data
+- `knowledge_base_v0_generic_46-class.faiss` - Vector index
+- `knowledge_base_v0_generic_46-class_text.pkl` - Processed text data
+- `knowledge_base_v0_generic_46-class.sqlite` - Mobile database
 
 This file contains the expert-verified information used for the RAG system.
 
@@ -75,7 +81,7 @@ The knowledge base powers a Retrieval-Augmented Generation (RAG) system that enh
 
 - **Vectorization Model:** `all-MiniLM-L6-v2`
 - **Vector Dimensions:** 384
-- **Index File:** `knowledge_base.faiss` (FAISS CPU Index)
+- **Index File:** `knowledge_base_v0_generic_46-class.faiss` (FAISS CPU Index)
 - **Text Data File:** `knowledge_base_text.pkl`
 - **Uncertainty Detection:** Heuristic-based confidence scoring
 - **Fallback Mechanism:** Contextual reprompting with retrieved information
@@ -128,7 +134,7 @@ A separate web-based prototype exists for demonstration purposes.
 
 - **v0.0.1 - 2025-06-30**
   - Initial repository setup
-  - Curated `knowledge_base.csv`
+  - Curated `knowledge_base_v0_generic_46-class.csv`
 
 ### Phase 2: Android App Development (Upcoming)
 - Native Android application development

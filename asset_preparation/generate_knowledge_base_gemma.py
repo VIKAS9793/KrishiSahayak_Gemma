@@ -15,7 +15,12 @@ from pipeline.inference import generate_text_from_prompt, load_model
 # Use absolute path to ensure the file is found regardless of working directory
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DISEASE_LIST_PATH = os.path.join(BASE_DIR, "data", "raw", "disease_list.txt")
-OUTPUT_CSV_PATH = os.path.join(BASE_DIR, "data", "raw", "knowledge_base.csv")
+# Create archive directory if it doesn't exist
+output_dir = os.path.join(BASE_DIR, "data", "_archive")
+os.makedirs(output_dir, exist_ok=True)
+
+# Use versioned filename
+OUTPUT_CSV_PATH = os.path.join(output_dir, "knowledge_base_v0_generic_46-class.csv")
 
 def create_generation_prompt(plant_name: str, disease_name: str) -> str:
     """Creates a precise prompt to instruct Gemma to act as an expert."""

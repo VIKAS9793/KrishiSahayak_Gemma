@@ -252,7 +252,12 @@ class OptimizedRAGIndexer:
             self.index = self.build_faiss_index(embeddings)
             
             # Save index and texts
-            index_path = Path(output_dir) / "knowledge_base.faiss"
+            # Create archive directory if it doesn't exist
+            archive_dir = Path(output_dir) / "_archive"
+            archive_dir.mkdir(exist_ok=True, parents=True)
+            
+            # Use versioned filename
+            index_path = archive_dir / "knowledge_base_v0_generic_46-class.faiss"
             texts_path = Path(output_dir) / "knowledge_base_text.pkl"
             
             self.save_index_and_texts(self.index, self.texts, 
@@ -297,7 +302,8 @@ def main():
     }
     
     # Paths
-    csv_path = "data/processed/knowledge_base.csv"
+    # Path to the processed CSV in the archive
+    csv_path = "data/processed/_archive/knowledge_base_v0_generic_46-class.csv"
     output_dir = "data/processed"
     
     # Create optimized indexer

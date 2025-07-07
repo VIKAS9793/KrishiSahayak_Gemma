@@ -21,7 +21,7 @@ By merging and de-duplicating these datasets, a definitive list of 46 distinct p
 
 ## 3. Data Curation Methodology: An Iterative Engineering Process
 
-The core task was to create a structured knowledge base (`knowledge_base.csv`) containing accurate symptoms and remedy information for each of the 46 disease classes. An iterative process involving three distinct methods was undertaken.
+The core task was to create a structured knowledge base (`knowledge_base_v0_generic_46-class.csv`) containing accurate symptoms and remedy information for each of the 46 disease classes. An iterative process involving three distinct methods was undertaken.
 
 ### Method 1: Automated Web Scraping (Attempt and Failure)
 
@@ -61,7 +61,7 @@ The failures of the automated methods led to the final, successful strategy: a p
 **Process:**
 1. **AI-Powered Research:** The Project Owner utilized the advanced research capabilities of a state-of-the-art model (Gemini 2.5 Pro) to synthesize information from multiple authoritative sources, including academic papers and PDFs, for each of the 46 diseases.
 2. **Human-in-the-Loop (HITL) Verification:** The AI-synthesized information was not accepted blindly. The Project Owner performed the critical role of a human expert, meticulously reviewing the generated text for factual accuracy, clarity, and relevance to the Indian agricultural context.
-3. **Manual Curation:** This verified and refined information was then manually structured and compiled into the final `knowledge_base.csv` file, ensuring perfect formatting and data integrity.
+3. **Manual Curation:** This verified and refined information was then manually structured and compiled into the final `knowledge_base_v0_generic_46-class.csv` file, ensuring perfect formatting and data integrity.
 
 ## 4. Justification for the Final Methodology
 
@@ -69,7 +69,7 @@ The expert-led curation approach was chosen because it was the only method that 
 
 - **It Ensures Trust:** By manually verifying every piece of information and citing authoritative sources, the resulting knowledge base is not a "black box." Its reliability is transparent and can be audited.
 - **It Captures Nuance:** The human-led process allowed for the inclusion of strategic depth, such as the principles of Integrated Disease Management (IDM), which prioritizes cultural and biological controls—a level of sophistication that automation failed to achieve.
-- **It Is Robust:** The final `knowledge_base.csv` is clean, complete, and correctly formatted, providing a solid foundation for the project's RAG system.
+- **It Is Robust:** The final `knowledge_base_v0_generic_46-class.csv` is clean, complete, and correctly formatted, providing a solid foundation for the project's RAG system.
 
 ## 5. Conclusion
 
