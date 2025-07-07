@@ -61,26 +61,19 @@ venv.bak/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Data files
-data/raw/*
-!data/raw/sample_knowledge_base.csv
-data/processed/*
-!data/processed/.gitkeep
+# Ignore specific large image directories
+data/raw/plantvillage/
+data/raw/plantdoc/
 
 # Model and data files
 models/*.pt
 *.pth
 *.bin
 *.safetensors
+# Allow .faiss files in _archive directory
 *.faiss
+!data/_archive/*.faiss
 model_cache/
-
-# Data directory - track everything except raw/plantdoc and raw/plantvillage
-data/**
-!data/raw/
-!data/raw/*/
-!data/raw/plantdoc/
-!data/raw/plantvillage/
 
 # Other ignored directories
 old_scripts_archive/
