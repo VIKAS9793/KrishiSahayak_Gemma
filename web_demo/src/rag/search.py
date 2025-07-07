@@ -9,9 +9,9 @@ from sentence_transformers import SentenceTransformer
 # --- Configuration ---
 # This must match the model used in build_index.py
 EMBEDDING_MODEL_ID = 'all-MiniLM-L6-v2'
-PROCESSED_DATA_DIR = "../data/processed"
-INDEX_FILE_PATH = os.path.join(PROCESSED_DATA_DIR, "knowledge_base.faiss")
-TEXT_DATA_PATH = os.path.join(PROCESSED_DATA_DIR, "knowledge_base_text.pkl")
+ARCHIVE_DIR = "../../data/_archive"
+INDEX_FILE_PATH = os.path.join(ARCHIVE_DIR, "knowledge_base_v0_generic_46-class.faiss")
+TEXT_DATA_PATH = os.path.join(ARCHIVE_DIR, "knowledge_base_v0_generic_46-class_text.pkl")
 
 # --- Global Caching ---
 # Load models and data only once to ensure efficiency

@@ -42,10 +42,15 @@ A key decision was made to use different model assets for the web demo and the f
 
 To enhance the reliability and explainability of the demo, a Retrieval-Augmented Generation (RAG) pipeline was implemented as a fallback mechanism.
 
-- **Vector Search:** A FAISS index is built from the curated `knowledge_base.csv` using sentence-transformers embeddings.
+- **Vector Search:** A FAISS index is built from the curated `knowledge_base_v0_generic_46-class.csv` using sentence-transformers embeddings.
+- **Data Versioning:** The initial dataset (v0) has been archived in `data/_archive/` with the following files:
+  - `knowledge_base_v0_generic_46-class.csv` - Original structured data
+  - `knowledge_base_v0_generic_46-class.faiss` - Pre-built FAISS index
+  - `knowledge_base_v0_generic_46-class_text.pkl` - Processed text data
+  - `knowledge_base_v0_generic_46-class.sqlite` - SQLite database for mobile
 - **Uncertainty Trigger:** A custom module (`uncertainty.py`) analyzes the model's initial response. If the response is too short or contains keywords indicating uncertainty (e.g., "could be," "not sure"), the RAG pipeline is triggered.
 
-**Benefit:** This adds a layer of robustness. When the base model is not confident, it can retrieve relevant, expert-verified information from our knowledge base to provide a more accurate and trustworthy final answer.
+**Benefit:** This adds a layer of robustness. When the base model is not confident, it can retrieve relevant, expert-verified information from our knowledge base to provide a more accurate and trustworthy final answer. The versioned archive ensures reproducibility and makes it easy to maintain different dataset versions.
 
 ## 5. Deployment & Distribution Strategy
 

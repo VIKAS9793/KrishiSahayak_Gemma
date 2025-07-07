@@ -16,8 +16,8 @@
 - [✨ Features](#-features)
 - [🏗️ Architecture](#%EF%B8%8F-architecture)
 - [🚀 Getting Started](#-getting-started)
-- [📱 Mobile App](#-mobile-application)
 - [🌐 Web Demo](#-web-demo)
+- [📱 Mobile App](#-mobile-application)
 - [📊 Project Structure](#-project-structure)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
@@ -30,62 +30,7 @@
 - **🗣️ Multilingual Support** - Voice and text in regional languages
 - **📱 Cross-Platform** - Web and mobile interfaces for all users
 
-### 🌐 Web Demo
-<div align="center">
-  <img src="https://img.shields.io/badge/Status-Online%20%26%20Active-brightgreen" alt="Status: Online & Active">
-  <img src="https://img.shields.io/badge/Model-Gemma%203B-9cf" alt="Model: Gemma 3B">
-  <img src="https://img.shields.io/badge/API-FastAPI-009688" alt="API: FastAPI">
-</div>
-
-### 📱 Mobile App
-<div align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Development-yellow" alt="Status: In Development">
-  <img src="https://img.shields.io/badge/Platform-Android-3DDC84" alt="Platform: Android">
-  <img src="https://img.shields.io/badge/Storage-SQLite-003B57" alt="Storage: SQLite">
-</div>
-
-## 🖥️ Web Demo
-
-**Status:** 🟢 Fully Functional
-
-A feature-rich web application that demonstrates the core capabilities of our agricultural AI assistant. Perfect for testing and demonstration purposes.
-
-### Key Features:
-- 🌿 Plant disease diagnosis from images
-- 🎤 Voice query support in multiple languages
-- 📝 Detailed diagnostic reports with remedies
-- 🎧 Audio responses in regional languages
-- 🔍 Knowledge base integration for accurate information
-
-### Quick Start:
-```bash
-# Navigate to web_demo directory
-cd web_demo
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Launch the application
-python app.py
-```
-
-*For detailed setup instructions, see the [Web Demo Documentation](./web_demo/README.md).*
-
-## 📱 Android Application
-
-**Status:** 🟡 In Development (MVP Phase)
-
-A fully offline-capable mobile application designed specifically for farmers in remote areas with limited or no internet connectivity.
-
-### Planned Features:
-- 📶 100% offline functionality
-- 🌍 Local language support
-- 🔋 Low-resource operation
-- 📊 Crop health monitoring
-- 📅 Agricultural calendar
-- 💡 Expert farming tips
-
-### 🏗️ System Architecture
+## 🏗️ Architecture
 
 KrishiSahayak+Gemma is built with a modular, scalable architecture that supports both web and mobile platforms while sharing a common knowledge base and AI capabilities.
 
@@ -121,78 +66,7 @@ graph TD
 
 ### 🗃️ Data Storage
 
-#### Web Version
-- `knowledge_base.faiss` - Vector embeddings for semantic search
-- `knowledge_base_text.pkl` - Pre-processed text data
-- `knowledge_base.csv` - Structured agricultural knowledge
-
-#### Mobile Version
-- `knowledge_base.sqlite` - Local database for offline access
-- Pre-computed embeddings for fast on-device search
-
-### 🚀 Deployment
-
-#### Web Demo
-1. Clone the repository
-2. Install Python dependencies
-3. Run the Gradio application
-4. Access via web browser
-
-#### Android App
-1. Open project in Android Studio
-2. Build the APK
-3. Install on Android device
-4. All data is bundled with the app for offline use
-
-### 🧱 Core Components
-
-1. **AI Engine**
-   - Built on PyTorch and Transformers
-   - Utilizes Gemma for natural language understanding
-   - Implements Retrieval-Augmented Generation (RAG) for accurate responses
-   - Handles image-based disease classification
-   - Processes voice queries with Whisper ASR
-
-2. **Knowledge Base**
-   - Structured agricultural database (SQLite for mobile, CSV for web)
-   - Vector embeddings using FAISS for semantic search
-   - Pre-processed text data for efficient retrieval
-   - Localized content for regional languages
-
-3. **Web Interface**
-   - Built with Gradio for rapid prototyping
-   - Real-time inference pipeline
-   - Interactive visualization of results
-   - Responsive design for various devices
-
-4. **Mobile Application**
-   - Native Android implementation
-   - Offline-first architecture
-   - Local SQLite database
-   - Optimized for low-resource environments
-
-### 🔄 Data Flow
-
-```mermaid
-graph TD
-    A[User Input] --> B{Input Type}
-    B -->|Image| C[Image Processing]
-    B -->|Audio| D[Speech-to-Text]
-    B -->|Text| E[Query Processing]
-    C --> F[Feature Extraction]
-    D --> E
-    F --> G[Disease Classification]
-    E --> H[Knowledge Retrieval]
-    G --> I[Response Generation]
-    H --> I
-    I --> J[Response to User]
-    J --> K{Platform}
-    K -->|Web| L[Gradio UI]
-    K -->|Mobile| N[Native Android UI]
-```
-
-### 🗃️ Data Storage
-
+#### Current Architecture
 - **Web Version**:
   - `knowledge_base.faiss` - Vector embeddings for semantic search
   - `knowledge_base_text.pkl` - Pre-processed text data
@@ -202,21 +76,67 @@ graph TD
   - `knowledge_base.sqlite` - Local database for offline access
   - Pre-computed embeddings for fast on-device search
 
-### 🚀 Deployment
+#### Versioned Data Archives
+All dataset versions are stored in the `data/_archive/` directory with versioned filenames:
+- `knowledge_base_v0_generic_46-class.csv` - Structured agricultural knowledge (46 classes)
+- `knowledge_base_v0_generic_46-class.faiss` - Vector embeddings for semantic search
+- `knowledge_base_v0_generic_46-class_text.pkl` - Pre-processed text data
+- `knowledge_base_v0_generic_46-class.sqlite` - SQLite database for mobile
 
-#### Web Demo
-1. Clone the repository
-2. Install Python dependencies
-3. Run the Gradio application
-4. Access via web browser
+## 🌐 Web Demo
 
-#### Android App
-1. Open project in Android Studio
-2. Build the APK
-3. Install on Android device
-4. All data is bundled with the app for offline use
+<div align="center">
+  <img src="https://img.shields.io/badge/Status-Online%20%26%20Active-brightgreen" alt="Status: Online & Active">
+  <img src="https://img.shields.io/badge/Model-Gemma%203B-9cf" alt="Model: Gemma 3B">
+  <img src="https://img.shields.io/badge/API-FastAPI-009688" alt="API: FastAPI">
+</div>
 
-## 🛠 Technical Highlights:
+**Status:** 🟢 Fully Functional
+
+A feature-rich web application that demonstrates the core capabilities of our agricultural AI assistant. Perfect for testing and demonstration purposes.
+
+### Key Features:
+- 🌿 Plant disease diagnosis from images
+- 🎤 Voice query support in multiple languages
+- 📝 Detailed diagnostic reports with remedies
+- 🎧 Audio responses in regional languages
+- 🔍 Knowledge base integration for accurate information
+
+### Quick Start:
+```bash
+# Navigate to web_demo directory
+cd web_demo
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch the application
+python app.py
+```
+
+*For detailed setup instructions, see the [Web Demo Documentation](web_demo/README.md).*
+
+## 📱 Mobile Application
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Status-In%20Development-yellow" alt="Status: In Development">
+  <img src="https://img.shields.io/badge/Platform-Android-3DDC84" alt="Platform: Android">
+  <img src="https://img.shields.io/badge/Storage-SQLite-003B57" alt="Storage: SQLite">
+</div>
+
+**Status:** 🟡 In Development (MVP Phase)
+
+A fully offline-capable mobile application designed specifically for farmers in remote areas with limited or no internet connectivity.
+
+### Planned Features:
+- 📶 100% offline functionality
+- 🌍 Local language support
+- 🔋 Low-resource operation
+- 📊 Crop health monitoring
+- 📅 Agricultural calendar
+- 💡 Expert farming tips
+
+### 🛠 Technical Highlights:
 - Uses quantized `gemma-3n-q4_k_m.gguf` model
 - Optimized for low-end Android devices
 - Minimal storage and memory footprint
@@ -229,20 +149,7 @@ graph TD
 - [ ] Offline knowledge base
 - [ ] Field testing
 
-## 📚 Documentation
-
-### 📄 Key Documents
-
-| Document | Description |
-|----------|-------------|
-| [Technical Report](docs/TECHNICAL_REPORT.md) | Comprehensive technical specifications and data architecture |
-| [Model Card](web_demo/MODEL_CARD.md) | Model details, performance, and limitations |
-| [Technical Decision Log](docs/technical_decision_log.md) | Key technical decisions and rationale |
-| [Contribution Guidelines](CONTRIBUTING.md) | How to contribute to the project |
-
-> 💡 All documentation is stored in the `docs/` directory. Please ensure documentation is kept up-to-date with code changes.
-
-## 📁 Project Structure
+## 📊 Project Structure
 
 ```
 KrishiSahayak-Gemma/
@@ -259,11 +166,14 @@ KrishiSahayak-Gemma/
 │   ├── 📄 knowledge_base.csv       # Agricultural knowledge base (CSV)
 │   ├── 📄 knowledge_base.faiss    # Vector index for semantic search
 │   ├── 📄 knowledge_base_text.pkl # Pre-processed text data
+│   ├── 📁 _archive/        # Versioned datasets
 │   ├── 📁 processed/       # Processed datasets
 │   └── 📁 raw/             # Raw data files
 │
 ├── 📁 docs/                # Project documentation
-│   └── 📄 model_card.md    # Model documentation
+│   ├── 📄 TECHNICAL_REPORT.md      # Comprehensive technical specs
+│   ├── 📄 technical_decision_log.md # Technical decisions and rationale
+│   └── 📄 DEV_LOGS.md              # Development logs
 │
 ├── 📁 reports/             # Analysis and performance reports
 │   ├── 📁 eda_results/     # Exploratory data analysis
@@ -272,6 +182,7 @@ KrishiSahayak-Gemma/
 └── 📁 web_demo/            # Web-based demonstration
     ├── 📄 app.py                  # Main application
     ├── 📄 requirements.txt        # Python dependencies
+    ├── 📄 MODEL_CARD.md          # Model documentation
     │
     └── 📁 src/                   # Source code
         ├── 📁 pipeline/          # ML pipeline components
@@ -285,7 +196,7 @@ KrishiSahayak-Gemma/
             └── 📄 audio_processing.py  # Audio handling
 ```
 
-### 📊 File Descriptions
+### 📄 File Descriptions
 
 | File | Purpose |
 |------|---------|
@@ -381,6 +292,19 @@ KrishiSahayak-Gemma/
    print(f"Knowledge base contains {len(df)} entries")
    ```
 
+## 📚 Documentation
+
+### 📄 Key Documents
+
+| Document | Description |
+|----------|-------------|
+| [Technical Report](docs/TECHNICAL_REPORT.md) | Comprehensive technical specifications and data architecture |
+| [Model Card](web_demo/MODEL_CARD.md) | Model details, performance, and limitations |
+| [Technical Decision Log](docs/technical_decision_log.md) | Key technical decisions and rationale |
+| [Contribution Guidelines](CONTRIBUTING.md) | How to contribute to the project |
+
+> 💡 All documentation is stored in the `docs/` directory. Please ensure documentation is kept up-to-date with code changes.
+
 ## 🤝 Contributing
 
 <div align="center">
@@ -463,4 +387,3 @@ For any questions, feedback, or support, please don't hesitate to reach out:
   <p>Made with ❤️ for farmers and the open source community</p>
   <img src="https://komarev.com/ghpvc/?username=VIKAS9793&label=Project%20Visitors&color=blueviolet&style=flat" alt="Project Visitors">
 </div>
-

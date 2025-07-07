@@ -341,9 +341,9 @@ class RAGPerformanceMonitor:
 def main():
     """Main function to run performance monitoring."""
     
-    # Paths (adjust according to your setup)
-    index_path = "data/processed/knowledge_base.faiss"
-    texts_path = "data/processed/knowledge_base_text.pkl"
+    # Paths to archived demo dataset
+    index_path = "../../data/_archive/knowledge_base_v0_generic_46-class.faiss"
+    texts_path = "../../data/_archive/knowledge_base_v0_generic_46-class_text.pkl"
     
     # Create monitor
     monitor = RAGPerformanceMonitor(index_path, texts_path)
