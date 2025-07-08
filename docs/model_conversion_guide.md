@@ -1,6 +1,6 @@
 # Gemma Model Conversion and Quantization Guide
 
-**Version:** 2.1  
+**Version:** 0.10.0  
 **Date:** July 8, 2025
 
 ## Purpose
