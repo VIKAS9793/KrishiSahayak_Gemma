@@ -92,9 +92,17 @@ To simplify deployment and ensure consistency, pre-processed knowledge base file
 ### Download Instructions
 
 1. Visit the [GitHub Releases](https://github.com/VIKAS9793/KrishiSahayak_Gemma/releases) page
-2. Download the latest release assets
-3. Extract the files to the `data/processed/` directory
+2. Download the `KrishiSahayak_KB_v0.10.0.zip` file from the latest release
+3. Extract the contents to the `data/processed/` directory
 4. The application will automatically detect and use these files
+
+### File Contents
+
+The ZIP file contains the following files:
+- `knowledge_base_v0_generic_46-class.csv`
+- `knowledge_base_v0_generic_46-class.faiss`
+- `knowledge_base_v0_generic_46-class.sqlite`
+- `knowledge_base_v0_generic_46-class_text.pkl`
 
 ### Regenerating Files (Advanced)
 

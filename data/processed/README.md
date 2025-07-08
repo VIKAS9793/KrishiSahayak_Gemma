@@ -7,8 +7,8 @@ This directory contains pre-processed knowledge base files used by the KrishiSah
 ### Option 1: Download from GitHub Releases (Recommended)
 
 1. Go to the [GitHub Releases](https://github.com/VIKAS9793/KrishiSahayak_Gemma/releases) page
-2. Download the latest release assets
-3. Extract the files to this directory
+2. Download the `KrishiSahayak_KB_v0.10.0.zip` file
+3. Extract the contents to this directory
 
 ### Option 2: Generate from Source
 
@@ -20,6 +20,8 @@ python scripts/process_knowledge_base.py --input data/raw/knowledge_base_v0_gene
 ```
 
 ## File Descriptions
+
+After extracting `KrishiSahayak_KB_v0.10.0.zip`, you should have these files:
 
 - `knowledge_base_v0_generic_46-class.csv`: The curated knowledge base in CSV format
 - `knowledge_base_v0_generic_46-class.faiss`: FAISS index for semantic search
