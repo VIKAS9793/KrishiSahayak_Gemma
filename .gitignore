@@ -91,7 +91,7 @@ model_cache/
 # Processed data files (available via GitHub Releases)
 data/processed/*.pkl
 data/processed/*.csv
-data/processed/*.pkl
+!data/processed/knowledge_base_*.pkl
 !data/processed/README.md
 
 # Other ignored directories
