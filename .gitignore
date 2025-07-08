@@ -75,14 +75,24 @@ models/*.pt
 *.faiss
 !data/_archive/*.faiss
 !data/regional_kbs/4_faiss_packs/*.faiss
+# Exclude processed FAISS files
+!data/processed/*.faiss
 
 # SQLite files - only track those in specific directories
 *.sqlite
 !data/_archive/*.sqlite
 !data/regional_kbs/3_sqlite_packs/*.sqlite
+# Exclude processed SQLite files
+!data/processed/*.sqlite
 
 # Cache and temporary files
 model_cache/
+
+# Processed data files (available via GitHub Releases)
+data/processed/*.pkl
+data/processed/*.csv
+data/processed/*.pkl
+!data/processed/README.md
 
 # Other ignored directories
 old_scripts_archive/

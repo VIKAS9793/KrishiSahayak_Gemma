@@ -67,6 +67,45 @@ The fully manual, expert-led curation approach was chosen because it is the only
 - **It Captures Human Expertise:** The manual process allows for the inclusion of strategic depth, such as the principles of Integrated Disease Management (IDM), which prioritizes cultural and biological controls—a level of sophistication that automation failed to achieve.
 - **It Is Robust:** The resulting CSV files are clean, complete, and correctly formatted, providing a solid foundation for the project's RAG system.
 
-## 5. Conclusion
+## 5. Accessing Pre-processed Knowledge Base Files
+
+To simplify deployment and ensure consistency, pre-processed knowledge base files are made available through GitHub Releases. These files include the fully curated and processed data ready for use with the KrishiSahayak+Gemma system.
+
+### Available Files
+
+1. **knowledge_base_v0_generic_46-class.csv**
+   - CSV file containing the curated knowledge base
+   - Columns: Disease, Symptoms, Remedy, Source
+
+2. **knowledge_base_v0_generic_46-class.faiss**
+   - FAISS index for fast semantic search
+   - Generated from the embeddings of the knowledge base content
+
+3. **knowledge_base_v0_generic_46-class.sqlite**
+   - SQLite database for efficient querying
+   - Contains the full knowledge base with metadata
+
+4. **knowledge_base_v0_generic_46-class_text.pkl**
+   - Serialized text data for quick loading
+   - Used by the RAG system for response generation
+
+### Download Instructions
+
+1. Visit the [GitHub Releases](https://github.com/VIKAS9793/KrishiSahayak_Gemma/releases) page
+2. Download the latest release assets
+3. Extract the files to the `data/processed/` directory
+4. The application will automatically detect and use these files
+
+### Regenerating Files (Advanced)
+
+If you need to regenerate these files from source:
+
+```bash
+# 1. Ensure you have the source CSV file in data/raw/
+# 2. Run the knowledge base processing script
+python scripts/process_knowledge_base.py --input data/raw/knowledge_base_v0_generic_46-class.csv --output data/processed/
+```
+
+## 6. Conclusion
 
 The journey to create the project's knowledge base underscores a critical lesson in applied AI: for high-stakes, real-world applications, data quality and trustworthiness are paramount. The final, adopted methodology is a fully manual, expert-driven process that ensures the foundation of KrishiSahayak+Gemma is not just data, but trusted, verifiable, and actionable knowledge.
