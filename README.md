@@ -121,12 +121,22 @@ A fully offline-capable mobile application designed specifically for farmers in 
 ## 📊 Project Structure
 
 ```
-KrishiSahayak-Gemma/
-├── android_app/              # Android application source
+.
 ├── asset_preparation/        # Scripts for data and model preparation
-├── data/                     # Data storage
-│   ├── processed/           # Processed datasets
-│   └── raw/                 # Raw data files
+│   ├── generate_knowledge_base_gemma.py  # Generate initial knowledge base
+│   ├── create_database.py                # Create SQLite database
+│   └── build_index.py                    # Build FAISS search index
+├── scripts/                  # Utility and maintenance scripts
+│   ├── validate_knowledge_base.py  # Validate knowledge base integrity
+│   ├── eda_knowledge_base.py       # Exploratory data analysis
+│   ├── enhance_knowledge_base.py   # Data enhancement utilities
+│   └── evaluate.py                 # Model evaluation scripts
+├── data/                    # Data directory
+│   ├── raw/                 # Raw data files
+│   ├── processed/           # Processed data files
+│   └── _archive/            # Archived versions of knowledge base
+├── web_demo/               # Web interface
+└── docs/                   # Documentation
 ├── docs/                     # Project documentation
 │   ├── TECHNICAL_REPORT.md
 │   ├── technical_decision_log.md

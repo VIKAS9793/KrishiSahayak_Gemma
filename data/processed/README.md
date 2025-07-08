@@ -12,12 +12,17 @@ This directory contains pre-processed knowledge base files used by the KrishiSah
 
 ### Option 2: Generate from Source
 
-If you need to regenerate these files:
+1. Ensure you have the knowledge base CSV file in the processed directory:
+   ```
+   data/processed/knowledge_base_v0_generic_46-class.csv
+   ```
 
-```bash
-# Make sure you have the source CSV file in data/raw/
-python scripts/process_knowledge_base.py --input data/raw/knowledge_base_v0_generic_46-class.csv --output data/processed/
-```
+2. Run the build index script:
+   ```bash
+   python asset_preparation/build_index.py
+   ```
+
+   This will generate the processed files in the current directory.
 
 ## File Descriptions
 

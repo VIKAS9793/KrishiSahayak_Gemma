@@ -106,13 +106,24 @@ The ZIP file contains the following files:
 
 ### Regenerating Files (Advanced)
 
-If you need to regenerate these files from source:
+### Regenerating the Knowledge Base
 
-```bash
-# 1. Ensure you have the source CSV file in data/raw/
-# 2. Run the knowledge base processing script
-python scripts/process_knowledge_base.py --input data/raw/knowledge_base_v0_generic_46-class.csv --output data/processed/
-```
+If you need to regenerate the processed files from the source CSV:
+
+1. Ensure you have the knowledge base CSV file in the correct location:
+   ```
+   data/processed/knowledge_base_v0_generic_46-class.csv
+   ```
+
+2. Run the build index script:
+   ```bash
+   python asset_preparation/build_index.py
+   ```
+
+This will generate the following files in the `data/processed/` directory:
+- `knowledge_base_v0_generic_46-class.faiss` - FAISS index for semantic search
+- `knowledge_base_v0_generic_46-class.sqlite` - SQLite database for efficient querying
+- `knowledge_base_v0_generic_46-class_text.pkl` - Serialized text data for the RAG system
 
 ## 6. Conclusion
 

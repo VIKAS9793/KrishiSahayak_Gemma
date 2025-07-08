@@ -302,8 +302,8 @@ def main():
     }
     
     # Paths
-    # Path to the processed CSV in the archive
-    csv_path = "data/processed/_archive/knowledge_base_v0_generic_46-class.csv"
+    # Path to the knowledge base CSV file
+    csv_path = "data/processed/knowledge_base_v0_generic_46-class.csv"
     output_dir = "data/processed"
     
     # Create optimized indexer
