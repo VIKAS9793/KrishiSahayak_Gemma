@@ -2,104 +2,77 @@
 
 This document outlines the versioning strategy for the KrishiSahayak-Gemma project's data assets.
 
-## Version Format
+## 1. Version Format
 
-### Global Knowledge Base
+A semantic versioning scheme is used to track changes to our knowledge base assets.
+
+### Generic Knowledge Base (For MVP)
 ```
 knowledge_base_v{MAJOR}.{MINOR}_[TYPE]_[DETAILS].{EXT}
 ```
+*Example:* `knowledge_base_v0_generic_46-class.csv`
 
-### Regional Knowledge Bases
+### Regional Knowledge Bases (Future Scope)
 ```
 knowledge_base_{REGION}_v{MAJOR}.{MINOR}.{EXT}
 ```
+*Example:* `knowledge_base_maharashtra_v1.0.csv`
 
-Where:
-- `{REGION}`: Lowercase, underscore-separated region name (e.g., maharashtra, punjab)
-  - Covers all 36 states and union territories of India
-  - Naming follows ISO 3166-2:IN where applicable
-- `{MAJOR}`: Major version number (breaking changes)
-- `{MINOR}`: Minor version number (backward-compatible changes)
-- `{EXT}`: File extension (csv, sqlite, faiss, etc.)
+## 2. Current Data Assets (For MVP Development)
 
-- `MAJOR`: Incremented for significant changes or additions to the knowledge base
-- `MINOR`: Incremented for minor updates or corrections
-- `TYPE`: Describes the type of dataset (e.g., `generic`, `regional`)
-- `DETAILS`: Additional details about the dataset (e.g., `46-class`)
-- `EXT`: File extension (csv, faiss, pkl, sqlite)
+The initial development of the Android MVP will use the following versioned, generic dataset. This allows the engineering team to build and test the application's core technology without being blocked by the long-term data curation process.
 
-## Current Version
+- **Version:** v0.1
+- **Type:** Generic 46-Class Dataset
+- **Files:**
+  - `knowledge_base_v0_generic_46-class.csv`
+  - `knowledge_base_v0_generic_46-class.faiss`
+  - `knowledge_base_v0_generic_46-class_text.pkl`
+  - `knowledge_base_v0_generic_46-class.sqlite`
 
-**v0.1 - Generic 46-class Dataset**
-- `knowledge_base_v0_generic_46-class.csv`
-- `knowledge_base_v0_generic_46-class.faiss`
-- `knowledge_base_v0_generic_46-class_text.pkl`
-- `knowledge_base_v0_generic_46-class.sqlite`
+These assets are archived in the `data/_archive/` directory for reference.
 
-## Regional Coverage
+## 3. Regional Data Strategy & Versioning
 
-The regional knowledge base covers all 36 states and union territories of India, ensuring comprehensive agricultural support across the entire country. This includes:
+The long-term vision for the production application is to use expert-curated, regional data packs for maximum relevance and accuracy.
 
-- 28 states (e.g., Maharashtra, Punjab, Kerala)
-- 8 union territories (e.g., Delhi, Jammu & Kashmir, Ladakh)
-- Each region has its own specialized data pack with locally relevant agricultural knowledge
+### Phased Rollout
 
-## Directory Structure
+The creation of these data packs will follow a phased approach:
+
+1. **Pilot Phase:** The initial data curation effort will focus on the 6 key states outlined in the `REGIONAL_COVERAGE.md` document.
+2. **Future Expansion:** Based on the success of the pilot, coverage will be expanded to additional states and union territories.
+
+### Versioning
+
+- Each regional data pack will be versioned independently (e.g., `maharashtra_v1.0`, `punjab_v1.1`).
+- This allows for updates to a specific region's data without affecting others.
+
+## 4. Directory Structure
+
+All data assets are organized in a structured manner to ensure clarity and maintainability.
 
 ```
 data/
-├── _archive/               # Versioned global datasets
-│   └── knowledge_base_v0_generic_46-class.*
-├── regional_kbs/           # Regional knowledge bases
-│   ├── 1_raw_text/        # Raw text data
-│   ├── 2_curated_csv/     # Processed CSV files
-│   ├── 3_sqlite_packs/    # SQLite databases
-│   └── 4_faiss_packs/     # FAISS indices
-├── processed/              # Temporary processed data
-└── raw/                    # Raw data sources
+├── processed/               # Current version of the knowledge base
+│   ├── knowledge_base_v0_generic_46-class.csv
+│   ├── knowledge_base_v0_generic_46-class.faiss
+│   ├── knowledge_base_v0_generic_46-class_text.pkl
+│   └── knowledge_base_v0_generic_46-class.sqlite
+├── raw/                    # Raw data sources
+│   ├── disease_data.txt
+│   ├── diseases_list.txt
+│   ├── plantvillage/      # PlantVillage dataset
+│   └── plantdoc/          # PlantDoc dataset
+└── _archive/              # (Planned) For archiving old versions
 ```
 
-## Creating a New Version
+## 5. Best Practices
 
-### Global Knowledge Base
-1. **Major Version (v1, v2, etc.)**
-   - Significant changes to data structure
-   - Addition of new disease classes
-   - Major updates to existing information
+- **Immutable Versions:** Once a version is created, it should not be modified. Any changes require a new version number.
+- **Documentation:** All relevant documentation (`README.md`, `TECHNICAL_REPORT.md`) must be updated to reflect the current data version in use.
+- **Testing:** Any new data version must be thoroughly tested with all dependent systems before being deployed.
+- **Archiving:** Previous versions should always be kept in the archive for reference and potential rollbacks.
 
-2. **Minor Version (v0.1, v0.2, etc.)**
-   - Minor corrections
-   - Formatting improvements
-   - Small additions to existing entries
-
-### Regional Knowledge Bases
-1. **Versioning per Region**
-   - Each region maintains its own version number
-   - Version format: `v{MAJOR}.{MINOR}` (e.g., v1.0, v1.1, v2.0)
-   - Update version when making changes specific to a region
-
-2. **Synchronization**
-   - When updating the global knowledge base, consider if regional versions need updates
-   - Document any dependencies between global and regional versions
-
-## Updating Dependencies
-
-When creating a new version, ensure all related files are updated:
-
-1. Web demo configuration
-2. Android app assets
-3. Documentation references
-4. Test cases
-
-## Backward Compatibility
-
-- The web demo and mobile app should specify which version they require
-- Include migration scripts if data structure changes
-- Maintain documentation of changes between versions
-
-## Best Practices
-
-1. Always create a new version when making changes to the knowledge base
-2. Update documentation to reflect the current version in use
-3. Test all dependent systems with the new version before deployment
-4. Keep previous versions in the archive for reference and rollback
+---
+*Last updated: July 8, 2025*

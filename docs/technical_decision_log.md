@@ -1,15 +1,16 @@
 # Technical Decision Log: KrishiSahayak Web Demo
 
-**Version:** 1.1  
-**Date:** July 6, 2025  
+**Version:** 2.0  
+**Date:** July 8, 2025  
 **Status:** Finalized  
 **Component:** web_demo
 
 ## 1. Objective
 
 The primary objective for this component was to rapidly develop a high-fidelity, interactive web-based prototype. This prototype serves two main purposes:
-- To validate the core multimodal AI pipeline (Image + Audio → Diagnosis)
-- To provide a functional and impressive demo for stakeholders, showcasing the project's potential before embarking on the more complex native Android development.
+
+1. To validate the core multimodal AI pipeline (Image + Audio → Diagnosis).
+2. To provide a functional and impressive demo for stakeholders, showcasing the project's potential before embarking on the more complex native Android development.
 
 ## 2. Architectural Decisions
 
@@ -23,7 +24,7 @@ A standard, server-based Python architecture was chosen to prioritize developmen
 
 ## 3. Model & Inference Strategy
 
-A key decision was made to use different model assets for the web demo and the final Android application, optimizing each for its specific environment.
+A key decision was made to use a different model asset and inference strategy for the web demo than for the final Android application, optimizing each for its specific environment.
 
 ### Web Demo Strategy (Implemented):
 - **Model Source:** The base `google/gemma-3n-E2B-it` model is downloaded directly from the Hugging Face Hub at runtime.
@@ -43,99 +44,20 @@ A key decision was made to use different model assets for the web demo and the f
 To enhance the reliability and explainability of the demo, a Retrieval-Augmented Generation (RAG) pipeline was implemented as a fallback mechanism.
 
 - **Vector Search:** A FAISS index is built from the curated `knowledge_base_v0_generic_46-class.csv` using sentence-transformers embeddings.
-- **Data Versioning:** The initial dataset (v0) has been archived in `data/_archive/` with the following files:
-  - `knowledge_base_v0_generic_46-class.csv` - Original structured data
-  - `knowledge_base_v0_generic_46-class.faiss` - Pre-built FAISS index
-  - `knowledge_base_v0_generic_46-class_text.pkl` - Processed text data
-  - `knowledge_base_v0_generic_46-class.sqlite` - SQLite database for mobile
-- **Uncertainty Trigger:** A custom module (`uncertainty.py`) analyzes the model's initial response. If the response is too short or contains keywords indicating uncertainty (e.g., "could be," "not sure"), the RAG pipeline is triggered.
+- **Uncertainty Trigger:** A custom module (`uncertainty.py`) analyzes the model's initial response. If the response is too short or contains keywords indicating uncertainty (e.g., "could be," "not sure"), the RAG pipeline is triggered to provide a source-grounded answer.
 
-**Benefit:** This adds a layer of robustness. When the base model is not confident, it can retrieve relevant, expert-verified information from our knowledge base to provide a more accurate and trustworthy final answer. The versioned archive ensures reproducibility and makes it easy to maintain different dataset versions.
-
-### 2025-07-07: Regional Knowledge Base Structure Implementation
-
-#### 1. New Directory Structure
-- **Decision**: Implement a standardized structure for regional knowledge bases
-- **Reason**: To organize regional data assets in a consistent, maintainable way
-- **Structure**:
-  ```
-  regional_kbs/
-  ├── 1_raw_text/        # Raw text data collection
-  ├── 2_curated_csv/     # Processed and cleaned CSVs
-  ├── 3_sqlite_packs/    # Mobile-optimized SQLite databases
-  └── 4_faiss_packs/     # FAISS indices for semantic search
-  ```
-  
-#### 2. Regional Coverage
-- **Decision**: Cover all 36 states and union territories of India
-- **Implementation**:
-  - 28 states (e.g., Maharashtra, Punjab, Kerala)
-  - 8 union territories (e.g., Delhi, Jammu & Kashmir, Ladakh)
-  - Each region has its own specialized data pack
-- **Naming Conventions**:
-  - Lowercase, underscore-separated (e.g., jammu_and_kashmir, uttar_pradesh)
-  - Follows ISO 3166-2:IN where applicable
-
-#### 2. Naming Conventions
-- **Files**: `knowledge_base_{region}_v{MAJOR}.{MINOR}.{ext}`
-- **Regions**: Lowercase, underscore-separated (e.g., maharashtra, punjab)
-- **Versions**: Separate versioning per region
-
-#### 3. Git Ignore Rules
-- Updated to track FAISS and SQLite files in regional_kbs/
-- Maintained ignore rules for raw image directories
-
-### 2025-07-07: Knowledge Base Versioning and Archiving Strategy
-
-#### 1. Versioned Data Storage
-- **Decision**: Implement a structured versioning system for all data assets
-- **Reason**: To enable tracking changes, support rollbacks, and maintain reproducibility
-- **Details**:
-  - All data files now follow the pattern: `knowledge_base_v{MAJOR}_{MINOR}_[TYPE]_[DETAILS].{EXT}`
-  - Current version: `v0_generic_46-class`
-  - Files stored in `data/_archive/` directory
-
-#### 2. Updated File Structure
-- **Changes**:
-  - Moved all knowledge base files to versioned names in `data/_archive/`
-  - Updated all code references to use versioned paths
-  - Created comprehensive documentation in `docs/VERSIONING.md`
-
-#### 3. Impact and Migration
-- **Affected Components**:
-  - Web demo configuration
-  - Asset preparation scripts
-  - Documentation
-- **Migration Path**:
-  - All systems now reference the versioned files
-  - Old file paths have been removed
-  - Documentation updated to reflect current structure
-
-#### 4. Future Considerations
-- Automated version bumping for data updates
-- Integration with CI/CD pipeline
-- Validation tests for data consistency
+**Benefit:** This adds a layer of robustness and demonstrates the explainability features planned for the final product.
 
 ## 5. Deployment & Distribution Strategy
 
-The two project tracks have distinct deployment models.
+The web demo has a distinct deployment model from the final Android app.
 
-### Web Demo:
-- Deployed on a standard cloud server or run locally for demonstration purposes.
-- Requires an active internet connection to download the model on first run.
-
-### Android App:
-- A fully offline application.
-- Not distributed through the Google Play Store.
-- Distribution method:
-  - Final .apk file will be distributed through a network of trusted partners (NGOs, local agricultural centers).
-  - Updates (containing new models or databases) will be delivered to partners.
-  - Partners will distribute updates to farmers via P2P methods like SD cards or local file sharing.
-- **Benefits:**
-  - Ensures application accessibility in areas with no internet connectivity.
-  - Maintains the ability to push updates through trusted local networks.
-  - Reduces data costs and infrastructure requirements for end-users.
+- **Web Demo:** Deployed on a standard cloud server or run locally for demonstration purposes. It requires an active internet connection to download the model on first run.
+- **Android App:** A fully offline application distributed via P2P methods (SD cards, local file sharing), not the Google Play Store.
 
 ## 6. Conclusion
 
-The chosen architecture and technologies are optimal for the web demo. By keeping the web and mobile tracks separate, we can effectively showcase the project's full potential while ensuring the final Android product is perfectly optimized for its real-world constraints.
+The chosen architecture and technologies are optimal for the web demo. By keeping the web and mobile tracks separate, we can effectively showcase the project's full potential while ensuring the final Android product is perfectly optimized for its real-world constraints. This decision log accurately reflects the technical choices made for this specific prototype component.
+
+---
+*Last updated: July 8, 2025*

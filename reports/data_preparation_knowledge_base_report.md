@@ -6,18 +6,18 @@
 
 ## 1. Introduction & Objective
 
-The reliability of any AI-driven advisory system is fundamentally dependent on the quality of its underlying knowledge. For the KrishiSahayak+Gemma project, the primary objective was to build a trustworthy, offline-first agricultural assistant. This necessitated the creation of a high-fidelity, verifiable knowledge base to power the system's Retrieval-Augmented Generation (RAG) fallback mechanism.
+The reliability of any AI-driven advisory system is fundamentally dependent on the quality of its underlying knowledge. For the KrishiSahayak+Gemma project, the primary objective was to build a trustworthy, offline-first agricultural assistant for six key Indian states (Maharashtra, Uttar Pradesh, Punjab, Himachal Pradesh, Jammu & Kashmir, and Ladakh). This necessitated the creation of a high-fidelity, verifiable knowledge base to power the system's Retrieval-Augmented Generation (RAG) fallback mechanism, with content specifically curated for these regions.
 
 This document details the iterative engineering process undertaken to prepare this data. It outlines the methods attempted, the technical challenges encountered, and the justification for the final, expert-curated methodology. The project's findings demonstrate that for high-stakes applications like agricultural diagnostics, a purely automated data collection approach is insufficient. A Human-in-the-Loop (HITL) strategy is non-negotiable to ensure the accuracy, trust, and real-world applicability required.
 
 ## 2. Initial Data Scoping
 
-The project's scope was defined by a comprehensive collection of image data sourced from two well-regarded public datasets:
+The project's initial scope was defined by a comprehensive collection of image data from six key Indian states, sourced from two well-regarded public datasets and augmented with region-specific agricultural information:
 
 - **PlantVillage Dataset:** A large, open-source repository of images of healthy and diseased plant leaves.
 - **PlantDoc Dataset:** Another significant collection of plant disease images, with specific relevance to the Indian agricultural context.
 
-By merging and de-duplicating these datasets, a definitive list of 46 distinct plant-disease classes was established. The folder names from this dataset (e.g., `Tomato___Late_blight`) provided the foundational checklist of diseases the system needed to address. The images themselves were reserved to serve as the unbiased test set for the final evaluation phase.
+By merging and de-duplicating these datasets, a definitive list of 46 distinct plant-disease classes was established, with a focus on crops and conditions relevant to our six target states. The folder names from this dataset (e.g., `Tomato___Late_blight`) provided the foundational checklist of diseases the system needed to address. The images themselves were reserved to serve as the unbiased test set for the final evaluation phase, with additional validation from agricultural experts in each pilot state.
 
 ## 3. Data Curation Methodology: An Iterative Engineering Process
 

@@ -1,103 +1,90 @@
 # Contributing to KrishiSahayak+Gemma
 
-Thank you for your interest in contributing to KrishiSahayak+Gemma! We welcome contributions from the community to help improve this project.
+First off, thank you for considering contributing to the KrishiSahayak project! Your help is essential for our mission to empower farmers with accessible AI technology.
 
-## 📋 Table of Contents
-
-- [Code of Conduct](#code-of-conduct)
-- [Getting Started](#-getting-started)
-- [Development Setup](#-development-setup)
-- [Pull Request Process](#-pull-request-process)
-- [Code Style Guidelines](#-code-style-guidelines)
-- [Testing](#-testing)
-- [Documentation](#-documentation)
-- [Reporting Issues](#-reporting-issues)
+This document provides guidelines for contributing to the project. We welcome contributions of all kinds, from bug reports and feature suggestions to documentation improvements and code pull requests.
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+This project and everyone participating in it is governed by our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to the project maintainers.
 
-## 🤝 Getting Started
+## How You Can Contribute
 
-1. **Fork** the repository on GitHub
-2. **Clone** the project to your own machine
-3. **Commit** changes to your own branch
-4. **Push** your work back up to your fork
-5. Submit a **Pull Request** so we can review your changes
+There are many ways to contribute to the project's success:
 
-## 🛠 Development Setup
+- **Reporting Bugs**: If you find a bug in the web demo or have an issue with the setup, please open an issue and provide as much detail as possible.
+- **Suggesting Enhancements**: Have an idea for a new feature or an improvement to an existing one? We'd love to hear it! Please open an issue to start a discussion.
+- **Improving Documentation**: If you find parts of our documentation unclear or inaccurate, please let us know or submit a pull request with your improvements.
+- **Submitting Pull Requests**: If you have a bug fix or a new feature you'd like to contribute, please follow the process outlined below.
 
-### Prerequisites
+## A Special Call for Domain Experts
 
-- Python 3.11.9 (or 3.8+)
-- Git
-- pip (Python package manager)
+A core part of our long-term vision is building high-quality, expert-verified Regional Data Packs. If you are an agricultural scientist, researcher, agronomist, or botanist, your expertise is invaluable. We are actively seeking collaborators to help us curate and validate the data that will power our application. Please reach out to the project maintainers if you are interested in contributing in this capacity.
 
-### Setup Steps
+## Setting Up Your Development Environment
 
-1. Clone the repository:
+To get started with the code, follow these steps. This guide focuses on setting up the web_demo.
+
+### Fork & Clone the Repository
+
+1. [Fork the repository](https://github.com/VIKAS9793/KrishiSahayak_Gemma/fork) on GitHub.
+2. Clone your fork to your local machine:
    ```bash
-   git clone https://github.com/VIKAS9793/KrishiSahayak_Gemma.git
+   git clone https://github.com/YOUR_USERNAME/KrishiSahayak_Gemma.git
    cd KrishiSahayak_Gemma
    ```
 
-2. Set up a virtual environment:
+### Create and Activate a Virtual Environment (Crucial Step)
+
+It is essential to use a Python virtual environment to avoid conflicts with system-wide packages.
+
+From the project root directory, run:
+
+```bash
+# Create the virtual environment
+python3 -m venv venv
+
+# Activate the environment
+# On Windows:
+# .\venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+The dependencies for the web demo are located in their own directory. Install them using pip:
+
+```bash
+pip install -r web_demo/requirements.txt
+```
+
+### Run the Web Demo
+
+You can now start the Gradio application:
+
+```bash
+python web_demo/app.py
+```
+
+## Submitting Changes (Pull Request Process)
+
+1. Create a new branch for your feature or bug fix:
    ```bash
-   # On Windows
-   python -m venv venv
-   .\venv\Scripts\activate
-   
-   # On macOS/Linux
-   python3 -m venv venv
-   source venv/bin/activate
+   git checkout -b feature/my-new-feature
    ```
-
-3. Install dependencies:
+2. Make your changes and commit them with a clear, descriptive message.
+3. Push your branch to your fork:
    ```bash
-   pip install -r web_demo/requirements.txt
+   git push origin feature/my-new-feature
    ```
+4. Open a Pull Request from your fork's branch to the main branch of the original repository.
+5. Clearly describe the changes you have made and link to any relevant issues.
+6. The project maintainers will review your PR, provide feedback, and merge it when it's ready.
 
-## 🔄 Pull Request Process
+## Style Guides
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a build.
-2. Update the README.md with details of changes to the interface, including new environment variables, exposed ports, useful file locations, and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent.
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you do not have permission to do that, you may request the second reviewer to merge it for you.
+- **Python**: Please follow the [PEP 8 Style Guide](https://www.python.org/dev/peps/pep-0008/). We recommend using an autoformatter like `black` to ensure consistency.
+- **Documentation**: All documentation is written in Markdown. Please ensure it is clear, concise, and easy to read.
 
-## 🎨 Code Style Guidelines
-
-- Follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python code
-- Use 4 spaces for indentation (no tabs)
-- Keep lines under 100 characters
-- Use docstrings for all public modules, functions, classes, and methods
-- Use type hints for better code clarity
-- Write meaningful commit messages
-
-## 📝 Documentation
-
-- Update documentation for any changes to the codebase
-- Ensure all new modules, functions, and classes have docstrings
-- Keep the README.md file up to date
-- Add comments to explain complex logic
-
-## 🐛 Reporting Issues
-
-When reporting issues, please include:
-
-1. A clear, descriptive title
-2. Steps to reproduce the issue
-3. Expected behavior
-4. Actual behavior
-5. Screenshots if applicable
-6. Your environment (OS, Python version, etc.)
-
-## 📧 Contact
-
-If you have any questions, feel free to reach out:
-- **Vikas Sahani**
-  - Email: [vikassahani17@gmail.com](mailto:vikassahani17@gmail.com)
-  - LinkedIn: [Vikas Sahani](https://www.linkedin.com/in/vikas-sahani-727420358)
-
----
-
-Thank you for your contribution! Your work helps make KrishiSahayak+Gemma better for everyone. 🌱
+Thank you again for your interest in contributing!

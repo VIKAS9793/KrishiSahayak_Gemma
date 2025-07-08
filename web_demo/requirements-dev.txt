@@ -1,0 +1,25 @@
+# ==============================================================================
+# Optional Development & Monitoring Dependencies
+# ==============================================================================
+# These packages are not required to run the basic web demo but are useful
+# for performance monitoring, logging, and advanced deployment scenarios.
+# Install with: pip install -r requirements-dev.txt
+# ==============================================================================
+
+# System Monitoring
+psutil>=5.9.0
+
+# Advanced Logging
+python-json-logger>=2.0.2
+
+# Production Web Servers (alternatives to Gradio's default)
+gunicorn>=20.1.0
+uvloop>=0.16.0
+httptools>=0.2.0
+
+# Security & Authentication (if adding auth layers)
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# Environment Management
+python-dotenv>=0.19.0
