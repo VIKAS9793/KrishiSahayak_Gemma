@@ -90,7 +90,23 @@ python3 ../convert_hf_to_gguf.py gemma-model \
   Q4_K_M
 ```
 
-## 4. Verification and Next Steps
+## 4. Visual Guide to Model Quantization
+
+The following screenshots document the successful execution of the model quantization process:
+
+### Step 1: Model Download and Conversion
+![Model Conversion Process](images/1.png)
+*Figure 1: Downloading the Gemma 3n model and converting it to GGUF format*
+
+### Step 2: Quantization Execution
+![Quantization Process](images/2.png)
+*Figure 2: Running the quantization process with Q4_K_M settings*
+
+### Step 3: Successful Completion
+![Quantization Complete](images/3.png)
+*Figure 3: Successful completion of model quantization*
+
+## 5. Verification and Next Steps
 
 After the pipeline completes, it is critical to verify the output and proceed with formal evaluation.
 
