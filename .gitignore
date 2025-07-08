@@ -91,8 +91,11 @@ model_cache/
 # Processed data files (available via GitHub Releases)
 data/processed/*.pkl
 data/processed/*.csv
-!data/processed/knowledge_base_*.pkl
 !data/processed/README.md
+
+# Only track specific binary files that are needed
+!data/processed/knowledge_base_*.faiss
+!data/processed/knowledge_base_*.sqlite
 
 # Other ignored directories
 old_scripts_archive/
