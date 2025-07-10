@@ -143,9 +143,9 @@ A fully offline-capable mobile application designed specifically for farmers in 
 │   ├── regional_data_pack_adr.md
 │   ├── VERSIONING.md
 │   ├── REGIONAL_COVERAGE.md
-│   └── model_card.md
-├── reports/                  # Analysis and performance reports
+│   ├── model_card.md
 │   └── data_preparation_knowledge_base_report.md
+├── reports/                  # Analysis and performance reports
 ├── scripts/                  # Utility scripts
 └── web_demo/                 # Web-based demonstration
     ├── app.py
