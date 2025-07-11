@@ -2,24 +2,50 @@
 # Optional Development & Monitoring Dependencies
 # ==============================================================================
 # These packages are not required to run the basic web demo but are useful
-# for performance monitoring, logging, and advanced deployment scenarios.
+# for development, testing, and advanced deployment scenarios.
 # Install with: pip install -r requirements-dev.txt
 # ==============================================================================
 
-# System Monitoring
-psutil>=5.9.0
+# System Monitoring & Profiling
+psutil==7.0.0
+memory-profiler==0.61.0
+
+# Testing & Debugging
+pytest==8.3.2
+pytest-cov==6.0.0
+ipdb==0.13.13
+
+# Code Quality & Formatting
+black==24.4.2
+isort==5.13.2
+flake8==7.1.1
+mypy==1.10.0
+
+# Documentation
+mkdocs==1.6.0
+mkdocs-material==9.5.28
+
+# Jupyter for Interactive Development
+jupyter==1.0.0
+ipython==9.4.0
+matplotlib==3.10.3
+seaborn==0.12.2
 
 # Advanced Logging
-python-json-logger>=2.0.2
+python-json-logger==3.3.0
 
-# Production Web Servers (alternatives to Gradio's default)
-gunicorn>=20.1.0
-uvloop>=0.16.0
-httptools>=0.2.0
+# Production Web Servers
+gunicorn==21.2.0
+uvloop==0.19.0
+httptools==0.6.4
 
-# Security & Authentication (if adding auth layers)
-python-jose[cryptography]>=3.3.0
-passlib[bcrypt]>=1.7.4
+# Security & Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
 
 # Environment Management
-python-dotenv>=0.19.0
+python-dotenv==1.1.1
+
+# Type Hints
+mypy-extensions==1.0.0
+typing-extensions==4.14.1
