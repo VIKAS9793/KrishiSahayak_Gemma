@@ -16,7 +16,7 @@
 - [✨ Project Mission](#-project-mission)
 - [🏗️ Architecture](#-architecture)
 - [🚀 Getting Started](#-getting-started)
-  - [Web Demo](#-web-demo)
+  - [Development Setup](#-development-setup)
   - [Mobile App](#-mobile-app)
 - [📊 Project Structure](#-project-structure)
 - [🤝 Contributing](#-contributing)
@@ -34,7 +34,7 @@ The project follows a strategic two-track approach to balance rapid prototyping 
 
 | Component | Technology Stack | Purpose |
 |-----------|-----------------|----------|
-| 🤖 AI Engine | `google/gemma-3n-E2B-it` | The core language model for generating diagnostics. |
+| 🤖 AI Engine | `gemma-3n-q4_k_m.gguf` (4-bit quantized) | The core language model for generating diagnostics. |
 | 📚 Knowledge Base | FAISS, SQLite, CSV | A database for the Retrieval-Augmented Generation (RAG) system to ensure factual grounding. |
 | 🌐 Web Interface | Gradio, FastAPI | A server-based prototype for demonstration and testing. |
 | 📱 Mobile App | Native Android, C++ (llama.cpp) | The final, offline-first product for end-users. |
@@ -68,32 +68,28 @@ To de-risk development and ensure the final data quality is exceptionally high, 
 
 2. **Production Data (Future Scope):** The final, production-ready solution will use expert-curated Regional Data Packs. This will be a separate phase involving manual curation with agricultural scientists. The initial focus for this effort will be the 6 pilot states (see [Regional Coverage Documentation](docs/REGIONAL_COVERAGE.md)).
 
-## 🌐 Web Demo
+## 🚀 Getting Started
 
-<div align="center">
-<img src="https://img.shields.io/badge/Status-Online-brightgreen" alt="Status: Online">
-<img src="https://img.shields.io/badge/Model-Gemma%203n-blue" alt="Model: Gemma 3n">
-<img src="https://img.shields.io/badge/API-FastAPI-green" alt="API: FastAPI">
-</div>
+### Development Setup
 
-**Status:** 🟢 Fully Functional
-
-A feature-rich web application that demonstrates the core capabilities of our agricultural AI assistant. It uses the transformers library to showcase the model's maximum quality in a server environment.
-
-**Quick Start:**
+To set up the development environment for the mobile application:
 
 ```bash
-# Navigate to the web_demo directory
-cd web_demo
+# Clone the repository
+git clone https://github.com/VIKAS9793/KrishiSahayak_Gemma.git
+cd KrishiSahayak_Gemma
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Launch the application
-python app.py
+# Set up the Android development environment
+# (Refer to Android Studio setup guide for detailed instructions)
 ```
 
-For detailed setup instructions, see the [Web Demo Documentation](web_demo/README.md).
+### Mobile App (Primary Solution)
+The official end-user solution is our mobile application, specifically designed for production use with optimized performance for low-resource devices. The mobile app provides a complete, user-friendly experience for farmers in the field.
+
+*Coming soon*
 
 ## 📱 Mobile Application
 
@@ -150,7 +146,7 @@ A fully offline-capable mobile application designed specifically for farmers in 
 └── web_demo/                 # Web-based demonstration
     ├── app.py
     ├── requirements.txt
-    └── src/                  # Source code for web demo
+    └── src/                  # Core application source code
 ```
 
 ### 📄 Key Files
@@ -159,7 +155,7 @@ A fully offline-capable mobile application designed specifically for farmers in 
 |------|---------|
 | `data/processed/knowledge_base_v0_generic_46-class.csv` | Structured agricultural knowledge base |
 | `web_demo/app.py` | Main Gradio web application |
-| `web_demo/requirements.txt` | Python dependencies for the web demo |
+| `web_demo/requirements.txt` | Python dependencies for development |
 | `docs/model_card.md` | Model details and specifications |
 | `docs/TECHNICAL_REPORT.md` | Comprehensive technical documentation |
 
@@ -199,7 +195,7 @@ A fully offline-capable mobile application designed specifically for farmers in 
    pip install -r requirements.txt
    ```
 
-### 🌐 Running the Web Demo
+### 🌐 Development Setup
 
 <div align="center">
   <img src="https://img.shields.io/badge/Quick%20Start-4%20Steps-blue" alt="Quick Start: 4 Steps">

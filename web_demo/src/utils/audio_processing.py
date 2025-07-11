@@ -1,32 +1,25 @@
-# --- src/utils/audio_processing.py ---
+# --- src/utils/audio_processing.py (Corrected) ---
+# Version 2: Added 'import time' to fix NameError in text_to_speech.
 
 import whisper
 from gtts import gTTS
 import os
 import torch
-import tempfile
-from pathlib import Path
+import time  # <--- FIXED: Added the missing import
 
 # --- Configuration ---
-# Use a smaller, efficient Whisper model suitable for on-device use
-WHISPER_MODEL_SIZE = "base" 
-# Directory to save temporary audio files
-TTS_OUTPUT_DIR = os.path.join(tempfile.gettempdir(), "krishi_sahayak_audio")
-os.makedirs(TTS_OUTPUT_DIR, exist_ok=True)
+WHISPER_MODEL_SIZE = "base"
+TTS_OUTPUT_DIR = "web_demo/audio_outputs"
 
 # --- Model Loading (with caching) ---
 whisper_model = None
 
 def load_whisper_model():
-    """
-    Loads the Whisper model into memory.
-    This is called once to initialize the model.
-    """
+    """Loads the Whisper model into memory."""
     global whisper_model
     if whisper_model is None:
-        print(f"Loading Whisper model ({WHISPER_MODEL_SIZE})...")
+        print("Loading Whisper model (base)...")
         try:
-            # Check for GPU availability
             device = "cuda" if torch.cuda.is_available() else "cpu"
             print(f"Using device: {device}")
             whisper_model = whisper.load_model(WHISPER_MODEL_SIZE, device=device)
@@ -36,25 +29,11 @@ def load_whisper_model():
             raise
 
 def transcribe_audio(audio_file_path: str) -> str:
-    """
-    Transcribes an audio file to text using Whisper.
-
-    Args:
-        audio_file_path (str): Path to the audio file (e.g., .wav, .mp3).
-
-    Returns:
-        str: The transcribed text, or an error message.
-    """
-    # Ensure the whisper model is loaded
+    """Transcribes an audio file to text using Whisper."""
     if whisper_model is None:
         load_whisper_model()
-        if whisper_model is None:
-            return "Error: Whisper model could not be loaded."
-
-    # Verify audio file path
     if not os.path.exists(audio_file_path):
         return "Error: Audio file not found."
-
     try:
         print(f"Transcribing audio file: {audio_file_path}")
         result = whisper_model.transcribe(audio_file_path)
@@ -66,39 +45,22 @@ def transcribe_audio(audio_file_path: str) -> str:
         return "Sorry, could not understand the audio."
 
 def text_to_speech(text: str, lang: str = 'hi', slow: bool = False) -> str:
-    """
-    Converts text to speech using gTTS and saves it as an MP3 file.
-
-    Args:
-        text (str): The text to convert to speech.
-        lang (str): The language of the text (e.g., 'en', 'hi').
-        slow (bool): Whether to read the text slowly.
-
-    Returns:
-        str: The path to the generated audio file, or an error message.
-    """
+    """Converts text to speech and saves it as an MP3 file."""
     if not text:
         return "Error: No text provided for text-to-speech."
-
     try:
-        # Generate a unique filename in the temp directory
-        output_file = os.path.join(TTS_OUTPUT_DIR, f"tts_output_{int(time.time())}.mp3")
-        
-        # Ensure the directory exists (should be created at module load)
-        os.makedirs(os.path.dirname(output_file), exist_ok=True)
-
-        # Create the gTTS object
+        os.makedirs(TTS_OUTPUT_DIR, exist_ok=True)
         tts = gTTS(text=text, lang=lang, slow=slow)
-
-        # Save the audio file
-        print(f"Generating audio file at: {output_file}")
-        tts.save(output_file)
-        print("Audio file generated successfully.")
-        
-        return output_file
+        # Use a timestamp to ensure the filename is unique for each request
+        output_filename = f"response_{int(time.time())}.mp3"
+        output_path = os.path.join(TTS_OUTPUT_DIR, output_filename)
+        print(f"Generating audio file at: {output_path}")
+        tts.save(output_path)
+        return output_path
     except Exception as e:
         print(f"An error occurred during text-to-speech conversion: {e}")
         return "Sorry, could not generate audio for the response."
+
 
 # --- Self-test block ---
 if __name__ == '__main__':

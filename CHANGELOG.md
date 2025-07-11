@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial public release of KrishiSahayak+Gemma
 - Core functionality for agricultural disease diagnosis
-- Web demo interface with image and audio input support
+- Core AI pipeline with image and audio processing support
 - Documentation for model conversion and data preparation
 - Pre-processed knowledge base for 46 plant-disease classes
 - Model quantization scripts and guides

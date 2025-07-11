@@ -14,17 +14,25 @@ This document provides a technical overview at the conclusion of Phase 1, which 
 
 The project follows a dual-track development approach to balance rapid prototyping with production readiness.
 
-* **Web Demo Prototype:** A server-based Gradio application using the Hugging Face `transformers` library to showcase the AI's maximum potential in an unconstrained environment.
+* **AI Pipeline:** A robust AI processing pipeline using the Hugging Face `transformers` library to demonstrate the core AI capabilities.
+
+![AI Pipeline in Action](images/AI_PIPELINE%20_IN_ACTION.png)
+*Figure 1: AI Pipeline demonstrating real-time processing of agricultural queries*
+
 * **Android Production App:** The primary goal of the project. A native Android app using a pre-quantized `.gguf` model and the `llama.cpp` C++ engine for maximum offline performance.
 
 ## 3. Core AI Asset for Android: `gemma-3n-q4_k_m.gguf`
 
 The central component of the Android application is a highly optimized version of Google's Gemma model.
 
+* **Model File:** `gemma-3n-q4_k_m.gguf`
 * **Base Model:** `google/gemma-3n-E2B-it` (4.46 Billion Parameters)
 * **Quantization:** 4-bit (`Q4_K_M`)
 * **Final Size:** **2.60 GiB** (a 68.7% reduction from the 8.31 GiB FP16 version)
 * **Performance:** While the total task time is slightly longer due to the initial dequantization overhead on the CPU, the massive reduction in file size is the critical optimization for mobile deployment.
+
+![Model Loading Performance](images/model_loading.png)
+*Figure 2: Model loading performance metrics across different devices*
 
 ## 4. Data Strategy: A Phased Approach
 
@@ -47,4 +55,4 @@ The application implements a Retrieval-Augmented Generation (RAG) system to enha
 * **Next Step:** **Phase 2 (Android App Development).** The focus now shifts to building the native Android application and integrating the validated AI assets using the generic dataset for initial functionality.
 
 ---
-*Last updated: July 8, 2025*
+*Last updated: July 11, 2025*

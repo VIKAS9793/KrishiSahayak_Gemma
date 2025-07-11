@@ -10,7 +10,7 @@ To deliver a production-grade, offline crop disease detection and advisory syste
 This mission is executed via a two-track strategy:
 
 1. **Production-focused Android Application** that is 100% offline and resource-efficient.
-2. **Server-based Web Demo** for prototyping, validation, and stakeholder demonstration.
+2. **Development Tools** for prototyping, validation, and stakeholder demonstration.
 
 ## 2. AI Personas
 

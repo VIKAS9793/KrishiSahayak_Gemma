@@ -12,7 +12,7 @@ This project and everyone participating in it is governed by our [Code of Conduc
 
 There are many ways to contribute to the project's success:
 
-- **Reporting Bugs**: If you find a bug in the web demo or have an issue with the setup, please open an issue and provide as much detail as possible.
+- **Reporting Bugs**: If you find a bug or have an issue with the setup, please open an issue and provide as much detail as possible.
 - **Suggesting Enhancements**: Have an idea for a new feature or an improvement to an existing one? We'd love to hear it! Please open an issue to start a discussion.
 - **Improving Documentation**: If you find parts of our documentation unclear or inaccurate, please let us know or submit a pull request with your improvements.
 - **Submitting Pull Requests**: If you have a bug fix or a new feature you'd like to contribute, please follow the process outlined below.
@@ -53,18 +53,10 @@ source venv/bin/activate
 
 ### Install Dependencies
 
-The dependencies for the web demo are located in their own directory. Install them using pip:
+Dependencies are managed in the project root. Install them using pip:
 
 ```bash
-pip install -r web_demo/requirements.txt
-```
-
-### Run the Web Demo
-
-You can now start the Gradio application:
-
-```bash
-python web_demo/app.py
+pip install -r requirements.txt
 ```
 
 ## Submitting Changes (Pull Request Process)

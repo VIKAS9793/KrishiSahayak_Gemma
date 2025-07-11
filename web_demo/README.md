@@ -1,51 +1,36 @@
-# KrishiSahayak+Gemma: Web Demo
+# KrishiSahayak+Gemma: Development Tools
 
-This directory contains the source code for the web-based demonstration of the KrishiSahayak project. It uses a Gradio interface to provide a user-friendly way to interact with the multimodal AI pipeline.
+> **Development Use Only**: This directory contains development and testing tools for the KrishiSahayak project. These tools are provided for development and testing purposes only and are not part of the production mobile application.
+
+## Purpose
+- Test and validate the AI pipeline
+- Demonstrate core functionality to stakeholders
+- Facilitate development and debugging
+- Validate model performance
 
 ## 🌟 Features
 - Image and audio input for crop diagnosis
-- AI-powered diagnosis using the `google/gemma-3n-E2B-it` model with on-the-fly 4-bit quantization
-- Retrieval-Augmented Generation (RAG) to improve accuracy when the model is uncertain
-- Text-to-speech output in Hindi
+- AI-powered diagnosis using Gemma 3B model
+- Retrieval-Augmented Generation (RAG) for accurate responses
+- Multilingual text-to-speech support
 
-## 🚀 Setup and Execution
+## 🚀 Quick Start
 
-### 1. Prerequisites
-- Python 3.8+
-- `git`
+For detailed setup and deployment instructions, including system requirements and troubleshooting, see the [Deployment Guide](DEPLOYMENT_GUIDE.md).
 
-### 2. Create a Virtual Environment
-It is a critical best practice to use a Python virtual environment to avoid conflicts with system-wide packages.
-
+### Basic Commands
 ```bash
-# Create the virtual environment
-python -m venv venv
-
-# Activate the environment
-# On Windows:
-.\venv\Scripts\activate
-# On macOS/Linux:
-# source venv/bin/activate
-```
-
-### 3. Install Dependencies
-This project separates production dependencies from optional development/monitoring packages.
-
-```bash
-# Install the core packages required to run the demo
+# Install dependencies
 pip install -r requirements.txt
 
-# (Optional) To install tools for monitoring and advanced deployment:
-pip install -r requirements-dev.txt
-```
-
-### 4. Run the Application
-```bash
-# Launch the Gradio web server
+# Run the application
 python app.py
 ```
 
-The application will start, and you can access it through the local URL provided in your terminal (e.g., http://127.0.0.1:7860).
+## 📚 Documentation
+- [Deployment Guide](DEPLOYMENT_GUIDE.md) - Complete setup and troubleshooting
+- [API Reference](docs/API_REFERENCE.md) - API documentation
+- [Development Guide](docs/DEVELOPMENT.md) - Contributing and development workflow
 
 ## 📁 Project Structure
 
@@ -74,10 +59,10 @@ web_demo/
 
 ## 🤖 Model Information
 
-This demo uses the `google/gemma-3n-E2B-it` model with on-the-fly quantization via the BitsAndBytes library. This is distinct from the pre-quantized `.gguf` asset used by the final Android application.
+This demo uses the `gemma-3n-q4_k_m.gguf` model, which is a 4-bit quantized version of the `google/gemma-3n-E2B-it` model, optimized for efficient inference on consumer hardware.
 
 ## 📝 Notes
-- The web demo requires an internet connection to download the model weights on first run
+- These tools require an internet connection to download model weights on first run
 - For production deployment, consider using a GPU-accelerated server for better performance
 - All sensitive configurations should be managed through environment variables
 

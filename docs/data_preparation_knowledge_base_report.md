@@ -17,7 +17,7 @@ The project's scope was defined by a comprehensive collection of image data sour
 - **PlantVillage Dataset:** A large, open-source repository of images of healthy and diseased plant leaves.
 - **PlantDoc Dataset:** Another significant collection of plant disease images, with specific relevance to the Indian agricultural context.
 
-By merging and de-duplicating these datasets, a definitive list of 46 distinct plant-disease classes was established. This list formed the basis for our generic `knowledge_base_v0_generic_46-class.csv`, which is used for the initial MVP development and web demo.
+By merging and de-duplicating these datasets, a definitive list of 46 distinct plant-disease classes was established. This list formed the basis for our generic `knowledge_base_v0_generic_46-class.csv`, which is used for the initial MVP development and testing.
 
 ## 3. Data Curation Methodology: An Iterative Engineering Process
 
