@@ -4,12 +4,15 @@ import whisper
 from gtts import gTTS
 import os
 import torch
+import tempfile
+from pathlib import Path
 
 # --- Configuration ---
 # Use a smaller, efficient Whisper model suitable for on-device use
 WHISPER_MODEL_SIZE = "base" 
 # Directory to save temporary audio files
-TTS_OUTPUT_DIR = "../data/processed/audio_outputs"
+TTS_OUTPUT_DIR = os.path.join(tempfile.gettempdir(), "krishi_sahayak_audio")
+os.makedirs(TTS_OUTPUT_DIR, exist_ok=True)
 
 # --- Model Loading (with caching) ---
 whisper_model = None
@@ -78,22 +81,21 @@ def text_to_speech(text: str, lang: str = 'hi', slow: bool = False) -> str:
         return "Error: No text provided for text-to-speech."
 
     try:
-        # Ensure the output directory exists
-        os.makedirs(TTS_OUTPUT_DIR, exist_ok=True)
+        # Generate a unique filename in the temp directory
+        output_file = os.path.join(TTS_OUTPUT_DIR, f"tts_output_{int(time.time())}.mp3")
+        
+        # Ensure the directory exists (should be created at module load)
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
         # Create the gTTS object
         tts = gTTS(text=text, lang=lang, slow=slow)
 
-        # Define the output file path
-        output_filename = f"{hash(text)}.mp3"
-        output_path = os.path.join(TTS_OUTPUT_DIR, output_filename)
-
         # Save the audio file
-        print(f"Generating audio file at: {output_path}")
-        tts.save(output_path)
+        print(f"Generating audio file at: {output_file}")
+        tts.save(output_file)
         print("Audio file generated successfully.")
         
-        return output_path
+        return output_file
     except Exception as e:
         print(f"An error occurred during text-to-speech conversion: {e}")
         return "Sorry, could not generate audio for the response."

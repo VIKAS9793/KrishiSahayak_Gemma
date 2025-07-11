@@ -97,6 +97,48 @@ data/processed/*.csv
 !data/processed/knowledge_base_*.faiss
 !data/processed/knowledge_base_*.sqlite
 
+# Temporary files
+.temp/
+temp_*
+*.tmp
+*.temp
+.temp_*
+~$*
+._*
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+rag_search.log
+logs/
+
+# Model files and directories
+web_demo/model/
+model_cache/
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.pkl
+*.h5
+*.hdf5
+
+# Large data files
+data/*.csv
+data/*.json
+!data/raw/
+!data/processed/
+
+# Application specific
+temp_app_files/
+.gradio/
+
 # Other ignored directories
 old_scripts_archive/
 

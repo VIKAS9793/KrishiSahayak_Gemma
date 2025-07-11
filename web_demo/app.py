@@ -6,8 +6,10 @@ import gradio as gr
 import os
 import sys
 import time
+import tempfile
 from PIL import Image
 import scipy.io.wavfile as wav
+from pathlib import Path
 
 # --- Setup System Path ---
 # This ensures we can import our custom modules from the src directory
@@ -127,18 +129,33 @@ def diagnose_plant(image_input, audio_input):
     print("\n--- New Diagnosis Request Received ---")
 
     # --- Save temporary files for processing ---
-    temp_dir = "temp_app_files"
+    temp_dir = os.path.join(tempfile.gettempdir(), "krishi_sahayak_temp")
     os.makedirs(temp_dir, exist_ok=True)
-    
-    image_path = os.path.join(temp_dir, "input_image.jpg")
-    Image.fromarray(image_input).save(image_path)
-    
+    # Save the image to a temporary file
+    if image_input is not None:
+        try:
+            image = Image.fromarray(image_input)
+            image_path = os.path.join(temp_dir, f"input_image_{int(time.time())}.jpg")
+            image.save(image_path)
+        except Exception as e:
+            print(f"Error processing image: {e}")
+            image_path = None
+    else:
+        image_path = None
+    # Create a unique filename
+    temp_audio_path = os.path.join(temp_dir, f"input_audio_{int(time.time())}.wav")
     sample_rate, audio_data = audio_input
-    audio_path = os.path.join(temp_dir, "input_audio.wav")
-    wav.write(audio_path, sample_rate, audio_data)
+    wav.write(temp_audio_path, sample_rate, audio_data)
     
     # --- Execute the core pipeline logic ---
-    final_diagnosis, output_audio_path = _run_diagnostic_pipeline(image_path, audio_path)
+    final_diagnosis, output_audio_path = _run_diagnostic_pipeline(image_path, temp_audio_path)
+
+    # Clean up the temporary audio file
+    try:
+        if os.path.exists(temp_audio_path):
+            os.remove(temp_audio_path)
+    except Exception as e:
+        print(f"Warning: Could not remove temporary file {temp_audio_path}: {e}")
 
     print(f"--- Pipeline finished in {time.time() - start_time:.2f} seconds ---")
     

@@ -10,7 +10,7 @@ from datetime import datetime
 from sentence_transformers import SentenceTransformer
 
 # Import our utilities
-from utils.cache_utils import get_cache, set_cache, rate_limit, with_retry
+from ..utils.cache_utils import get_cache, set_cache, rate_limit, with_retry
 from .monitoring import monitor
 
 # Configure logging
@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 # --- Configuration ---
 # This must match the model used in build_index.py
 EMBEDDING_MODEL_ID = 'all-MiniLM-L6-v2'
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'processed')
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))), 'data', 'processed')
 INDEX_FILE_PATH = os.path.join(DATA_DIR, "knowledge_base_v0_generic_46-class.faiss")
 TEXT_DATA_PATH = os.path.join(DATA_DIR, "knowledge_base_v0_generic_46-class_text.pkl")
 

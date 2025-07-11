@@ -255,6 +255,7 @@ A fully offline-capable mobile application designed specifically for farmers in 
 | Document | Description |
 |----------|-------------|
 | [Technical Report](docs/TECHNICAL_REPORT.md) | Comprehensive technical specifications and data architecture |
+| [Strategy & Roadmap](docs/STRATEGY_AND_ROADMAP.md) | Project strategy, phases, and future roadmap |
 | [Model Card](docs/model_card.md) | Model details, performance, and limitations |
 | [Technical Decision Log](docs/technical_decision_log.md) | Key technical decisions and rationale |
 | [Versioning Strategy](docs/VERSIONING.md) | Version control and data management approach |
