@@ -25,16 +25,16 @@ The web demo provides a user-friendly interface for testing and demonstrating th
 ![Web Demo Home](../docs/images/web%20demo_1.png)
 *Figure 1: Main interface with image upload and audio input options*
 
-![Web Demo Diagnosis](images/web%20demo_2.png)
+![Web Demo Diagnosis](../docs/images/web%20demo_2.png)
 *Figure 2: Real-time diagnosis with RAG support*
 
-![Web Demo Results](images/web%20demo_3.png)
+![Web Demo Results](../docs/images/web%20demo_3.png)
 *Figure 3: Detailed diagnosis results with confidence scores*
 
-![Web Demo Audio](images/web%20demo_4.png)
+![Web Demo Audio](../docs/images/web%20demo_4.png)
 *Figure 4: Audio input and transcription interface*
 
-![Web Demo Multilingual](images/web%20demo_5.png)
+![Web Demo Multilingual](../docs/images/web%20demo_5.png)
 *Figure 5: Multilingual support and text-to-speech options*
 
 ## 🚀 Quick Start

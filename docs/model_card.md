@@ -32,21 +32,15 @@ This model is a 4-bit quantized version of Google's Gemma 3n, optimized for high
 
 #### Model Size Comparison
 ![Model Size Comparison](images/file_size_comparison.png)
+*Figure 2: Model size comparison across different quantization methods*
 
 #### Total Task Time Comparison
 ![Total Task Time Comparison](images/total_time_comparison.png)
+*Figure 3: Total task time comparison across different devices*
 
 #### Inference Speed Comparison
 ![Inference Speed Comparison](images/inference_speed_comparison.png)
-
-#### Model Size Comparison
-![Model Size Comparison](images/file_size_comparison.png)
-
-#### Total Task Time Comparison
-![Total Task Time Comparison](images/total_time_comparison.png)
-
-#### Inference Speed Comparison
-![Inference Speed Comparison](images/inference_speed_comparison.png)
+*Figure 4: Inference speed comparison across different quantization methods*
 
 ## Limitations & Ethical Considerations
 - **Risk of Inaccuracy:** The model can produce factually incorrect diagnoses. The application **must** display a prominent disclaimer.
