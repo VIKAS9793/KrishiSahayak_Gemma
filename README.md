@@ -32,12 +32,11 @@ The project's primary goal is to deliver a 100% offline, reliable, and user-frie
 
 The project follows a strategic two-track approach to balance rapid prototyping with production readiness.
 
-| Component | Technology Stack | Purpose |
-|-----------|-----------------|----------|
-| 🤖 AI Engine | `gemma-3n-q4_k_m.gguf` (4-bit quantized) | The core language model for generating diagnostics. |
-| 📚 Knowledge Base | FAISS, SQLite, CSV | A database for the Retrieval-Augmented Generation (RAG) system to ensure factual grounding. |
-| 🌐 Web Interface | Gradio, FastAPI | A server-based prototype for demonstration and testing. |
-| 📱 Mobile App | Native Android, C++ (llama.cpp) | The final, offline-first product for end-users. |
+| Component | Purpose |
+|-----------|----------|
+| 🤖 AI Engine | The core language model for generating diagnostics. |
+| 📚 Knowledge Base | A database for the Retrieval-Augmented Generation (RAG) system to ensure factual grounding. |
+| 📱 Mobile App | The final, offline-first product for end-users. |
 
 ### 🔄 Data Flow
 
@@ -60,13 +59,9 @@ graph TD
     I --> K[Mobile App]
 ```
 
-### 🗃️ Data Strategy: A Phased Approach
-
-To de-risk development and ensure the final data quality is exceptionally high, the project follows a phased data strategy.
-
-1. **MVP Development (Current Phase):** To accelerate development, the initial Android MVP will be built using the generic `knowledge_base_v0_generic_46-class` dataset. This allows us to build and test the core offline technology stack immediately.
-
-2. **Production Data (Future Scope):** The final, production-ready solution will use expert-curated Regional Data Packs. This will be a separate phase involving manual curation with agricultural scientists. The initial focus for this effort will be the 6 pilot states (see [Regional Coverage Documentation](docs/REGIONAL_COVERAGE.md)).
+For detailed data strategy and regional coverage, see:
+- [REGIONAL_COVERAGE.md](docs/REGIONAL_COVERAGE.md)
+- [VERSIONING.md](docs/VERSIONING.md)
 
 ## 🚀 Getting Started
 
@@ -118,35 +113,23 @@ A fully offline-capable mobile application designed specifically for farmers in 
 
 ```
 .
-├── asset_preparation/        # Scripts for data and model preparation
-│   ├── generate_knowledge_base_gemma.py  # Generate initial knowledge base
-│   ├── create_database.py                # Create SQLite database
-│   └── build_index.py                    # Build FAISS search index
-├── scripts/                  # Utility and maintenance scripts
+├── android_app/              # Native Android application (Phase 2)
+├── web_demo/                 # Web-based development tools
+├── docs/                     # Project documentation
+│   ├── TECHNICAL_REPORT.md
+│   ├── STRATEGY_AND_ROADMAP.md
+│   ├── model_card.md
+│   ├── REGIONAL_COVERAGE.md
+│   └── VERSIONING.md
+├── scripts/                  # Utility scripts
 │   ├── validate_knowledge_base.py  # Validate knowledge base integrity
 │   ├── eda_knowledge_base.py       # Exploratory data analysis
 │   ├── enhance_knowledge_base.py   # Data enhancement utilities
 │   └── evaluate.py                 # Model evaluation scripts
-├── data/                    # Data directory
-│   ├── raw/                 # Raw data files
-│   ├── processed/           # Processed data files
-│   └── _archive/            # Archived versions of knowledge base
-├── web_demo/               # Web interface
-└── docs/                   # Documentation
-├── docs/                     # Project documentation
-│   ├── TECHNICAL_REPORT.md
-│   ├── technical_decision_log.md
-│   ├── regional_data_pack_adr.md
-│   ├── VERSIONING.md
-│   ├── REGIONAL_COVERAGE.md
-│   ├── model_card.md
-│   └── data_preparation_knowledge_base_report.md
-├── reports/                  # Analysis and performance reports
-├── scripts/                  # Utility scripts
-└── web_demo/                 # Web-based demonstration
-    ├── app.py
-    ├── requirements.txt
-    └── src/                  # Core application source code
+└── data/                     # Dataset and knowledge base files
+    ├── raw/                 # Raw data files
+    ├── processed/           # Processed data files
+    └── _archive/            # Archived versions of knowledge base
 ```
 
 ### 📄 Key Files

@@ -34,14 +34,10 @@ A web-based development interface for testing and validating the AI pipeline. Se
 
 The primary goal of the project. A native Android app using a pre-quantized `.gguf` model and the `llama.cpp` C++ engine for maximum offline performance.
 
-The project follows a dual-track development approach to balance rapid prototyping with production readiness.
+The project follows a dual-track development approach:
 
-* **AI Pipeline:** A robust AI processing pipeline using the Hugging Face `transformers` library to demonstrate the core AI capabilities.
-
-![AI Pipeline in Action](images/krishisayak+Gemma_AI%20pipeline%20in%20action.png)
-*Figure 1: Comprehensive AI Pipeline demonstrating the end-to-end flow from user input to diagnosis*
-
-* **Android Production App:** The primary goal of the project. A native Android app using a pre-quantized `.gguf` model and the `llama.cpp` C++ engine for maximum offline performance.
+1. **Development Tools:** A web-based interface for testing and validating the AI pipeline. See [web_demo/README.md](../web_demo/README.md) for details.
+2. **Production System:** A native Android app using a pre-quantized `.gguf` model and the `llama.cpp` C++ engine for maximum offline performance.
 
 ## 3. Core AI Asset for Android: `gemma-3n-q4_k_m.gguf`
 
@@ -70,10 +66,9 @@ The final, production-ready solution will use **expert-curated Regional Data Pac
 
 For detailed regional coverage strategy, see [REGIONAL_COVERAGE.md](REGIONAL_COVERAGE.md).
 
-The project has adopted a phased data strategy to de-risk development and ensure the final data quality is exceptionally high.
-
-* **Initial Approach (MVP Development):** To accelerate development, the initial Android MVP will be built using the generic **46-class dataset** (`knowledge_base_v0_generic_46-class`). This allows us to build and test the core offline technology stack without being blocked by the long data curation timeline.
-* **Production Approach (Future Scope):** The final, production-ready solution will use **expert-curated Regional Data Packs**. This will be a separate, future phase involving manual curation with agricultural scientists to ensure the highest level of accuracy. **No AI-generated data will be used in the final production knowledge base.**
+For detailed data strategy and regional coverage, see:
+- [REGIONAL_COVERAGE.md](REGIONAL_COVERAGE.md)
+- [VERSIONING.md](VERSIONING.md)
 
 ## 5. Reliability: RAG Fallback System
 
@@ -89,10 +84,7 @@ The application implements a Retrieval-Augmented Generation (RAG) system to enha
 * **Next Step:** **Phase 2 (Android App Development).** The focus now shifts to building the native Android application and integrating the validated AI assets using the generic dataset for initial functionality.
 
 ---
-*Last updated: July 11, 2025*
+*Last updated: July 12, 2025*
 
 * **Current Status:** **Phase 1 (Asset Production & Optimization) is complete.**
 * **Next Step:** **Phase 2 (Android App Development).** The focus now shifts to building the native Android application and integrating the validated AI assets using the generic dataset for initial functionality.
-
----
-*Last updated: July 11, 2025*
