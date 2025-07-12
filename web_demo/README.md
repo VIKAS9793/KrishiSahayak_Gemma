@@ -34,8 +34,6 @@ The web demo provides a user-friendly interface for testing and demonstrating th
 ![Web Demo Audio](../docs/images/web%20demo_4.png)
 *Figure 4: Audio input and transcription interface*
 
-![Web Demo Multilingual](../docs/images/web%20demo_5.png)
-*Figure 5: Multilingual support and text-to-speech options*
 
 ## 🚀 Quick Start
 

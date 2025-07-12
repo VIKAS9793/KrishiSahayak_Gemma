@@ -28,6 +28,9 @@ This model is a 4-bit quantized version of Google's Gemma 3n, optimized for high
 ![AI Pipeline](images/krishisayak+Gemma_AI%20pipeline%20in%20action.png)
 *Figure 1: End-to-end AI pipeline showing data flow from user input to diagnosis*
 
+![AI Pipeline in Action](images/AI_PIPELINE%20_IN_ACTION.png)
+*Figure 1.1: Detailed view of the AI pipeline in action*
+
 ### Performance Metrics
 
 #### Model Size Comparison

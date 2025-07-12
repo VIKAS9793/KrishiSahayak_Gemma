@@ -74,9 +74,30 @@ For detailed data strategy and regional coverage, see:
 
 The application implements a Retrieval-Augmented Generation (RAG) system to enhance reliability.
 
-* **Uncertainty Detection:** A module (`uncertainty.py`) analyzes the model's initial response for signs of low confidence.
-* **Contextual Retrieval:** If uncertainty is detected, the system performs a semantic search on the local `.faiss` index to retrieve relevant, verified text chunks.
-* **Reprompting:** The original query is combined with the retrieved context and sent back to the model for a final, source-grounded diagnosis.
+![RAG Fallback Pipeline](images/RAG%20fallback%20pipeline%20in%20action.png)
+*Figure 5.1: RAG fallback pipeline in action*
+
+### RAG System Components
+
+1. **Uncertainty Detection**
+   - A module (`uncertainty.py`) analyzes the model's initial response for signs of low confidence.
+   - Example of uncertainty detection:
+   ![Uncertain Query](images/Uncertain%20query.png)
+   *Figure 5.2: Example of an uncertain query*
+
+2. **Contextual Retrieval**
+   - If uncertainty is detected, the system performs a semantic search on the local `.faiss` index to retrieve relevant, verified text chunks.
+   - Example output:
+   ![RAG Output 1](images/RAG%20based%20output_1.png)
+   *Figure 5.3: RAG output example 1*
+
+3. **Reprompting**
+   - The original query is combined with the retrieved context and sent back to the model for a final, source-grounded diagnosis.
+   - Example output:
+   ![RAG Output 2](images/RAG%20based%20output_2.png)
+   *Figure 5.4: RAG output example 2*
+
+This system ensures that the AI provides reliable, source-grounded responses by leveraging local knowledge base data when uncertain about its initial response.
 
 ## 7. Next Steps
 
