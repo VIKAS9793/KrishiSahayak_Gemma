@@ -2,7 +2,7 @@
 
 **Model Name:** gemma-3n-q4_k_m.gguf  
 **Version:** 1.0  
-**Date:** July 8, 2025  
+**Date:** July 12, 2025  
 **Author:** KrishiSahayak AI Engineering Team
 
 ## 1. Model Details
@@ -20,7 +20,23 @@ This model is a 4-bit quantized version of Google's Gemma 3n, optimized for high
 
 **Analysis:** The `Q4_K_M` model achieves a **68.7% reduction in file size**, which is the primary optimization for mobile deployment. The total task time is slightly longer due to the one-time cost of de-quantization on the CPU, while the token generation speed remains comparable. This trade-off is acceptable and necessary for on-device execution.
 
-## Performance Visualizations
+## System Architecture & Performance
+
+### AI Pipeline
+
+![AI Pipeline](images/krishisayak+Gemma_AI%20pipeline%20in%20action.png)
+*Figure 1: End-to-end AI pipeline showing data flow from user input to diagnosis*
+
+### Performance Metrics
+
+#### Model Size Comparison
+![Model Size Comparison](images/file_size_comparison.png)
+
+#### Total Task Time Comparison
+![Total Task Time Comparison](images/total_time_comparison.png)
+
+#### Inference Speed Comparison
+![Inference Speed Comparison](images/inference_speed_comparison.png)
 
 #### Model Size Comparison
 ![Model Size Comparison](images/file_size_comparison.png)

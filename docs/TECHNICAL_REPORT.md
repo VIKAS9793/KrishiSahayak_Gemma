@@ -1,23 +1,45 @@
 # KrishiSahayak+Gemma: Technical Report
 
 **Version:** 1.3  
-**Date:** July 11, 2025  
+**Date:** July 12, 2025  
 **Status:** End of Phase 1: Asset Production & Optimization
 
-## 1. Project Mission & Overview
+## 📋 Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [System Architecture](#system-architecture)
+3. [AI Pipeline](#ai-pipeline)
+4. [Model Optimization](#model-optimization)
+5. [Data Strategy](#data-strategy)
+6. [RAG Implementation](#rag-implementation)
+7. [Performance Metrics](#performance-metrics)
+8. [Development Tools](#development-tools)
+9. [Next Steps](#next-steps)
+
+## 1. Project Overview
 
 The KrishiSahayak+Gemma project is an engineering initiative to deliver a **100% offline, reliable, and user-friendly Android application** that operates efficiently on low-resource smartphones (≤ 2GB RAM) for farmers in India.
 
-This document provides a technical overview at the conclusion of Phase 1, which focused on the successful creation and validation of the production-ready AI assets that will power the final application.
+For more details on the project vision and strategy, see [STRATEGY_AND_ROADMAP.md](STRATEGY_AND_ROADMAP.md).
 
-## 2. System Architecture: A Strategic Two-Track Approach
+## 2. System Architecture
+
+The project follows a dual-track development approach to balance rapid prototyping with production readiness:
+
+### 2.1 Development Tools
+
+A web-based development interface for testing and validating the AI pipeline. See [web_demo/README.md](../web_demo/README.md) for details.
+
+### 2.2 Production System
+
+The primary goal of the project. A native Android app using a pre-quantized `.gguf` model and the `llama.cpp` C++ engine for maximum offline performance.
 
 The project follows a dual-track development approach to balance rapid prototyping with production readiness.
 
 * **AI Pipeline:** A robust AI processing pipeline using the Hugging Face `transformers` library to demonstrate the core AI capabilities.
 
-![AI Pipeline in Action](images/AI_PIPELINE%20_IN_ACTION.png)
-*Figure 1: AI Pipeline demonstrating real-time processing of agricultural queries*
+![AI Pipeline in Action](images/krishisayak+Gemma_AI%20pipeline%20in%20action.png)
+*Figure 1: Comprehensive AI Pipeline demonstrating the end-to-end flow from user input to diagnosis*
 
 * **Android Production App:** The primary goal of the project. A native Android app using a pre-quantized `.gguf` model and the `llama.cpp` C++ engine for maximum offline performance.
 
@@ -34,7 +56,19 @@ The central component of the Android application is a highly optimized version o
 ![Model Loading Performance](images/model_loading.png)
 *Figure 2: Model loading performance metrics across different devices*
 
-## 4. Data Strategy: A Phased Approach
+## 4. Data Strategy
+
+The project has adopted a phased data strategy to de-risk development and ensure the final data quality is exceptionally high.
+
+### 4.1 MVP Development
+
+To accelerate development, the initial Android MVP will be built using the generic **46-class dataset** (`knowledge_base_v0_generic_46-class`). This allows us to build and test the core offline technology stack without being blocked by the long data curation timeline.
+
+### 4.2 Production Approach
+
+The final, production-ready solution will use **expert-curated Regional Data Packs**. This will be a separate, future phase involving manual curation with agricultural scientists to ensure the highest level of accuracy. **No AI-generated data will be used in the final production knowledge base.**
+
+For detailed regional coverage strategy, see [REGIONAL_COVERAGE.md](REGIONAL_COVERAGE.md).
 
 The project has adopted a phased data strategy to de-risk development and ensure the final data quality is exceptionally high.
 
@@ -49,7 +83,13 @@ The application implements a Retrieval-Augmented Generation (RAG) system to enha
 * **Contextual Retrieval:** If uncertainty is detected, the system performs a semantic search on the local `.faiss` index to retrieve relevant, verified text chunks.
 * **Reprompting:** The original query is combined with the retrieved context and sent back to the model for a final, source-grounded diagnosis.
 
-## 6. Project Status & Next Steps
+## 7. Next Steps
+
+* **Current Status:** **Phase 1 (Asset Production & Optimization) is complete.**
+* **Next Step:** **Phase 2 (Android App Development).** The focus now shifts to building the native Android application and integrating the validated AI assets using the generic dataset for initial functionality.
+
+---
+*Last updated: July 11, 2025*
 
 * **Current Status:** **Phase 1 (Asset Production & Optimization) is complete.**
 * **Next Step:** **Phase 2 (Android App Development).** The focus now shifts to building the native Android application and integrating the validated AI assets using the generic dataset for initial functionality.

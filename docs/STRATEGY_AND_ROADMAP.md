@@ -2,7 +2,11 @@
 
 ## 🌾 Project Overview
 
-KrishiSahayak+Gemma is an offline-first AI agricultural support system designed to empower Indian farmers through dignified, regionally-aware technology. Built as a public infrastructure initiative, it combines the power of quantized Gemma models with hyper-local knowledge bases to deliver intelligent agricultural guidance without internet dependency.
+KrishiSahayak+Gemma is an offline-first AI agricultural support system designed to empower Indian farmers through dignified, regionally-aware technology. For detailed technical specifications, see the [Technical Report](TECHNICAL_REPORT.md).
+
+Built as a public infrastructure initiative, it combines the power of quantized Gemma models with hyper-local knowledge bases to deliver intelligent agricultural guidance without internet dependency.
+
+For model-specific details, see the [Model Card](model_card.md). For regional data strategy, see [Regional Coverage](REGIONAL_COVERAGE.md).
 
 ## 📋 Table of Contents
 
@@ -31,7 +35,12 @@ In India, farmers are the backbone of our economy — yet they remain underserve
 
 Like UPI transformed digital payments, our vision is to make intelligent agricultural support offline, free, regionalized, and permanent.
 
+---
+*Last updated: July 12, 2025*
+
 ## 🏗 Core Architecture
+
+For detailed technical architecture, see [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md).
 
 ### 1. 📶 Offline-First Design
 - **Why**: Internet access is unreliable, costly, or nonexistent in rural India
@@ -71,40 +80,11 @@ Like UPI transformed digital payments, our vision is to make intelligent agricul
 
 ## 🔧 Technical Implementation
 
-### System Components
-
-1. **Quantized Gemma Model**: On-device LLM for conversational AI
-2. **Regional Knowledge Base**: SQLite + FAISS for hyper-local agricultural data
-3. **Android APK**: Lightweight mobile application (<50MB)
-4. **CommunitySync**: P2P update distribution system
-5. **Version Management**: Manifest-based integrity checking
-
-### Distribution Architecture
-
-```
-Region-Specific ZIP Package:
-├── app.apk (Android application)
-├── model.gguf (Quantized Gemma model)
-├── knowledge_base.sqlite (Regional agricultural data)
-├── faiss_index.bin (Vector search index)
-├── manifest.json (Version & integrity info)
-└── README_local.pdf (Setup instructions)
-```
+For detailed technical implementation, see [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md).
 
 ## ⚠️ Long-Term Reliability & Risk Management
 
-### Identified Risks and Mitigation Strategies
-
-| Risk Category | Timeline | Impact | Mitigation Strategy |
-|---------------|----------|---------|-------------------|
-| 🧪 **Model Drift** | 6-12 months | Accuracy degradation | Static testbench + trigger flags |
-| 📆 **Version Confusion** | Scaling phase | Incorrect regional data | Manifest.json + version checks |
-| 🔊 **Language/Dialect Drift** | State expansion | Communication barriers | Local feedback + KB update pipeline |
-| 📼 **Hardware Compatibility** | 1-2 years | App incompatibility | Fallback app + ABI checks |
-| 🔒 **Model Tampering** | Low frequency, high severity | Security compromise | SHA256-based file integrity validation |
-| 📃 **Institutional Memory Loss** | 1+ years | Update continuity | Printable NGO SOP guide |
-| 🤖 **Overtrust in AI** | As usage increases | Misplaced confidence | Warnings + icon-based output markers |
-| ⚖️ **Regulatory Risk** | 1-2 years | Compliance issues | Transparent model card + local disclaimers |
+For detailed risk management strategies, see [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md).
 
 ### Specific Mitigation Implementations
 

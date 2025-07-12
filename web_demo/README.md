@@ -2,17 +2,40 @@
 
 > **Development Use Only**: This directory contains development and testing tools for the KrishiSahayak project. These tools are provided for development and testing purposes only and are not part of the production mobile application.
 
+For the project's mission and technical details, please refer to the main documentation in the [docs](../docs/) directory.
+
 ## Purpose
 - Test and validate the AI pipeline
 - Demonstrate core functionality to stakeholders
 - Facilitate development and debugging
 - Validate model performance
 
+For detailed technical architecture and implementation, see the [Technical Report](../docs/TECHNICAL_REPORT.md).
+
 ## 🌟 Features
 - Image and audio input for crop diagnosis
 - AI-powered diagnosis using Gemma 3B model
 - Retrieval-Augmented Generation (RAG) for accurate responses
 - Multilingual text-to-speech support
+
+## 📸 Web Demo Interface
+
+The web demo provides a user-friendly interface for testing and demonstrating the core functionality of KrishiSahayak+Gemma. Here's a quick tour of the interface:
+
+![Web Demo Home](../docs/images/web%20demo_1.png)
+*Figure 1: Main interface with image upload and audio input options*
+
+![Web Demo Diagnosis](images/web%20demo_2.png)
+*Figure 2: Real-time diagnosis with RAG support*
+
+![Web Demo Results](images/web%20demo_3.png)
+*Figure 3: Detailed diagnosis results with confidence scores*
+
+![Web Demo Audio](images/web%20demo_4.png)
+*Figure 4: Audio input and transcription interface*
+
+![Web Demo Multilingual](images/web%20demo_5.png)
+*Figure 5: Multilingual support and text-to-speech options*
 
 ## 🚀 Quick Start
 
@@ -29,8 +52,6 @@ python app.py
 
 ## 📚 Documentation
 - [Deployment Guide](DEPLOYMENT_GUIDE.md) - Complete setup and troubleshooting
-- [API Reference](docs/API_REFERENCE.md) - API documentation
-- [Development Guide](docs/DEVELOPMENT.md) - Contributing and development workflow
 
 ## 📁 Project Structure
 
@@ -59,7 +80,7 @@ web_demo/
 
 ## 🤖 Model Information
 
-This demo uses the `gemma-3n-q4_k_m.gguf` model, which is a 4-bit quantized version of the `google/gemma-3n-E2B-it` model, optimized for efficient inference on consumer hardware.
+For detailed model specifications, see the [Model Card](../docs/model_card.md).
 
 ## 📝 Notes
 - These tools require an internet connection to download model weights on first run
