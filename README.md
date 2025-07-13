@@ -39,64 +39,39 @@ This project consists of two main components, each with a distinct purpose:
 
 The project follows a strategic two-track approach to balance rapid prototyping with production readiness.
 
-| Component | Purpose |
-|-----------|----------|
-| 🤖 AI Engine | The core language model for generating diagnostics. |
-| 📚 Knowledge Base | A database for the Retrieval-Augmented Generation (RAG) system to ensure factual grounding. |
-| 📱 Mobile App | The final, offline-first product for end-users. |
-
-### 🔄 Data Flow
-
-```mermaid
-graph TD
-    A[User Input] --> B{Input Type}
-    B -->|Image| C[Image Processing]
-    B -->|Audio| D[Speech-to-Text]
-    B -->|Text| E[Query Processing]
-    
-    C --> F[AI Analysis]
-    D --> E
-    E --> F
-    
-    F --> G[Knowledge Base Search]
-    G --> H[Response Generation]
-    H --> I[User Interface]
-    
-    I --> J[Web App]
-    I --> K[Mobile App]
-```
+| Component | Technology Stack | Purpose |
+|-----------|------------------|----------|
+| 🤖 AI Engine | google/gemma-3n-E2B-it (quantized) | The core language model for generating diagnostics. |
+| 📚 Knowledge Base | FAISS, SQLite, CSV | A database for the Retrieval-Augmented Generation (RAG) system to ensure factual grounding. |
+| 🌐 Web Interface | Gradio, FastAPI | A server-based prototype for demonstration and testing. |
+| 📱 Mobile App | Native Android, C++ (llama.cpp) | The final, offline-first product for end-users. |
 
 ## 📺 Demo Video
 
-[![KrishiSahayak+Gemma Web Demo](https://img.youtube.com/vi/W8L-15np5do/0.jpg)](https://youtu.be/W8L-15np5do)
+[![KrishiSahayak+Gemma Web Demo](https://img.youtube.com/vi/W8L-15np5do/0.jpg)](https://youtu.be/W8L-15np5do?si=lSxdbrKVDozeQZ8I)
 
 *Click the thumbnail to watch a short demo of the web-based AI playground in action.*
 
-**What you’ll see:**
+**What you'll see:**
 1. **Confident Answers** – The base model **`google/gemma-3n-E2B-it`** (≈ 4.5 B parameters), quantized on-device as **`gemma-3n-q4_k_m.gguf`**, responds instantly to common agricultural queries when confidence is high.
-2. **Uncertainty & RAG Fallback** – When the model’s confidence drops for tougher questions, the Retrieval-Augmented Generation (RAG) pipeline searches the knowledge base and delivers a grounded answer.
+2. **Uncertainty & RAG Fallback** – When the model's confidence drops for tougher questions, the Retrieval-Augmented Generation (RAG) pipeline searches the knowledge base and delivers a grounded answer.
 
 For detailed data strategy and regional coverage, see:
 - [REGIONAL_COVERAGE.md](docs/REGIONAL_COVERAGE.md)
 - [VERSIONING.md](docs/VERSIONING.md)
+- [Technical Report](docs/TECHNICAL_REPORT.md)
+- [Data Preparation Report](docs/data_preparation_knowledge_base_report.md)
 
 ## 🚀 Getting Started
 
-### Development Setup
+### 📋 Prerequisites
 
-To set up the development environment for the mobile application:
-
-```bash
-# Clone the repository
-git clone https://github.com/VIKAS9793/KrishiSahayak_Gemma.git
-cd KrishiSahayak_Gemma
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up the Android development environment
-# (Refer to Android Studio setup guide for detailed instructions)
-```
+| Requirement | Version | Installation |
+|-------------|---------|--------------|
+| Python | 3.8+ | [Download](https://www.python.org/downloads/) |
+| pip | Latest | `python -m pip install --upgrade pip` |
+| Git | Latest | [Download](https://git-scm.com/downloads) |
+| Android Studio | 2022.3+ | [Download](https://developer.android.com/studio) |
 
 ### Model Download
 
@@ -118,28 +93,15 @@ The official end-user solution is our mobile application, specifically designed 
 
 *Coming soon*
 
-## 📱 Mobile Application
-
-<div align="center">
-<img src="https://img.shields.io/badge/Status-Starting%20Development-yellow" alt="Status: Starting Development">
-<img src="https://img.shields.io/badge/Platform-Android-green" alt="Platform: Android">
-<img src="https://img.shields.io/badge/Storage-SQLite-blue" alt="Storage: SQLite">
-</div>
-
+## 📱 The Android Application
 **Status:** 🟡 Phase 2: MVP Development Starting
 
-A fully offline-capable mobile application designed specifically for farmers in remote areas with limited or no internet connectivity.
+A fully offline-capable mobile application designed specifically for farmers in remote areas.
 
-**Technical Highlights:**
-- Uses the validated, quantized `gemma-3n-q4_k_m.gguf` model.
+Technical Highlights:
+- Uses the validated, quantized gemma-3n-q4_k_m.gguf model.
 - Optimized for low-end Android devices (≤ 2GB RAM).
-- Deployed via offline P2P methods (SD card, local sharing), not the Play Store.
-
-**Development Progress:**
-- [x] Phase 1: Asset Production Complete (Model quantization, data pipeline, validation)
-- [~] Phase 2: Android App Development (in progress – backend & web demo complete, Android MVP coding underway)
-- [ ] Phase 3: Field Testing & Pilot Deployment
-- [ ] Phase 4: Continuous Improvement & Scaling
+- Deployed via offline P2P methods (SD card, local sharing).
 
 ## 📈 Progress Update (13 July 2025)
 
@@ -154,24 +116,16 @@ Next milestone: Field-testing pilot (Phase 3).
 ## 📊 Project Structure
 
 ```
-.
-├── android_app/              # Native Android application (Phase 2)
-├── web_demo/                 # Web-based development tools
-├── docs/                     # Project documentation
-│   ├── TECHNICAL_REPORT.md
-│   ├── STRATEGY_AND_ROADMAP.md
-│   ├── model_card.md
-│   ├── REGIONAL_COVERAGE.md
-│   └── VERSIONING.md
-├── scripts/                  # Utility scripts
-│   ├── validate_knowledge_base.py  # Validate knowledge base integrity
-│   ├── eda_knowledge_base.py       # Exploratory data analysis
-│   ├── enhance_knowledge_base.py   # Data enhancement utilities
-│   └── evaluate.py                 # Model evaluation scripts
-└── data/                     # Dataset and knowledge base files
-    ├── raw/                 # Raw data files
-    ├── processed/           # Processed data files
-    └── _archive/            # Archived versions of knowledge base
+KrishiSahayak-Gemma/
+├── android_app_assets/       # Optimized assets for the mobile app
+├── asset_preparation/        # Scripts for data processing & model conversion
+├── data/
+│   └── _archive/             # Archived generic dataset
+├── docs/                     # All project documentation
+├── reports/                  # Project analysis reports and visualizations
+└── web_demo/                 # Self-contained web application
+    ├── app.py
+    └── src
 ```
 
 ### 📄 Key Files
@@ -181,8 +135,8 @@ Next milestone: Field-testing pilot (Phase 3).
 | `data/processed/knowledge_base_v0_generic_46-class.csv` | Structured agricultural knowledge base |
 | `web_demo/app.py` | Main Gradio web application |
 | `web_demo/requirements.txt` | Python dependencies for development |
-| `docs/model_card.md` | Model details and specifications |
-| `docs/TECHNICAL_REPORT.md` | Comprehensive technical documentation |
+| [model_card.md](docs/model_card.md) | Model details and specifications |
+| [TECHNICAL_REPORT.md](docs/TECHNICAL_REPORT.md) | Comprehensive technical documentation |
 
 ## 🚀 Getting Started
 
@@ -276,10 +230,10 @@ Next milestone: Field-testing pilot (Phase 3).
 | Document | Description |
 |----------|-------------|
 | [Technical Report](docs/TECHNICAL_REPORT.md) | Comprehensive technical specifications and data architecture |
-| [Strategy & Roadmap](docs/STRATEGY_AND_ROADMAP.md) | Project strategy, phases, and future roadmap |
-| [Model Card](docs/model_card.md) | Model details, performance, and limitations |
-| [Technical Decision Log](docs/technical_decision_log.md) | Key technical decisions and rationale |
-| [Versioning Strategy](docs/VERSIONING.md) | Version control and data management approach |
+| [STRATEGY_AND_ROADMAP.md](docs/STRATEGY_AND_ROADMAP.md) | Project strategy, phases, and future roadmap |
+| [model_card.md](docs/model_card.md) | Model details, performance, and limitations |
+| [technical_decision_log.md](docs/technical_decision_log.md) | Key technical decisions and rationale |
+| [VERSIONING.md](docs/VERSIONING.md) | Version control and data management approach |
 
 > 💡 All documentation is stored in the `docs/` directory. Please ensure documentation is kept up-to-date with code changes.
 
@@ -349,5 +303,5 @@ For any questions, feedback, or support, please don't hesitate to reach out thro
 
 <div align="center">
   <p>Made with ❤️ for farmers and the open source community</p>
-  <img src="https://komarev.com/ghpvc/?username=VIKAS9793&label=Project%20Visitors&color=blueviolet&style=flat" alt="Project Visitors">
+  <img src="https://komarev.com/ghpvc/?username=VIKAS9793&label=Page%20Views&color=blueviolet&style=flat" alt="Page Views">
 </div>
