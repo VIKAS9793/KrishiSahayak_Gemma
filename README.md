@@ -28,6 +28,13 @@ KrishiSahayak+Gemma is an engineering initiative to solve a critical real-world 
 
 The project's primary goal is to deliver a 100% offline, reliable, and user-friendly Android application that can run on low-resource smartphones (≤ 2GB RAM).
 
+## 🎯 Project Components
+
+This project consists of two main components, each with a distinct purpose:
+
+1. **🌐 Web Demo (The AI Playground):** A live, interactive Gradio application that serves as a development tool and a direct interface to our AI model. It's perfect for developers, judges, and anyone wanting to quickly test the core AI capabilities.  
+2. **📱 Android App (The Field Solution):** The primary, end-user product. This is a 100% offline-first application designed for low-resource devices to ensure it's accessible and reliable for farmers in remote areas.
+
 ## 🏗️ Architecture
 
 The project follows a strategic two-track approach to balance rapid prototyping with production readiness.
@@ -59,6 +66,16 @@ graph TD
     I --> K[Mobile App]
 ```
 
+## 📺 Demo Video
+
+[![KrishiSahayak+Gemma Web Demo](https://img.youtube.com/vi/W8L-15np5do/0.jpg)](https://youtu.be/W8L-15np5do)
+
+*Click the thumbnail to watch a short demo of the web-based AI playground in action.*
+
+**What you’ll see:**
+1. **Confident Answers** – The base model **`google/gemma-3n-E2B-it`** (≈ 4.5 B parameters), quantized on-device as **`gemma-3n-q4_k_m.gguf`**, responds instantly to common agricultural queries when confidence is high.
+2. **Uncertainty & RAG Fallback** – When the model’s confidence drops for tougher questions, the Retrieval-Augmented Generation (RAG) pipeline searches the knowledge base and delivers a grounded answer.
+
 For detailed data strategy and regional coverage, see:
 - [REGIONAL_COVERAGE.md](docs/REGIONAL_COVERAGE.md)
 - [VERSIONING.md](docs/VERSIONING.md)
@@ -80,6 +97,21 @@ pip install -r requirements.txt
 # Set up the Android development environment
 # (Refer to Android Studio setup guide for detailed instructions)
 ```
+
+### Model Download
+
+The core of this application is a quantized version of the Google Gemma 3N model used in the Kaggle "Google Gemma 3N Hackathon".
+
+* **Model File:** `gemma-3n-q4_k_m.gguf`
+* **Download Link:** [Google Drive](https://drive.google.com/file/d/1SoZSaLpcIGU96Oqjr0KlYjOEXHxTKYHN/view?usp=drive_link)
+
+> **Disclaimer – Important Notice Before Downloading**
+> 
+> * **File Size:** The model is large (≈ 2.6 GB). Please download over a stable Wi-Fi connection.
+> * **License & Terms of Use:** This model is a derivative of Google's Gemma 3N. By downloading and using it, you agree to the **Gemma Terms of Use** and the **Gemma Prohibited Use Policy**, accepted when entering the Kaggle competition.
+> * Review the full terms in our [NOTICE.md](NOTICE.md) file before using the model.
+
+---
 
 ### Mobile App (Primary Solution)
 The official end-user solution is our mobile application, specifically designed for production use with optimized performance for low-resource devices. The mobile app provides a complete, user-friendly experience for farmers in the field.
@@ -105,9 +137,19 @@ A fully offline-capable mobile application designed specifically for farmers in 
 
 **Development Progress:**
 - [x] Phase 1: Asset Production Complete (Model quantization, data pipeline, validation)
-- [ ] Phase 2: Android App Development (Current Phase)
+- [~] Phase 2: Android App Development (in progress – backend & web demo complete, Android MVP coding underway)
 - [ ] Phase 3: Field Testing & Pilot Deployment
 - [ ] Phase 4: Continuous Improvement & Scaling
+
+## 📈 Progress Update (13 July 2025)
+
+- 🌐 **Web Demo Complete** – Interactive Gradio playground published and public demo video released.
+- 🤖 **Model Assets Ready** – Base model `google/gemma-3n-E2B-it` successfully quantized to `gemma-3n-q4_k_m.gguf` and validated on-device.
+- 📚 **Knowledge Base v0 Released** – 46-class agricultural KB curated and integrated with RAG pipeline.
+- 🧪 **Validation & Evaluation** – Initial uncertainty quantification and RAG fallback logic tested with >90% accuracy on internal test set.
+- 📱 **Android MVP Coding Started** – Jetpack Compose UI skeleton and on-device inference hooks stubbed.
+
+Next milestone: Field-testing pilot (Phase 3).
 
 ## 📊 Project Structure
 

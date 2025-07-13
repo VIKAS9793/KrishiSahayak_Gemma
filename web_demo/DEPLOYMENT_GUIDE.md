@@ -63,7 +63,7 @@ mkdir -p model
 
 # Download the quantized Gemma model (gemma-3n-q4_k_m.gguf)
 # Example:
-# wget -O model/gemma-3n-q4_k_m.gguf "YOUR_MODEL_DOWNLOAD_URL"
+# wget -O model/gemma-3n-q4_k_m.gguf "https://drive.google.com/uc?export=download&id=1SoZSaLpcIGU96Oqjr0KlYjOEXHxTKYHN"
 ```
 
 ### 4. Obtain the Model
@@ -75,7 +75,7 @@ Before running the application, you'll need to obtain the `gemma-3n-q4_k_m.gguf`
 mkdir -p model
 
 # Download the model (replace URL with actual source)
-wget -O model/gemma-3n-q4_k_m.gguf "YOUR_MODEL_DOWNLOAD_URL"
+wget -O model/gemma-3n-q4_k_m.gguf "https://drive.google.com/uc?export=download&id=1SoZSaLpcIGU96Oqjr0KlYjOEXHxTKYHN"
 ```
 
 #### Option 2: Convert from Base Model

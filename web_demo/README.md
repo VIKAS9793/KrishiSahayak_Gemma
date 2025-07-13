@@ -34,6 +34,17 @@ The web demo provides a user-friendly interface for testing and demonstrating th
 ![Web Demo Audio](../docs/images/web%20demo_4.png)
 *Figure 4: Audio input and transcription interface*
 
+## 📺 Demo Video
+
+[![KrishiSahayak+Gemma Web Demo](https://img.youtube.com/vi/W8L-15np5do/0.jpg)](https://youtu.be/W8L-15np5do)
+
+*Click the thumbnail to watch a short demo of the web application in action.*
+
+**What you’ll see:**
+1. **Confident Answers** – The base model **`google/gemma-3n-E2B-it`** (≈ 4.5 B parameters), quantized on-device as **`gemma-3n-q4_k_m.gguf`**, responds instantly to common agricultural queries when confidence is high.
+2. **Uncertainty & RAG Fallback** – For tougher questions, the model detects low confidence and automatically triggers the Retrieval-Augmented Generation (RAG) pipeline to retrieve relevant knowledge-base documents and craft a grounded answer.
+
+
 
 ## 🚀 Quick Start
 
