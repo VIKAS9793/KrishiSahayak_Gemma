@@ -46,6 +46,9 @@ The project follows a strategic two-track approach to balance rapid prototyping 
 | 🌐 Web Interface | Gradio, FastAPI | A server-based prototype for demonstration and testing. |
 | 📱 Mobile App | Native Android, C++ (llama.cpp) | The final, offline-first product for end-users. |
 
+For a detailed explanation of why we chose native C++ for the Android app instead of Python-on-Android, see:
+- [Android Architecture Decision](docs/Android_application_architecture_decision.md)
+
 ## 📺 Demo Video
 
 [![KrishiSahayak+Gemma Web Demo](https://img.youtube.com/vi/W8L-15np5do/0.jpg)](https://youtu.be/W8L-15np5do?si=lSxdbrKVDozeQZ8I)
