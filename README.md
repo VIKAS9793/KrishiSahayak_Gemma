@@ -28,6 +28,22 @@ KrishiSahayak+Gemma is an engineering initiative to solve a critical real-world 
 
 The project's primary goal is to deliver a 100% offline, reliable, and user-friendly Android application that can run on low-resource smartphones (≤ 2GB RAM).
 
+## 🏗️ Current Development Status (2025-07-16)
+
+The Android application build has been successfully completed and compiled ([build compilation video](https://youtu.be/BIKkLbJIZhA)). The project is currently in the APK testing phase to ensure reliability and performance before the initial public release.
+
+![Android Source Code](docs/images/Android_src.png)
+
+![Application Build Compilation](docs/images/Application_build_compilation.png)
+
+Testing is focused on:
+- Offline functionality verification
+- Memory usage on low-resource devices (≤ 2GB RAM)
+- AI performance and responsiveness
+- User interface stability
+
+Stay tuned for the public release announcement after successful testing completion.
+
 ## 🎯 Project Components
 
 This project consists of two main components, each with a distinct purpose:
