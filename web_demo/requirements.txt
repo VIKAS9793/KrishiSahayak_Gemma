@@ -14,7 +14,7 @@ ctransformers==0.2.27
 # Vector Database & Search
 faiss-cpu==1.11.0
 sentence-transformers==5.0.0
-sentencepiece==0.2.0
+sentencepiece==0.2.1
 
 # Audio Processing
 openai-whisper==20250625
