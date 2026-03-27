@@ -36,7 +36,7 @@ scipy==1.16.0
 Pillow==11.3.0
 tqdm==4.67.1
 python-dotenv==1.1.1
-orjson==3.10.18
+orjson==3.11.6
 
 # File Processing
 PyPDF2==3.0.1
