@@ -5,7 +5,7 @@
 # ==============================================================================
 
 # Core ML/AI Framework
-torch==2.3.1
+torch==2.8.0
 transformers==4.53.2
 accelerate==1.8.1
 safetensors==0.5.3
