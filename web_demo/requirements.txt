@@ -23,7 +23,7 @@ pydub==0.25.1
 ffmpy==0.6.0
 
 # Web Interface & Server
-gradio==5.36.2
+gradio==6.7.0
 fastapi==0.116.0
 uvicorn==0.35.0
 python-multipart==0.0.22
