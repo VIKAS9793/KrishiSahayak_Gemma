@@ -48,7 +48,7 @@ python-jose[cryptography]==3.4.0
 passlib[bcrypt]==1.7.4
 
 # Environment Management
-python-dotenv==1.1.1
+python-dotenv==1.2.2
 
 # Type Hints
 mypy-extensions==1.0.0

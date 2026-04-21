@@ -35,7 +35,7 @@ numpy==2.2.6
 scipy==1.16.0
 Pillow==12.1.1
 tqdm==4.67.1
-python-dotenv==1.1.1
+python-dotenv==1.2.2
 orjson==3.11.6
 
 # File Processing
