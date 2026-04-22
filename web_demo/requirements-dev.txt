@@ -11,7 +11,7 @@ psutil==7.0.0
 memory-profiler==0.61.0
 
 # Testing & Debugging
-pytest==8.3.2
+pytest==9.0.3
 pytest-cov==6.0.0
 ipdb==0.13.13
 
