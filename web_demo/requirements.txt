@@ -48,4 +48,4 @@ requests==2.33.0
 urllib3==2.6.3
 certifi==2025.7.9
 charset-normalizer==3.4.2
-idna==3.10
+idna==3.15
